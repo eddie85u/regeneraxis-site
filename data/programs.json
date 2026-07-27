@@ -1,0 +1,37 @@
+[
+  {
+    "id": "recovery",
+    "slug": "recovery-performance",
+    "number": "01",
+    "priceFrom": "$1.700.000 COP / mes",
+    "antiDoping": true
+  },
+  {
+    "id": "metabolic",
+    "slug": "metabolic-reset",
+    "number": "02",
+    "priceFrom": "$2.500.000 COP / mes",
+    "antiDoping": true
+  },
+  {
+    "id": "longevity",
+    "slug": "longevity-premium",
+    "number": "03",
+    "priceFrom": "$2.000.000 COP / mes",
+    "antiDoping": false
+  },
+  {
+    "id": "executive",
+    "slug": "executive-performance",
+    "number": "04",
+    "priceFrom": "$1.800.000 COP / mes",
+    "antiDoping": true
+  },
+  {
+    "id": "cellular",
+    "slug": "advanced-cellular-regeneration",
+    "number": "05",
+    "priceFrom": "$2.220.000 COP",
+    "antiDoping": false
+  }
+]
