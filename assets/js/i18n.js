@@ -1,23 +1,25 @@
-import { currentLang } from "./main.js";
+import { currentLang, refreshReveal } from "./main.js";
 
 /* Resolve "a.b.c" against a nested object. */
-function get(obj, path) {
+export function get(obj, path) {
   return path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
 }
 
-/* Path prefix to /data from any /en/ or /es/ page. */
-function dataBase() {
-  return "../data/";
-}
+/* Path to /data from any /en/ or /es/ page. */
+export const DATA_BASE = "../data/";
+
+let localeCache = null;
 
 export async function loadLocale() {
+  if (localeCache) return localeCache;
   const lang = currentLang();
-  const res = await fetch(`${dataBase()}${lang}.json`);
+  const res = await fetch(`${DATA_BASE}${lang}.json`);
   if (!res.ok) throw new Error("locale load failed");
-  return res.json();
+  localeCache = await res.json();
+  return localeCache;
 }
 
-/* Replace text of every [data-i18n="key.path"] element. */
+/* Replace text of every [data-i18n] element. */
 export function applyLocale(dict) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const val = get(dict, el.getAttribute("data-i18n"));
@@ -27,7 +29,6 @@ export function applyLocale(dict) {
     }
   });
   document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
-    // format: "attr:key.path"
     el.getAttribute("data-i18n-attr").split(",").forEach((pair) => {
       const [attr, key] = pair.split(":").map((s) => s.trim());
       const val = get(dict, key);
@@ -41,6 +42,7 @@ export async function initI18n() {
     const dict = await loadLocale();
     applyLocale(dict);
     document.dispatchEvent(new CustomEvent("locale:ready", { detail: dict }));
+    refreshReveal();
     return dict;
   } catch (e) {
     console.warn("i18n:", e);
