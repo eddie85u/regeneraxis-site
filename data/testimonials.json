@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Andrés M.",
+    "country": "Colombia",
+    "program": "Recovery & Performance",
+    "quote": "I felt stronger between sessions and more confident coming back from a rough training block. The team explained every step.",
+    "lang": "en"
+  },
+  {
+    "name": "Sarah K.",
+    "country": "United States",
+    "program": "Longevity Premium",
+    "quote": "I traveled to Medellín unsure what to expect. The process felt personal from the first consultation, and I slept better throughout.",
+    "lang": "en"
+  },
+  {
+    "name": "David R.",
+    "country": "Canada",
+    "program": "Executive Performance",
+    "quote": "The calm and focus I was looking for. What stood out was the follow-up. I never felt like just another appointment.",
+    "lang": "en"
+  },
+  {
+    "name": "Marcela T.",
+    "country": "Colombia",
+    "program": "Metabolic Reset",
+    "quote": "After years of trying on my own, having medical guidance changed how I approached it. I felt supported the whole way.",
+    "lang": "en"
+  },
+  {
+    "name": "Andrés M.",
+    "country": "Colombia",
+    "program": "Recovery & Performance",
+    "quote": "Me sentí más fuerte entre sesiones y con más confianza al volver de una etapa dura de entrenamiento. El equipo me explicó cada paso.",
+    "lang": "es"
+  },
+  {
+    "name": "Sarah K.",
+    "country": "Estados Unidos",
+    "program": "Longevity Premium",
+    "quote": "Viajé a Medellín sin saber qué esperar. El proceso se sintió personal desde la primera consulta, y dormí mejor durante todo el programa.",
+    "lang": "es"
+  },
+  {
+    "name": "David R.",
+    "country": "Canadá",
+    "program": "Executive Performance",
+    "quote": "La calma y el enfoque que buscaba. Lo que más destaco fue el seguimiento. Nunca me sentí como una cita más.",
+    "lang": "es"
+  },
+  {
+    "name": "Marcela T.",
+    "country": "Colombia",
+    "program": "Metabolic Reset",
+    "quote": "Después de años intentándolo sola, tener guía médica cambió mi manera de abordarlo. Me sentí acompañada todo el tiempo.",
+    "lang": "es"
+  }
+]
