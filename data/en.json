@@ -1,0 +1,153 @@
+{
+  "nav": { "programs": "Programs", "process": "Process", "medellin": "Medellín", "faq": "FAQ", "contact": "Contact" },
+  "cta": { "book": "Book Your Assessment" },
+
+  "hero": {
+    "kicker": "Medellín · Colombia",
+    "headline": "Optimize recovery. Elevate performance. Extend healthspan.",
+    "subline": "Physician-guided regenerative programs, personalized to your biology, delivered in the City of Eternal Spring."
+  },
+
+  "manifesto": { "body": "Recovery is no longer passive. Longevity is no longer about simply living longer. Performance is no longer reserved for elite athletes. The future of wellness is proactive, personalized, and guided by science. Welcome to a new era of human optimization." },
+
+  "who": {
+    "kicker": "Find your starting point",
+    "athlete": { "title": "The Athlete", "body": "You train at the limit. You want to recover faster, protect your joints, and return stronger to every session." },
+    "executive": { "title": "The Executive", "body": "You carry pressure all day. You want deeper sleep, sharper focus, and energy that lasts past noon." },
+    "metabolic": { "title": "The Metabolic Reset", "body": "You have tried diets and discipline. You want to lose fat with medical guidance and keep it off." },
+    "longevity": { "title": "The Longevity Seeker", "body": "You are not chasing youth. You want to feel strong, clear, and vital for decades to come." }
+  },
+
+  "programs": {
+    "kicker": "Our programs",
+    "title": "Five programs. One method.",
+    "intro": "Every protocol begins with a medical assessment, is built from your clinical history and lab biomarkers, and is supervised by our physicians from the first day to the last. Individual results vary.",
+    "learn": "Explore program",
+    "items": {
+      "recovery": {
+        "name": "Recovery & Performance",
+        "tagline": "Regeneration and resilience for athletes and demanding training.",
+        "kicker": "Program 01",
+        "hook": "You train at the limit and want to recover faster, protect your joints, and return stronger to every session.",
+        "body": "Designed to support your body's own tissue repair. It aims to support the regeneration of muscle, tendon, and ligament, encourage collagen production, and optimize the cellular environment where recovery happens, with a calming, anti-inflammatory intent. The goal: less discomfort, better recovery between sessions, and a structure more resilient to strain.",
+        "benefits": ["Faster muscle recovery after effort or strain", "Support for tendons, ligaments, and connective tissue", "Encourages collagen production and tissue regeneration", "Anti-inflammatory intent and comfort", "Joint support and better mobility", "Support for digestive and immune wellness"],
+        "idealFor": "Athletes, CrossFit and HYROX, strength and endurance sports, recovery after strain or overload.",
+        "schema": "Daily application with alternating-day reinforcement. Recommended cycle: 3 months."
+      },
+      "metabolic": {
+        "name": "Metabolic Reset",
+        "tagline": "Sustainable fat loss with medical guidance and nutritional accompaniment.",
+        "kicker": "Program 02",
+        "hook": "You have tried diets and discipline. You want to reduce fat with medical guidance and keep the result.",
+        "body": "Works on body composition on two fronts: supporting appetite regulation and satiety while supporting healthy energy metabolism at the cellular level. The intent is a sustainable approach to fat reduction, more energy, and improved metabolic efficiency, always personalized and supervised.",
+        "benefits": ["Supports sustainable fat reduction", "Supports appetite regulation and satiety", "Supports healthy blood glucose ranges", "More energy and metabolic efficiency", "Nutritional accompaniment throughout", "Personalized and physician supervised"],
+        "idealFor": "People seeking real, sustainable fat loss with medical backing, beyond traditional restriction.",
+        "schema": "One weekly application plus daily support. Recommended cycle: 3 months. Includes nutritional accompaniment."
+      },
+      "longevity": {
+        "name": "Longevity Premium",
+        "tagline": "Energy, skin, sleep, and cellular vitality for the years ahead.",
+        "kicker": "Program 03",
+        "hook": "You want to slow the clock: more energy, better skin, deeper sleep, and vitality you feel inside and out.",
+        "body": "An integrated longevity program with intent on three levels: supporting skin quality through collagen and elastin, supporting cellular energy and mental clarity, and supporting endocrine balance and sleep cycles. A considered, cell-level approach to healthy aging.",
+        "benefits": ["Supports brighter, firmer skin tone", "Sustained energy and mental clarity", "Supports better sleep quality", "Supports healthy cellular aging", "Antioxidant intent", "Personalized and physician supervised"],
+        "idealFor": "Those seeking a complete approach to longevity and rejuvenation.",
+        "schema": "Daily application with alternating-day reinforcement. Recommended cycle: 3 months."
+      },
+      "executive": {
+        "name": "Executive Performance",
+        "tagline": "Calm, focus, and recovery for high-pressure lives.",
+        "kicker": "Program 04",
+        "hook": "You live under pressure and want to perform at your best: focus, calm, better sleep, and high-level recovery.",
+        "body": "Designed for the high-performing executive. It aims to support deep sleep quality, recovery, and body composition, while supporting a calmer stress response without sedation, favoring focus, memory, and emotional steadiness. Calm and performance, together.",
+        "benefits": ["Supports a calmer stress response without sedation", "Supports focus, memory, and clarity", "Supports deep, restorative sleep", "Supports physical recovery", "Supports body composition", "Personalized and physician supervised"],
+        "idealFor": "Leaders and entrepreneurs who need to sustain high performance without burning out.",
+        "schema": "One weekly application plus daily support. Recommended cycle: 3 months."
+      },
+      "cellular": {
+        "name": "Advanced Cellular Regeneration",
+        "tagline": "Regenerative IV therapy to support the body's own repair.",
+        "kicker": "Program 05",
+        "hook": "You want integral regeneration from within: more vitality, better recovery, and a body that repairs itself well.",
+        "body": "Advanced IV therapy with cellular messengers intended to support communication between your cells. The intent is to support mitochondrial efficiency and microcirculation, immune balance, and tissue regeneration, with a considered anti-aging approach. Requires prior medical assessment.",
+        "benefits": ["Supports cellular and tissue regeneration", "Supports energy and mitochondrial efficiency", "Supports microcirculation", "Supports immune balance", "Antioxidant intent", "Personalized and physician supervised"],
+        "idealFor": "Those seeking an integral regenerative reset. Requires prior medical assessment. Not suitable in active neoplastic disease.",
+        "schema": "Per-session application, package of 6 vials, according to medical assessment."
+      }
+    }
+  },
+
+  "program": {
+    "whatItDoes": "What it does in your body",
+    "benefits": "Benefits",
+    "idealFor": "Ideal for",
+    "schema": "Schema & cycle",
+    "investmentFrom": "Investment from",
+    "investmentNote": "Final pricing depends on your medical assessment and personalization. Individual results vary.",
+    "doping": "Advisory for competitive athletes: some components of these protocols may be subject to anti-doping rules (AMA / WADA). If you compete under anti-doping control, tell us before starting so we can guide you.",
+    "resultsVary": "Personalized and physician supervised. Individual results vary."
+  },
+
+  "how": {
+    "kicker": "The journey",
+    "s1": { "title": "Medical Assessment", "body": "A private consultation to understand your goals, history, and lifestyle. International clients may begin remotely." },
+    "s2": { "title": "Biomarker Review", "body": "Laboratory testing gives us an objective picture of your biology." },
+    "s3": { "title": "Personalized Protocol", "body": "Your physician designs a program built for your body and your objectives." },
+    "s4": { "title": "Optimization & Follow-Up", "body": "We monitor, adjust, and refine throughout your cycle." }
+  },
+
+  "medellin": {
+    "kicker": "The destination",
+    "title": "The city where spring never ends.",
+    "body": "Medellín sits at the exact climate the body finds most restorative, within easy reach of North America yet apart from its noise. World-class clinicians, genuine privacy, and premium care at a fraction of the cost found elsewhere. The setting is not an afterthought. It is part of the therapy."
+  },
+
+  "tst": {
+    "kicker": "In their words",
+    "note": "Individual experiences. Results vary.",
+    "all": "Read all experiences",
+    "filterAll": "All",
+    "title": "In their words"
+  },
+
+  "science": {
+    "kicker": "The science",
+    "title": "We study your biology first.",
+    "body": "Our programs draw on regenerative medicine: peptide science, cellular signaling therapies, and IV nutrient support, applied under medical supervision and personalized through diagnostics. We do not offer generic solutions. We study your biology first, then build the protocol around it.",
+    "note": "Note: This information is educational and does not replace individualized medical advice."
+  },
+
+  "faq": {
+    "kicker": "Before you book",
+    "all": "See all questions",
+    "title": "Frequently asked questions",
+    "stillTitle": "Still have questions?",
+    "stillBody": "Read the full FAQ or write to us. We are happy to help before you book."
+  },
+
+  "expect": {
+    "a": { "k": "What it includes", "body": "A private physician consultation, review of your goals and history, and the lab biomarkers to personalize your program." },
+    "b": { "k": "How long it takes", "body": "A focused session with your medical team, plus a clear plan you leave with whether or not you continue." },
+    "c": { "k": "From anywhere", "body": "International clients can begin remotely, then coordinate travel to Medellín to start in person." }
+  },
+
+  "final": {
+    "title": "Your biology deserves a strategy.",
+    "subline": "Begin with a private medical assessment. In person in Medellín, or remotely if you are traveling to us.",
+    "questions": "Questions before booking? Read our <a href=\"./faq.html\">FAQ</a> or write via WhatsApp: +57 313 8750104"
+  },
+
+  "contact": {
+    "kicker": "Have questions first?",
+    "title": "Let's talk before you book.",
+    "body": "International clients can begin with a remote consultation before traveling. Send us a note and we will get back to you.",
+    "name": "Name", "country": "Country", "program": "Program of interest", "message": "Message", "send": "Send message",
+    "phone": "Or call us", "remote": "International clients can begin with a remote consultation before traveling."
+  },
+
+  "footer": {
+    "tagline": "The Axis of Human Renewal. Medellín, Colombia.",
+    "explore": "Explore", "connect": "Connect", "privacy": "Privacy",
+    "disclaimer": "The information on this site is for educational purposes only and does not constitute medical advice, diagnosis, or a guarantee of results. All programs require prior medical evaluation and are personalized and supervised by licensed physicians. Treatments are provided in person in Medellín, Colombia. Individual results vary."
+  }
+}
