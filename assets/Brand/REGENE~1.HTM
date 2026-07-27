@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RegenerAxis — Brand Identity</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --ivory:#F4F0E8;
+  --bone:#EAE4D8;
+  --stone:#B9AF9E;
+  --stone-deep:#8E8574;
+  --graphite:#3B3A37;
+  --warm-black:#1B1A17;
+  --olive:#6E7154;
+  --olive-deep:#565839;
+  --champagne:#C7A96B;
+  --champagne-soft:#D9C6A0;
+  --line:rgba(27,26,23,0.14);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+@page{ size:A4; margin:0; }
+
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--warm-black);
+  background:var(--ivory);
+  font-weight:300;
+  line-height:1.7;
+  font-size:10.5pt;
+}
+
+.page{
+  width:210mm;
+  min-height:297mm;
+  padding:24mm 22mm;
+  position:relative;
+  page-break-after:always;
+  background:var(--ivory);
+  overflow:hidden;
+}
+.page:last-child{ page-break-after:auto; }
+
+.page.dark{ background:var(--warm-black); color:var(--ivory); }
+.page.stone{ background:var(--bone); }
+
+/* Typography */
+h1,h2,h3,h4{ font-weight:400; line-height:1.12; }
+.serif{ font-family:'Cormorant Garamond',serif; }
+
+.kicker{
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:8.5pt;
+  letter-spacing:0.42em;
+  text-transform:uppercase;
+  color:var(--stone-deep);
+  margin-bottom:14px;
+}
+.dark .kicker{ color:var(--champagne); }
+
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;
+  font-size:34pt;
+  line-height:1.05;
+  letter-spacing:-0.01em;
+  margin-bottom:8px;
+}
+.section-num{
+  font-family:'Jost',sans-serif;
+  font-size:8.5pt;
+  letter-spacing:0.3em;
+  color:var(--champagne);
+  margin-bottom:26px;
+}
+
+h3.sub{
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:9pt;
+  letter-spacing:0.24em;
+  text-transform:uppercase;
+  color:var(--olive-deep);
+  margin:26px 0 8px;
+}
+.dark h3.sub{ color:var(--champagne-soft); }
+
+p{ margin-bottom:12px; max-width:62em; }
+p.lead{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16pt;
+  font-weight:300;
+  line-height:1.5;
+  color:var(--graphite);
+}
+.dark p.lead{ color:var(--bone); }
+
+.rule{ height:1px; background:var(--line); margin:20px 0; border:0; }
+.dark .rule{ background:rgba(244,240,232,0.16); }
+
+strong{ font-weight:500; }
+em{ font-style:italic; }
+
+/* ---------- COVER ---------- */
+.cover{
+  display:flex; flex-direction:column; justify-content:space-between;
+  background:var(--warm-black); color:var(--ivory);
+  padding:30mm 22mm;
+}
+.cover .top{ display:flex; justify-content:space-between; font-family:'Jost',sans-serif;
+  font-size:8pt; letter-spacing:0.32em; text-transform:uppercase; color:var(--stone); }
+.cover .center{ text-align:center; }
+.mark{ width:120px; height:120px; margin:0 auto 34px; }
+.cover .wordmark{
+  font-family:'Cormorant Garamond',serif; font-weight:300;
+  font-size:52pt; letter-spacing:0.12em; color:var(--ivory);
+}
+.cover .wordmark b{ font-weight:500; color:var(--champagne); }
+.cover .tagline{
+  font-family:'Jost',sans-serif; font-size:9.5pt; letter-spacing:0.46em;
+  text-transform:uppercase; color:var(--stone); margin-top:20px;
+}
+.cover .btm{ text-align:center; font-family:'Jost',sans-serif; font-size:8pt;
+  letter-spacing:0.34em; text-transform:uppercase; color:var(--stone-deep); }
+
+/* ---------- Palette swatches ---------- */
+.swatch-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:10px; }
+.swatch{ border:1px solid var(--line); }
+.swatch .chip{ height:82px; }
+.swatch .meta{ padding:11px 13px; background:#fff; }
+.swatch .name{ font-family:'Jost',sans-serif; font-size:9pt; letter-spacing:0.14em;
+  text-transform:uppercase; margin-bottom:4px; }
+.swatch .hex{ font-family:'Inter',sans-serif; font-size:8pt; color:var(--stone-deep);
+  letter-spacing:0.05em; }
+.swatch .psy{ font-size:8pt; color:var(--graphite); margin-top:7px; line-height:1.5; }
+
+/* type specimen */
+.spec{ border:1px solid var(--line); padding:20px 22px; margin-bottom:14px; background:#fff; }
+.spec .label{ font-family:'Jost',sans-serif; font-size:8pt; letter-spacing:0.24em;
+  text-transform:uppercase; color:var(--champagne); margin-bottom:12px; }
+.spec .big-serif{ font-family:'Cormorant Garamond',serif; font-weight:300; font-size:38pt; line-height:1; }
+.spec .big-sans{ font-family:'Inter',sans-serif; font-weight:300; font-size:22pt; line-height:1.1; }
+.spec .accent-type{ font-family:'Jost',sans-serif; font-size:12pt; letter-spacing:0.34em; text-transform:uppercase; }
+.spec .glyphs{ font-size:9pt; color:var(--stone-deep); margin-top:10px; letter-spacing:0.04em; }
+
+/* logo concept cards */
+.logo-concept{ display:grid; grid-template-columns:150px 1fr; gap:22px; align-items:center;
+  border:1px solid var(--line); background:#fff; padding:20px 22px; margin-bottom:16px; }
+.logo-art{ height:150px; display:flex; align-items:center; justify-content:center;
+  background:var(--bone); }
+.dark .logo-art{ background:#111; }
+.logo-concept h4{ font-family:'Cormorant Garamond',serif; font-size:19pt; font-weight:400; margin-bottom:2px; }
+.logo-concept .cnum{ font-family:'Jost',sans-serif; font-size:7.5pt; letter-spacing:0.3em;
+  color:var(--champagne); text-transform:uppercase; margin-bottom:6px; }
+.logo-concept .row{ font-size:8.5pt; margin-bottom:5px; }
+.logo-concept .row b{ font-family:'Jost',sans-serif; font-weight:400; letter-spacing:0.1em;
+  text-transform:uppercase; font-size:7.5pt; color:var(--olive-deep); }
+
+/* moodboard */
+.mood{ border:1px solid var(--line); margin-bottom:18px; background:#fff; }
+.mood .head{ padding:16px 20px; color:#fff; }
+.mood .head .mnum{ font-family:'Jost',sans-serif; font-size:7.5pt; letter-spacing:0.3em; opacity:.85; }
+.mood .head h4{ font-family:'Cormorant Garamond',serif; font-size:22pt; font-weight:300; }
+.mood .body{ padding:16px 20px; }
+.mood .palette-row{ display:flex; height:26px; margin-bottom:14px; }
+.mood .palette-row div{ flex:1; }
+.mood dl{ display:grid; grid-template-columns:96px 1fr; gap:5px 14px; font-size:8.5pt; }
+.mood dt{ font-family:'Jost',sans-serif; letter-spacing:0.12em; text-transform:uppercase;
+  font-size:7.5pt; color:var(--olive-deep); padding-top:1px; }
+
+/* keyword pills */
+.pills{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+.pill{ font-family:'Jost',sans-serif; font-size:8pt; letter-spacing:0.18em; text-transform:uppercase;
+  border:1px solid var(--stone); padding:6px 13px; border-radius:20px; color:var(--graphite); }
+.dark .pill{ border-color:rgba(244,240,232,0.3); color:var(--bone); }
+
+/* two-col */
+.cols{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+.cols-3{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+
+.callout{ border-left:2px solid var(--champagne); padding:4px 0 4px 18px; margin:16px 0; }
+.callout .serif{ font-size:15pt; line-height:1.45; color:var(--graphite); }
+.dark .callout .serif{ color:var(--bone); }
+
+.def dt{ font-family:'Jost',sans-serif; font-size:8pt; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--olive-deep); margin-top:16px; margin-bottom:3px; }
+.dark .def dt{ color:var(--champagne-soft); }
+.def dd{ margin:0; }
+
+.prompt-box{ border:1px solid var(--line); background:#fff; padding:16px 18px; margin-bottom:14px; }
+.prompt-box .ptitle{ font-family:'Jost',sans-serif; font-size:8pt; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--champagne); margin-bottom:8px; }
+.prompt-box .ptext{ font-family:'Inter',sans-serif; font-size:8.5pt; line-height:1.65; color:var(--graphite); }
+
+.footer{ position:absolute; bottom:12mm; left:22mm; right:22mm; display:flex;
+  justify-content:space-between; font-family:'Jost',sans-serif; font-size:7pt;
+  letter-spacing:0.28em; text-transform:uppercase; color:var(--stone-deep); }
+.dark .footer{ color:var(--stone); }
+
+.toc-item{ display:flex; justify-content:space-between; align-items:baseline;
+  padding:11px 0; border-bottom:1px solid var(--line); }
+.toc-item .t{ font-family:'Cormorant Garamond',serif; font-size:15pt; }
+.toc-item .n{ font-family:'Jost',sans-serif; font-size:8pt; letter-spacing:0.24em; color:var(--champagne); }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="page cover">
+  <div class="top">
+    <span>Brand Identity System</span>
+    <span>Medellín · Colombia</span>
+  </div>
+  <div class="center">
+    <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="46" stroke="#C7A96B" stroke-width="0.6" opacity="0.5"/>
+      <path d="M50 8 V92 M8 50 H92" stroke="#C7A96B" stroke-width="0.5" opacity="0.35"/>
+      <path d="M50 20 C64 34 64 66 50 80 C36 66 36 34 50 20 Z" stroke="#F4F0E8" stroke-width="1.1"/>
+      <path d="M20 50 C34 36 66 36 80 50 C66 64 34 64 20 50 Z" stroke="#F4F0E8" stroke-width="1.1"/>
+      <circle cx="50" cy="50" r="4.4" fill="#C7A96B"/>
+    </svg>
+    <div class="wordmark">Regener<b>Axis</b></div>
+    <div class="tagline">The Axis of Human Renewal</div>
+  </div>
+  <div class="btm">Confidential · Brand Guidelines · Volume One</div>
+</section>
+
+<!-- ============ TOC ============ -->
+<section class="page">
+  <div class="kicker">Contents</div>
+  <h2 class="section-title serif">The System</h2>
+  <div style="margin-top:30px;">
+    <div class="toc-item"><span class="t">Brand Strategy</span><span class="n">01</span></div>
+    <div class="toc-item"><span class="t">Brand Story</span><span class="n">02</span></div>
+    <div class="toc-item"><span class="t">Visual Identity — Logo Concepts</span><span class="n">03</span></div>
+    <div class="toc-item"><span class="t">Color Palette</span><span class="n">04</span></div>
+    <div class="toc-item"><span class="t">Typography</span><span class="n">05</span></div>
+    <div class="toc-item"><span class="t">Brand Elements</span><span class="n">06</span></div>
+    <div class="toc-item"><span class="t">Website Creative Direction</span><span class="n">07</span></div>
+    <div class="toc-item"><span class="t">Moodboards — Three Directions</span><span class="n">08</span></div>
+    <div class="toc-item"><span class="t">Logo Generation Prompts</span><span class="n">09</span></div>
+    <div class="toc-item"><span class="t">Final Recommendation</span><span class="n">10</span></div>
+  </div>
+  <div class="callout" style="margin-top:40px;">
+    <div class="serif">"A destination is not a place you go. It is a version of yourself you return home as."</div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>Contents</span></div>
+</section>
+
+<!-- ============ 01 STRATEGY ============ -->
+<section class="page">
+  <div class="section-num">01 — Foundation</div>
+  <h2 class="section-title serif">Brand Strategy</h2>
+  <p class="lead">RegenerAxis exists at the intersection of clinical precision and profound rest — a place where the science of human longevity is delivered with the grace of the world's finest hospitality.</p>
+  <hr class="rule">
+  <div class="cols">
+    <div>
+      <h3 class="sub">Mission</h3>
+      <p>To extend the healthspan and elevate the performance of the world's most demanding individuals through science-backed regenerative medicine, delivered within an environment of complete discretion, beauty and calm.</p>
+      <h3 class="sub">Vision</h3>
+      <p>To become the world's most respected destination for human optimization — the address the global elite associate with the moment they chose to invest in their own longevity.</p>
+      <h3 class="sub">Brand Purpose</h3>
+      <p>We believe the years ahead deserve the same intention we give to wealth, career and legacy. RegenerAxis returns agency over aging to those who refuse to leave their future to chance.</p>
+    </div>
+    <div>
+      <h3 class="sub">Positioning Statement</h3>
+      <p>For accomplished individuals who regard their vitality as their most valuable asset, RegenerAxis is the regenerative wellness destination that unites frontier longevity science with the sanctuary of a great resort — because optimization should feel less like treatment and more like arrival.</p>
+      <h3 class="sub">Unique Value Proposition</h3>
+      <p>The clinical rigor of a longevity institute, the intimacy of a private residence, and the restorative power of Medellín's eternal spring — in one seamless, deeply personal journey.</p>
+    </div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>01 · Brand Strategy</span></div>
+</section>
+
+<section class="page stone">
+  <div class="section-num">01 — Foundation</div>
+  <h2 class="section-title serif">Personality &amp; Archetypes</h2>
+  <hr class="rule">
+  <div class="cols">
+    <div>
+      <h3 class="sub">Brand Personality</h3>
+      <p>RegenerAxis is <strong>quietly authoritative</strong> — it never raises its voice because it never needs to. It is <strong>precise</strong> without being clinical, <strong>warm</strong> without being casual, and <strong>discreet</strong> by instinct. It carries the composure of a master concierge and the credibility of a principal investigator. It is the friend who is both the smartest and the calmest person in the room.</p>
+      <h3 class="sub">Brand Archetypes</h3>
+      <dl class="def">
+        <dt>Primary — The Sage</dt>
+        <dd>The pursuit of truth and mastery through science. Authority earned, not claimed.</dd>
+        <dt>Secondary — The Caregiver</dt>
+        <dd>Devotion to the guest's wellbeing; anticipatory, protective, generous service.</dd>
+        <dt>Accent — The Creator</dt>
+        <dd>The belief that a life — and a body — can be intentionally, beautifully authored.</dd>
+      </dl>
+    </div>
+    <div>
+      <h3 class="sub">Brand Keywords</h3>
+      <div class="pills">
+        <span class="pill">Regeneration</span><span class="pill">Longevity</span>
+        <span class="pill">Precision</span><span class="pill">Sanctuary</span>
+        <span class="pill">Discretion</span><span class="pill">Vitality</span>
+        <span class="pill">Balance</span><span class="pill">Mastery</span>
+        <span class="pill">Renewal</span><span class="pill">Exclusivity</span>
+        <span class="pill">Stillness</span><span class="pill">Evidence</span>
+      </div>
+      <h3 class="sub" style="margin-top:28px;">Tone of Voice</h3>
+      <p>Measured. Literate. Confident in understatement. We speak in the first person plural, never in superlatives. We cite, we do not exaggerate. Silence and white space are part of the sentence.</p>
+      <div class="callout">
+        <div class="serif">"We do not sell youth. We steward the years you have not yet lived."</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>01 · Brand Strategy</span></div>
+</section>
+
+<!-- ============ 02 STORY ============ -->
+<section class="page dark">
+  <div class="section-num">02 — Narrative</div>
+  <h2 class="section-title serif">Brand Story</h2>
+  <p class="lead">Somewhere between the laboratory and the retreat, a new kind of place became necessary.</p>
+  <hr class="rule">
+  <p>The people who shape the world have optimized everything but the one asset they cannot buy more of: <em>time in a body that performs.</em> They have advisors for their capital, architects for their homes, and chefs for their tables — yet when it comes to their own biology, they are handed a choice between the sterile efficiency of a clinic and the pleasant vagueness of a spa. Neither is worthy of them.</p>
+  <p><strong>RegenerAxis exists to end that compromise.</strong> We were founded on a simple conviction: that the frontier of regenerative medicine — peptides, exosomes, cellular therapies, precision diagnostics — deserves a setting as considered as the science itself. Not a hospital. Not a resort pretending to be a clinic. A true destination, built from the ground up around a single guest and a single question: <em>how do we help you live better, for longer?</em></p>
+  <h3 class="sub">The problem we solve</h3>
+  <p>Modern longevity science is fragmented, intimidating, and — for those who can access the very best of it — scattered across a dozen cities and a hundred appointments. RegenerAxis assembles it into one protocol, one place, one relationship. We turn a logistical burden into a restorative journey, and turn anxiety about aging into a plan authored with precision and delivered with grace.</p>
+  <h3 class="sub">Why Medellín</h3>
+  <p>Medellín is called the <em>City of Eternal Spring</em> — a climate that hovers, year-round, at the exact temperature the body finds most restorative. It sits within reach of North America yet apart from its noise, offering genuine privacy for those whose lives are lived in public. Colombia has quietly become a center of world-class regenerative and aesthetic medicine, with exceptional clinicians and a fraction of the friction found elsewhere. And the surrounding cordillera — its light, its altitude, its green — is itself a therapeutic landscape. Medellín is not a compromise on location. It is the reason the experience is possible at all.</p>
+  <div class="callout">
+    <div class="serif">"We chose the city where spring never ends to build the place where decline is no longer inevitable."</div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>02 · Brand Story</span></div>
+</section>
+
+<!-- ============ 03 LOGO CONCEPTS ============ -->
+<section class="page">
+  <div class="section-num">03 — Visual Identity</div>
+  <h2 class="section-title serif">Logo Concepts</h2>
+  <p>Five timeless directions. Each avoids the clichés of wellness branding — no helices, no crosses, no generic foliage — in favor of geometry that rewards a second look.</p>
+
+  <div class="logo-concept">
+    <div class="logo-art">
+      <svg width="110" height="110" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#8E8574" stroke-width="0.5"/>
+        <path d="M50 16 C63 33 63 67 50 84 C37 67 37 33 50 16Z" fill="none" stroke="#1B1A17" stroke-width="1.4"/>
+        <path d="M16 50 C33 37 67 37 84 50 C67 63 33 63 16 50Z" fill="none" stroke="#1B1A17" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cnum">Concept 01 — Recommended</div>
+      <h4>The Axis Bloom</h4>
+      <div class="row"><b>Symbol</b> — Two intersecting vesica forms rotate around a single gold core: the "axis" of the name made visible. Reads at once as a four-fold cellular division and a slow-opening flower.</div>
+      <div class="row"><b>Emotion</b> — Centered, balanced, quietly alive. Growth held in perfect equilibrium.</div>
+      <div class="row"><b>Why it works</b> — Sacred-geometry rigor meets biomimicry. Endlessly scalable, works as a debossed monogram, a watermark, or a spa-key emblem.</div>
+    </div>
+  </div>
+
+  <div class="logo-concept">
+    <div class="logo-art">
+      <svg width="110" height="110" viewBox="0 0 100 100">
+        <g fill="none" stroke="#1B1A17" stroke-width="1.3">
+          <path d="M50 18 L76 34 L76 66 L50 82 L24 66 L24 34 Z"/>
+          <path d="M50 32 L64 41 L64 59 L50 68 L36 59 L36 41 Z" stroke="#8E8574" stroke-width="0.9"/>
+        </g>
+        <circle cx="50" cy="50" r="3.4" fill="#C7A96B"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cnum">Concept 02</div>
+      <h4>The Regenerative Cell</h4>
+      <div class="row"><b>Symbol</b> — Nested hexagons echo the mitochondrion and the honeycomb — nature's most efficient, self-renewing structure — around a luminous center.</div>
+      <div class="row"><b>Emotion</b> — Energy, order, cellular vitality without a single medical signifier.</div>
+      <div class="row"><b>Why it works</b> — The hexagon is engineering and biology at once — science made elegant. Reproduces flawlessly in foil and embossing.</div>
+    </div>
+  </div>
+
+  <div class="logo-concept">
+    <div class="logo-art">
+      <svg width="110" height="110" viewBox="0 0 100 100">
+        <text x="50" y="62" font-family="Cormorant Garamond, serif" font-size="52" fill="#1B1A17" text-anchor="middle" font-weight="500">R</text>
+        <path d="M31 68 A22 22 0 0 1 69 68" fill="none" stroke="#C7A96B" stroke-width="1.3"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#8E8574" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cnum">Concept 03</div>
+      <h4>The Monogram Seal</h4>
+      <div class="row"><b>Symbol</b> — A refined serif "R" cradled by an open golden arc — the axis line — set within a fine ring, like a signet or a maison's crest.</div>
+      <div class="row"><b>Emotion</b> — Heritage, trust, membership. The feeling of belonging to something rare.</div>
+      <div class="row"><b>Why it works</b> — Monograms are the native language of luxury (Loro Piana, Aman). Instantly ownable as a stamp on linen, key or stationery.</div>
+    </div>
+  </div>
+
+  <div class="footer"><span>RegenerAxis</span><span>03 · Visual Identity</span></div>
+</section>
+
+<section class="page">
+  <div class="section-num">03 — Visual Identity</div>
+  <h2 class="section-title serif">Logo Concepts, continued</h2>
+
+  <div class="logo-concept">
+    <div class="logo-art">
+      <svg width="110" height="110" viewBox="0 0 100 100">
+        <g stroke="#1B1A17" stroke-width="1.2" fill="none">
+          <line x1="50" y1="14" x2="50" y2="86"/>
+          <circle cx="50" cy="30" r="9"/><circle cx="50" cy="50" r="13" stroke="#8E8574"/>
+          <circle cx="50" cy="70" r="9"/>
+        </g>
+        <circle cx="50" cy="50" r="3.2" fill="#C7A96B"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cnum">Concept 04</div>
+      <h4>The Vertical Axis</h4>
+      <div class="row"><b>Symbol</b> — A single vertical line threads three widening circles: the spine, the meridian, the axis of the body — expanding from core outward as renewal radiates.</div>
+      <div class="row"><b>Emotion</b> — Alignment, uprightness, calm strength. Balance you can feel.</div>
+      <div class="row"><b>Why it works</b> — The most literal expression of "Axis," yet abstract and architectural. Beautiful as a repeating vertical motif on spines and signage.</div>
+    </div>
+  </div>
+
+  <div class="logo-concept">
+    <div class="logo-art">
+      <svg width="110" height="110" viewBox="0 0 100 100">
+        <g fill="none" stroke="#1B1A17" stroke-width="1.1">
+          <circle cx="50" cy="50" r="14"/>
+          <circle cx="50" cy="50" r="26" stroke="#8E8574" stroke-width="0.8"/>
+          <circle cx="50" cy="50" r="38" stroke="#B9AF9E" stroke-width="0.6"/>
+        </g>
+        <circle cx="50" cy="12" r="2.6" fill="#C7A96B"/>
+        <circle cx="50" cy="24" r="2.2" fill="#8E8574"/>
+      </svg>
+    </div>
+    <div>
+      <div class="cnum">Concept 05</div>
+      <h4>Concentric Renewal</h4>
+      <div class="row"><b>Symbol</b> — Concentric rings — like a cross-section of growth, tree ring or ripple — expand from a still center, a gold node marking the point of regeneration.</div>
+      <div class="row"><b>Emotion</b> — Time, continuity, the accumulation of vitality. Serene and infinite.</div>
+      <div class="row"><b>Why it works</b> — Reads as topography, sound wave and cellular horizon at once. A perfect quiet watermark and motion-graphic signature.</div>
+    </div>
+  </div>
+  <hr class="rule">
+  <p style="font-size:9pt;color:var(--stone-deep);">All marks are constructed on a shared geometric grid so the family remains coherent. The gold node — the fixed center — is the constant thread across every concept: the axis around which renewal turns.</p>
+  <div class="footer"><span>RegenerAxis</span><span>03 · Visual Identity</span></div>
+</section>
+
+<!-- ============ 04 COLOR ============ -->
+<section class="page stone">
+  <div class="section-num">04 — Color</div>
+  <h2 class="section-title serif">Color Palette</h2>
+  <p>An earthed, mineral palette — stone and ivory grounded by warm black, lifted by a single restrained champagne. No blue "medical" tones; no bright "wellness" greens. Luxury lives in restraint.</p>
+
+  <h3 class="sub">Primary</h3>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="chip" style="background:#F4F0E8;"></div>
+      <div class="meta"><div class="name">Eternal Ivory</div><div class="hex">HEX #F4F0E8 · RGB 244 240 232</div>
+      <div class="psy">Space, light, purity of intention. The canvas of calm — the eternal-spring daylight of Medellín.</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#1B1A17;"></div>
+      <div class="meta"><div class="name">Warm Black</div><div class="hex">HEX #1B1A17 · RGB 27 26 23</div>
+      <div class="psy">Authority, discretion, gravitas. Softer than pure black — expensive, never severe.</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#B9AF9E;"></div>
+      <div class="meta"><div class="name">River Stone</div><div class="hex">HEX #B9AF9E · RGB 185 175 158</div>
+      <div class="psy">Permanence, nature, tactility. The mineral neutral that reads as timeless rather than trendy.</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#3B3A37;"></div>
+      <div class="meta"><div class="name">Graphite</div><div class="hex">HEX #3B3A37 · RGB 59 58 55</div>
+      <div class="psy">Intelligence, precision, structure. The voice of the science — quiet and exact.</div></div></div>
+  </div>
+
+  <h3 class="sub">Secondary</h3>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="chip" style="background:#6E7154;"></div>
+      <div class="meta"><div class="name">Cordillera Olive</div><div class="hex">HEX #6E7154 · RGB 110 113 84</div>
+      <div class="psy">Living nature, regeneration, the surrounding mountains. Organic without cliché.</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#EAE4D8;"></div>
+      <div class="meta"><div class="name">Bone</div><div class="hex">HEX #EAE4D8 · RGB 234 228 216</div>
+      <div class="psy">Warmth, paper, hospitality. A gentle second surface for panels and rest.</div></div></div>
+  </div>
+
+  <h3 class="sub">Accent</h3>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="chip" style="background:#C7A96B;"></div>
+      <div class="meta"><div class="name">Champagne Gold</div><div class="hex">HEX #C7A96B · RGB 199 169 107</div>
+      <div class="psy">Exclusivity, the precious, the core of renewal. Used sparingly — a single thread, never a field.</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#8E8574;"></div>
+      <div class="meta"><div class="name">Deep Stone</div><div class="hex">HEX #8E8574 · RGB 142 133 116</div>
+      <div class="psy">Grounding, subtlety, refinement. Bridges the neutrals; ideal for fine rules and captions.</div></div></div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>04 · Color Palette</span></div>
+</section>
+
+<!-- ============ 05 TYPOGRAPHY ============ -->
+<section class="page">
+  <div class="section-num">05 — Typography</div>
+  <h2 class="section-title serif">Typography</h2>
+  <p>A two-voice system: a high, calm serif for the human and the emotional; a precise neo-grotesque for the scientific and the functional. Swiss luxury hotel meets Apple minimalism.</p>
+
+  <div class="spec">
+    <div class="label">Headline — High-contrast serif · e.g. Canela / Cormorant Garamond</div>
+    <div class="big-serif">Renewal, authored.</div>
+    <div class="glyphs">A G R a e g · The elegance of a grand hotel's stationery. Light weights, generous leading, wide margins.</div>
+  </div>
+
+  <div class="spec">
+    <div class="label">Body — Neo-grotesque sans · e.g. Neue Haas / Inter</div>
+    <div class="big-sans">Frontier longevity science, delivered with the grace of great hospitality.</div>
+    <div class="glyphs">Weights 300–500 only. Optimized for long-form clarity and clinical trust — the Apple discipline.</div>
+  </div>
+
+  <div class="spec">
+    <div class="label">Accent — Geometric sans, letterspaced · e.g. Jost / Futura</div>
+    <div class="accent-type">The Axis of Human Renewal</div>
+    <div class="glyphs">Uppercase, 0.3em+ tracking. For kickers, navigation, and labels — the whisper, not the shout.</div>
+  </div>
+
+  <hr class="rule">
+  <div class="cols" style="font-size:9pt;">
+    <div><h3 class="sub">Why this pairing</h3>
+    <p>The serif carries warmth, heritage and the confidence to leave things unsaid — it makes the brand feel authored by people, not protocols. The grotesque carries evidence and modernity, signaling that beneath the beauty sits real science. Held apart by disciplined white space, the two never compete.</p></div>
+    <div><h3 class="sub">Rules</h3>
+    <p>Headlines set in light serif, tightly kerned. Body never below 300 weight. Accent type always uppercase and widely tracked. Never mix more than these three voices. When in doubt, remove weight and add space.</p></div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>05 · Typography</span></div>
+</section>
+
+<!-- ============ 06 BRAND ELEMENTS ============ -->
+<section class="page stone">
+  <div class="section-num">06 — System</div>
+  <h2 class="section-title serif">Brand Elements</h2>
+  <div class="cols">
+    <div>
+      <h3 class="sub">Iconography</h3>
+      <p>A single-weight line system (0.75pt) built on the logo's geometry. Rounded terminals, generous internal space, always monoline. Icons feel drawn by an architect, never a medical-supply catalog.</p>
+      <h3 class="sub">Patterns</h3>
+      <p>A subtle "axis field" — fine concentric rings and intersecting vesica arcs, printed tone-on-tone or blind-embossed. Used at 5–10% presence: a watermark, an endpaper, a foil detail. Never busy.</p>
+      <h3 class="sub">Shapes</h3>
+      <p>The vesica (lens), the circle, and the soft-cornered rectangle. Everything radiates from a center. Compositions favor a strong vertical axis and asymmetric balance.</p>
+      <h3 class="sub">Illustrations</h3>
+      <p>Rare and precious. When used: fine gold-line botanical and cellular studies, in the manner of antique scientific engravings — beautiful accuracy, not decoration.</p>
+    </div>
+    <div>
+      <h3 class="sub">Photography Direction</h3>
+      <p>Natural light, long shadows, matte film grain. Warm neutrals and living green. Architecture, stone, water, skin and mountain light — never equipment or lab coats. People shown mid-breath, at rest, in profile. Human, aspirational, unhurried. Faces are calm; nothing is clinical.</p>
+      <h3 class="sub">Art Direction</h3>
+      <p>Editorial and spacious, closer to <em>Kinfolk</em> or a Aman lookbook than a medical brochure. One idea per frame. Deep negative space. Texture over gloss: linen, travertine, brushed brass, raw plaster.</p>
+      <h3 class="sub">Website Visual Language</h3>
+      <p>Ivory canvases, full-bleed imagery, hairline gold rules, and typography given room to breathe. Motion is slow and intentional. The interface recedes so the science and the sanctuary can speak.</p>
+    </div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>06 · Brand Elements</span></div>
+</section>
+
+<!-- ============ 07 WEBSITE ============ -->
+<section class="page dark">
+  <div class="section-num">07 — Digital</div>
+  <h2 class="section-title serif">Website Creative Direction</h2>
+  <p class="lead">40% Aman · 30% Apple · 20% Clinique La Prairie · 10% Four Seasons — quiet luxury, science made serene.</p>
+  <hr class="rule">
+  <div class="cols">
+    <div>
+      <h3 class="sub">Hero Section</h3>
+      <p>A single full-bleed, slow-panning film — mountain light across stone, a still pool, a figure at rest. Over it, one restrained line of light serif and a single fine-lined call to action ("Begin Your Assessment"). No carousel, no clutter. The logo sits small and centered.</p>
+      <h3 class="sub">Layout</h3>
+      <p>Generous single-column storytelling with occasional asymmetric two-column breaks. Tall vertical rhythm, wide margins, content revealed one considered section at a time as you scroll.</p>
+      <h3 class="sub">Navigation</h3>
+      <p>Minimal top bar that fades on scroll: wordmark centered, a slim menu and a single gold "Enquire" link. A quiet full-screen overlay menu set in letterspaced accent caps.</p>
+      <h3 class="sub">Image Style</h3>
+      <p>Cinematic, warm, matte. Architecture and nature lead; science appears as elegant abstraction (macro tissue, light through glass) rather than clinical documentation.</p>
+    </div>
+    <div>
+      <h3 class="sub">Animation Style</h3>
+      <p>Slow fades and gentle parallax, 600–900ms easing. Text rises a few pixels into place. Nothing bounces, nothing rushes. Motion signals calm competence, echoing Apple's restraint.</p>
+      <h3 class="sub">White Space</h3>
+      <p>The primary design material. At least 40% of every viewport is empty. Space communicates confidence and exclusivity — the digital equivalent of a great lobby.</p>
+      <h3 class="sub">UI Principles</h3>
+      <p>One action per screen. Hairline rules, no hard shadows, no gradients. Buttons are thin outlines that fill on hover. Type does the work; ornament is nearly absent. Accessibility and load speed treated as luxuries, not afterthoughts.</p>
+      <div class="callout"><div class="serif">"The site should feel like walking into a quiet, sunlit room — and realizing everything in it was chosen for you."</div></div>
+    </div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>07 · Website</span></div>
+</section>
+
+<!-- ============ 08 MOODBOARDS ============ -->
+<section class="page">
+  <div class="section-num">08 — Creative Directions</div>
+  <h2 class="section-title serif">Moodboards</h2>
+  <p>Three coherent worlds. Each is a complete answer; the final recommendation follows.</p>
+
+  <div class="mood">
+    <div class="head" style="background:#1B1A17;">
+      <div class="mnum">Option One</div><h4>Ultra Luxury Longevity Institute</h4>
+    </div>
+    <div class="body">
+      <div class="palette-row"><div style="background:#1B1A17;"></div><div style="background:#3B3A37;"></div><div style="background:#B9AF9E;"></div><div style="background:#F4F0E8;"></div><div style="background:#C7A96B;"></div></div>
+      <dl>
+        <dt>Colors</dt><dd>Warm black &amp; graphite grounded by ivory, threaded with champagne gold.</dd>
+        <dt>Fonts</dt><dd>High-contrast serif headlines, precise grotesque body — maximum restraint.</dd>
+        <dt>Materials</dt><dd>Travertine, brushed bronze, smoked glass, dark oak, hand-bound linen.</dd>
+        <dt>Photography</dt><dd>Low, dramatic light; architecture and stillness; the human form as sculpture.</dd>
+        <dt>Interiors</dt><dd>Clinique La Prairie meets a private members' club — hushed, monumental, discreet.</dd>
+        <dt>Feeling</dt><dd>Rarefied authority. You have arrived somewhere very few can.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="mood">
+    <div class="head" style="background:#3B3A37;">
+      <div class="mnum">Option Two</div><h4>Modern Human Optimization Lab</h4>
+    </div>
+    <div class="body">
+      <div class="palette-row"><div style="background:#F4F0E8;"></div><div style="background:#EAE4D8;"></div><div style="background:#B9AF9E;"></div><div style="background:#3B3A37;"></div><div style="background:#C7A96B;"></div></div>
+      <dl>
+        <dt>Colors</dt><dd>Ivory &amp; bone dominant, graphite for text, a whisper of gold. Bright, clean, exact.</dd>
+        <dt>Fonts</dt><dd>Grotesque-led, Apple-clean, with serif reserved for emotional moments.</dd>
+        <dt>Materials</dt><dd>Pale micro-cement, frosted glass, matte aluminium, blond wood, white linen.</dd>
+        <dt>Photography</dt><dd>Bright daylight, macro science as abstract art, precise product-style stills.</dd>
+        <dt>Interiors</dt><dd>An Apple store's clarity crossed with a Scandinavian research spa.</dd>
+        <dt>Feeling</dt><dd>Optimistic precision. The future of your body, made calm and legible.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="footer"><span>RegenerAxis</span><span>08 · Moodboards</span></div>
+</section>
+
+<section class="page">
+  <div class="section-num">08 — Creative Directions</div>
+  <h2 class="section-title serif">Moodboards, continued</h2>
+
+  <div class="mood">
+    <div class="head" style="background:#565839;">
+      <div class="mnum">Option Three</div><h4>Mediterranean Wellness Sanctuary</h4>
+    </div>
+    <div class="body">
+      <div class="palette-row"><div style="background:#EAE4D8;"></div><div style="background:#B9AF9E;"></div><div style="background:#6E7154;"></div><div style="background:#8E8574;"></div><div style="background:#C7A96B;"></div></div>
+      <dl>
+        <dt>Colors</dt><dd>Sun-warmed bone, river stone, cordillera olive, deep stone, soft gold.</dd>
+        <dt>Fonts</dt><dd>Humanist serif with warmth; relaxed, generous grotesque for body.</dd>
+        <dt>Materials</dt><dd>Lime plaster, terracotta, aged brass, raw linen, olive wood, natural stone.</dd>
+        <dt>Photography</dt><dd>Golden-hour warmth, gardens and water, tactile texture, barefoot ease.</dd>
+        <dt>Interiors</dt><dd>Aman &amp; SHA Wellness — earthen, serene, indoor-outdoor, deeply restorative.</dd>
+        <dt>Feeling</dt><dd>Homecoming. The body exhales; the eternal spring does the healing.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:26px;">
+    <div class="serif">The recommended path braids these worlds: the authority of One, the clarity of Two, and the soul of Three — with Three as the emotional anchor.</div>
+  </div>
+  <div class="footer"><span>RegenerAxis</span><span>08 · Moodboards</span></div>
+</section>
+
+<!-- ============ 09 PROMPTS ============ -->
+<section class="page stone">
+  <div class="section-num">09 — Production</div>
+  <h2 class="section-title serif">Logo Generation Prompts</h2>
+  <p>Detailed prompts for AI image generation (Midjourney / DALL·E / Firefly). Copy directly; adjust the closing parameters to your tool.</p>
+
+  <div class="prompt-box">
+    <div class="ptitle">Direction A — The Axis Bloom (primary mark)</div>
+    <div class="ptext">Minimalist luxury logo mark for a longevity brand, two intersecting vesica-piscis lens shapes rotated 90 degrees forming a four-petal cellular bloom around a single small gold dot at the exact center, thin monoline strokes, perfectly symmetrical sacred geometry, warm champagne gold (#C7A96B) and warm black (#1B1A17) on eternal ivory (#F4F0E8) background, generous negative space, timeless, refined, high-end spa and medical hospitality, embossed on textured cotton paper mockup, elegant, understated, no text, vector, flat, award-winning brand identity --style raw --v 6</div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="ptitle">Direction B — The Regenerative Cell</div>
+    <div class="ptext">Elegant geometric logo icon, nested hexagons echoing a mitochondrion and honeycomb, concentric thin lines from outer to inner hexagon, tiny luminous gold center node, monoline, precise engineering-meets-biology aesthetic, warm black on ivory with a single champagne-gold accent, luxury wellness longevity institute, blind deboss on ivory linen business card, sophisticated minimal, ample white space, no medical cross, no DNA helix, no leaves, vector logo --v 6</div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="ptitle">Direction C — The Monogram Seal (with wordmark)</div>
+    <div class="ptext">Luxury monogram logo, refined high-contrast serif capital letter "R" cradled by an open thin golden arc beneath it, enclosed in a fine circular ring like a maison signet, below it the wordmark "REGENERAXIS" in widely letterspaced light geometric sans caps, warm black and champagne gold on ivory, crest-like, heritage, exclusive private clinic and resort, gold foil stamp on warm-black matte cover mockup, timeless, elegant, editorial --v 6</div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="ptitle">Direction D — Concentric Renewal + mockup suite</div>
+    <div class="ptext">Brand identity mockup for a premium longevity destination, logo of fine concentric rings radiating from a still center with a single small gold node offset at top, shown across a suite: gold-foil business card on travertine, embossed ivory linen folder, glass door signage with brushed-bronze lettering, minimal website hero on laptop, warm neutral palette of stone ivory graphite and champagne gold, soft natural light, quiet luxury, Aman-resort mood, photorealistic flat-lay, sophisticated, spacious composition --ar 3:2 --v 6</div>
+  </div>
+
+  <div class="footer"><span>RegenerAxis</span><span>09 · Logo Prompts</span></div>
+</section>
+
+<!-- ============ 10 RECOMMENDATION ============ -->
+<section class="page dark">
+  <div class="section-num">10 — Direction</div>
+  <h2 class="section-title serif">Final Recommendation</h2>
+  <p class="lead">Lead with the Axis Bloom mark and the Mediterranean Wellness Sanctuary world — disciplined by the Longevity Institute's authority.</p>
+  <hr class="rule">
+  <p>Of the five marks, <strong>Concept 01, The Axis Bloom</strong>, is the strongest and only true expression of the name. It resolves the brand's central tension in one figure: it is unmistakably scientific (cellular division, sacred-geometric precision) yet unmistakably serene (a slow-opening bloom around a still center). It is ownable, infinitely scalable, and it will look as considered debossed on a linen robe as it does animated on a phone.</p>
+  <p>For the world it lives in, <strong>Option Three, the Mediterranean Wellness Sanctuary</strong>, should be the emotional foundation — because it is the only direction that captures <em>why Medellín</em>. The earthen materials, golden light and indoor-outdoor calm turn the location from a footnote into the product. But it must be held to a higher standard of rigor by borrowing the typographic discipline and gravitas of <strong>Option One</strong>, and the clarity and digital polish of <strong>Option Two</strong> in all screen-based and clinical touchpoints.</p>
+  <h3 class="sub">Why this wins the international client</h3>
+  <p>Affluent executives, founders and HNW travelers from the US, Canada and Europe are fluent in luxury and instantly detect the fake. They are drawn to Aman and Loro Piana precisely because those brands never oversell. This system speaks their dialect: restraint over spectacle, evidence over hype, and warmth over sterility. It reassures them that the science is serious (the mineral palette, the grotesque, the precise mark) while promising the experience will be restorative, discreet and beautiful (the serif, the light, the earthen sanctuary). It positions RegenerAxis not as a clinic they must endure but as a destination they will want to return to — and quietly recommend to precisely three of their peers.</p>
+  <div class="callout"><div class="serif">"Serious enough to trust with your biology. Beautiful enough to call a holiday. Discreet enough to keep to yourself."</div></div>
+  <div class="footer"><span>RegenerAxis</span><span>10 · Recommendation</span></div>
+</section>
+
+</body>
+</html>
