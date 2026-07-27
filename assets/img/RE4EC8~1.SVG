@@ -1,0 +1,15 @@
+<svg width="700" height="600" viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg">
+  <title>RegenerAxis — Logo salud premium (salvia + pizarra sobre marfil)</title>
+  <desc>Marca de dos elipses cruzadas en monolínea, azul pizarra y verde salvia, sobre marfil, con anillo pizarra, ejes tenues y punto salvia central; wordmark RegenerAxis con "Regener" en pizarra y "Axis" en salvia, y lema THE AXIS OF HUMAN RENEWAL.</desc>
+  <rect width="700" height="600" fill="#F4F0E8"/>
+  <circle cx="350" cy="185" r="115" fill="none" stroke="#2C4A52" stroke-width="1.1" opacity="0.8"/>
+  <line x1="350" y1="60" x2="350" y2="310" stroke="#2C4A52" stroke-width="0.9" opacity="0.35"/>
+  <line x1="225" y1="185" x2="475" y2="185" stroke="#2C4A52" stroke-width="0.9" opacity="0.28"/>
+  <ellipse cx="350" cy="185" rx="44" ry="96" fill="none" stroke="#2C4A52" stroke-width="2.4"/>
+  <ellipse cx="350" cy="185" rx="96" ry="44" fill="none" stroke="#808D6A" stroke-width="2.4"/>
+  <circle cx="350" cy="185" r="9.5" fill="#808D6A"/>
+  <text x="350" y="455" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="76" letter-spacing="1">
+    <tspan fill="#2C4A52">Regener</tspan><tspan fill="#808D6A">Axis</tspan>
+  </text>
+  <text x="350" y="505" text-anchor="middle" fill="#8A8E80" font-family="'Century Gothic', 'Jost', sans-serif" font-size="17" letter-spacing="9">THE AXIS OF HUMAN RENEWAL</text>
+</svg>
