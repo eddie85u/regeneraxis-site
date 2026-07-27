@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('ra_theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
   <title>RegenerAxis · Regenerative Medicine & Human Optimization · Medellín</title>
   <meta name="description" content="Physician-guided regenerative programs, personalized to your biology, in Medellín, the City of Eternal Spring.">
 
-  <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://regeneraxis.com/en/">
   <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
   <link rel="alternate" hreflang="es" href="https://regeneraxis.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/en/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="RegenerAxis · The Axis of Human Renewal">
   <meta property="og:description" content="Physician-guided regenerative programs, personalized to your biology, in Medellín.">
@@ -20,17 +19,14 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_CO">
 
-  <!-- Favicon -->
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/styles.css">
 
-  <!-- schema.org MedicalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,14 +43,13 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="wrap">
       <nav class="nav" aria-label="Primary">
         <a class="nav__brand" href="./index.html" aria-label="RegenerAxis home">
-          <!-- LOGO: paste your inline SVG here (replace this block). Keep the gold node #C7A96B. -->
+          <!-- Inline Axis Bloom mark. Strokes recolor by theme via .logo-stroke. Gold node fixed. -->
           <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
-            <g fill="none" stroke="#1B1A17" stroke-width="1.6">
+            <g class="logo-stroke" fill="none" stroke-width="1.5">
               <ellipse cx="50" cy="50" rx="15" ry="28"/>
               <ellipse cx="50" cy="50" rx="28" ry="15"/>
             </g>
@@ -75,6 +70,10 @@
             <a href="../en/index.html" class="active">EN</a>
             <a href="../es/index.html">ES</a>
           </span>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light or dark theme">
+            <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+          </button>
         </div>
 
         <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
@@ -86,10 +85,8 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero__media">
-        <!-- Replace with hero image/video: athlete / executive / recovery, warm matte tone -->
         <img src="../assets/img/hero.jpg" alt="" loading="eager" onerror="this.style.display='none'">
       </div>
       <div class="wrap hero__inner reveal">
@@ -102,47 +99,26 @@
       </div>
     </section>
 
-    <!-- ============ MANIFESTO ============ -->
     <section class="section strip-dark manifesto">
       <div class="wrap narrow center reveal">
         <p data-i18n="manifesto.body">Recovery is no longer passive. Longevity is no longer about simply living longer. Performance is no longer reserved for elite athletes. The future of wellness is proactive, personalized, and guided by science. Welcome to a new era of human optimization.</p>
       </div>
     </section>
 
-    <!-- ============ WHO IS THIS FOR ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="eyebrow-center reveal">
-          <span class="kicker" data-i18n="who.kicker">Find your starting point</span>
-        </div>
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="who.kicker">Find your starting point</span></div>
         <div class="grid grid--4 reveal-stagger">
-          <article class="card">
-            <div class="card__num">01</div>
-            <h3 data-i18n="who.athlete.title">The Athlete</h3>
-            <p data-i18n="who.athlete.body">You train at the limit. You want to recover faster, protect your joints, and return stronger to every session.</p>
-          </article>
-          <article class="card">
-            <div class="card__num">02</div>
-            <h3 data-i18n="who.executive.title">The Executive</h3>
-            <p data-i18n="who.executive.body">You carry pressure all day. You want deeper sleep, sharper focus, and energy that lasts past noon.</p>
-          </article>
-          <article class="card">
-            <div class="card__num">03</div>
-            <h3 data-i18n="who.metabolic.title">The Metabolic Reset</h3>
-            <p data-i18n="who.metabolic.body">You have tried diets and discipline. You want to lose fat with medical guidance and keep it off.</p>
-          </article>
-          <article class="card">
-            <div class="card__num">04</div>
-            <h3 data-i18n="who.longevity.title">The Longevity Seeker</h3>
-            <p data-i18n="who.longevity.body">You are not chasing youth. You want to feel strong, clear, and vital for decades to come.</p>
-          </article>
+          <article class="card"><div class="card__num">01</div><h3 data-i18n="who.athlete.title">The Athlete</h3><p data-i18n="who.athlete.body">You train at the limit. You want to recover faster, protect your joints, and return stronger to every session.</p></article>
+          <article class="card"><div class="card__num">02</div><h3 data-i18n="who.executive.title">The Executive</h3><p data-i18n="who.executive.body">You carry pressure all day. You want deeper sleep, sharper focus, and energy that lasts past noon.</p></article>
+          <article class="card"><div class="card__num">03</div><h3 data-i18n="who.metabolic.title">The Metabolic Reset</h3><p data-i18n="who.metabolic.body">You have tried diets and discipline. You want to lose fat with medical guidance and keep it off.</p></article>
+          <article class="card"><div class="card__num">04</div><h3 data-i18n="who.longevity.title">The Longevity Seeker</h3><p data-i18n="who.longevity.body">You are not chasing youth. You want to feel strong, clear, and vital for decades to come.</p></article>
         </div>
       </div>
     </section>
 
     <div class="wrap"><div class="divider-wrap"><hr class="hairline"></div></div>
 
-    <!-- ============ PROGRAMS PREVIEW ============ -->
     <section class="section" id="programs">
       <div class="wrap">
         <div class="narrow center eyebrow-center reveal">
@@ -150,46 +126,28 @@
           <h2 data-i18n="programs.title">Five programs. One method.</h2>
           <p class="lead" data-i18n="programs.intro">Every protocol begins with a medical assessment, is built from your clinical history and lab biomarkers, and is supervised by our physicians from the first day to the last. Individual results vary.</p>
         </div>
-        <!-- Cards injected from programs.json + locale by programs.js -->
         <div class="grid grid--3 reveal-stagger" id="programs-grid" data-programs-preview></div>
       </div>
     </section>
 
-    <!-- CTA repeat -->
     <section class="section strip-dark center">
       <div class="wrap narrow reveal">
-        <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
+        <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
       </div>
     </section>
 
-    <!-- ============ HOW IT WORKS ============ -->
     <section class="section" id="process">
       <div class="wrap">
-        <div class="narrow eyebrow-center reveal">
-          <span class="kicker" data-i18n="how.kicker">The journey</span>
-        </div>
+        <div class="narrow eyebrow-center reveal"><span class="kicker" data-i18n="how.kicker">The journey</span></div>
         <div class="narrow steps reveal-stagger">
-          <div class="step">
-            <div class="step__n"></div>
-            <div><h3 data-i18n="how.s1.title">Medical Assessment</h3><p data-i18n="how.s1.body">A private consultation to understand your goals, history, and lifestyle. International clients may begin remotely.</p></div>
-          </div>
-          <div class="step">
-            <div class="step__n"></div>
-            <div><h3 data-i18n="how.s2.title">Biomarker Review</h3><p data-i18n="how.s2.body">Laboratory testing gives us an objective picture of your biology.</p></div>
-          </div>
-          <div class="step">
-            <div class="step__n"></div>
-            <div><h3 data-i18n="how.s3.title">Personalized Protocol</h3><p data-i18n="how.s3.body">Your physician designs a program built for your body and your objectives.</p></div>
-          </div>
-          <div class="step">
-            <div class="step__n"></div>
-            <div><h3 data-i18n="how.s4.title">Optimization & Follow-Up</h3><p data-i18n="how.s4.body">We monitor, adjust, and refine throughout your cycle.</p></div>
-          </div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Medical Assessment</h3><p data-i18n="how.s1.body">A private consultation to understand your goals, history, and lifestyle. International clients may begin remotely.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Biomarker Review</h3><p data-i18n="how.s2.body">Laboratory testing gives us an objective picture of your biology.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Personalized Protocol</h3><p data-i18n="how.s3.body">Your physician designs a program built for your body and your objectives.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Optimization & Follow-Up</h3><p data-i18n="how.s4.body">We monitor, adjust, and refine throughout your cycle.</p></div></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ WHY MEDELLÍN ============ -->
     <section class="section" id="medellin">
       <div class="wrap">
         <div class="feature reveal">
@@ -203,19 +161,15 @@
       </div>
     </section>
 
-    <!-- ============ TESTIMONIALS (featured 3) ============ -->
     <section class="section strip-dark">
       <div class="wrap">
         <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">In their words</span></div>
         <div class="grid grid--3 reveal-stagger" id="tst-featured" data-tst-featured></div>
         <p class="tst-note center mt-lg" data-i18n="tst.note">Individual experiences. Results vary.</p>
-        <div class="center mt-lg reveal">
-          <a class="link-quiet" href="./testimonials.html" data-i18n="tst.all">Read all experiences</a>
-        </div>
+        <div class="center mt-lg reveal"><a class="link-quiet" href="./testimonials.html" data-i18n="tst.all">Read all experiences</a></div>
       </div>
     </section>
 
-    <!-- ============ THE SCIENCE ============ -->
     <section class="section">
       <div class="wrap narrow reveal">
         <span class="kicker" data-i18n="science.kicker">The science</span>
@@ -225,52 +179,34 @@
       </div>
     </section>
 
-    <!-- ============ FAQ TEASER (top 5) ============ -->
     <section class="section strip-dark">
       <div class="wrap narrow">
         <div class="eyebrow-center reveal"><span class="kicker" data-i18n="faq.kicker">Before you book</span></div>
         <div id="faq-teaser" data-faq-teaser class="reveal"></div>
-        <div class="center mt-lg reveal">
-          <a class="link-quiet" href="./faq.html" data-i18n="faq.all">See all questions</a>
-        </div>
+        <div class="center mt-lg reveal"><a class="link-quiet" href="./faq.html" data-i18n="faq.all">See all questions</a></div>
       </div>
     </section>
 
-    <!-- ============ FINAL CTA ============ -->
     <section class="section">
       <div class="wrap narrow">
-        <!-- What to expect strip: resolves objections BEFORE the paid click -->
         <ul class="expect reveal-stagger" aria-label="What to expect">
-          <li>
-            <span class="kicker" data-i18n="expect.a.k">What it includes</span>
-            <p data-i18n="expect.a.body">A private physician consultation, review of your goals and history, and the lab biomarkers to personalize your program.</p>
-          </li>
-          <li>
-            <span class="kicker" data-i18n="expect.b.k">How long it takes</span>
-            <p data-i18n="expect.b.body">A focused session with your medical team, plus a clear plan you leave with whether or not you continue.</p>
-          </li>
-          <li>
-            <span class="kicker" data-i18n="expect.c.k">From anywhere</span>
-            <p data-i18n="expect.c.body">International clients can begin remotely, then coordinate travel to Medellín to start in person.</p>
-          </li>
+          <li><span class="kicker" data-i18n="expect.a.k">What it includes</span><p data-i18n="expect.a.body">A private physician consultation, review of your goals and history, and the lab biomarkers to personalize your program.</p></li>
+          <li><span class="kicker" data-i18n="expect.b.k">How long it takes</span><p data-i18n="expect.b.body">A focused session with your medical team, plus a clear plan you leave with whether or not you continue.</p></li>
+          <li><span class="kicker" data-i18n="expect.c.k">From anywhere</span><p data-i18n="expect.c.body">International clients can begin remotely, then coordinate travel to Medellín to start in person.</p></li>
         </ul>
-
         <div class="center reveal">
           <h2 data-i18n="final.title">Your biology deserves a strategy.</h2>
           <p class="lead" data-i18n="final.subline">Begin with a private medical assessment. In person in Medellín, or remotely if you are traveling to us.</p>
           <div class="btn-row" style="justify-content:center">
             <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
           </div>
-          <p class="tst-note mt-lg" data-i18n="final.questions" data-i18n-html>
-            Questions before booking? Read our <a href="./faq.html">FAQ</a> or write via WhatsApp: +57 313 8750104
-          </p>
+          <p class="tst-note mt-lg" data-i18n="final.questions" data-i18n-html>Questions before booking? Read our <a href="./faq.html">FAQ</a> or write via WhatsApp: +57 313 8750104</p>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
