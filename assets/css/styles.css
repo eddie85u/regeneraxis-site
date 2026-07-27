@@ -1,10 +1,10 @@
 /* ============================================================
-   RegenerAxis — Brand Style System
-   Quiet luxury. Editorial. 40%+ white space.
+   RegenerAxis — Brand Style System (themed)
+   Dark default. Full light/dark flip via [data-theme].
    ============================================================ */
 
 :root {
-  /* Palette (strict, from brand files) */
+  /* Raw brand palette (never changes) */
   --ivory:       #F4F0E8;
   --warm-black:  #1B1A17;
   --graphite:    #3B3A37;
@@ -13,13 +13,6 @@
   --olive:       #6E7154;
   --deep-stone:  #8E8574;
   --gold:        #C7A96B;
-
-  /* Semantic */
-  --bg:          var(--ivory);
-  --ink:         var(--warm-black);
-  --muted:       var(--graphite);
-  --hairline:    rgba(199, 169, 107, 0.45); /* gold hairline */
-  --hairline-soft: rgba(59, 58, 55, 0.14);
 
   /* Type */
   --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -34,6 +27,49 @@
   /* Motion */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --dur: 480ms;
+}
+
+/* ---- DARK THEME (default) ---- */
+:root, [data-theme="dark"] {
+  --bg:            var(--warm-black);
+  --ink:           var(--ivory);
+  --muted:         var(--river-stone);
+  --hairline:      rgba(199, 169, 107, 0.5);
+  --hairline-soft: rgba(244, 240, 232, 0.14);
+
+  --surface:       #211F1B;            /* cards on dark bg */
+  --strip-bg:      var(--ivory);       /* inverted strips = light */
+  --strip-ink:     var(--warm-black);
+  --strip-muted:   var(--graphite);
+  --strip-kicker:  var(--deep-stone);
+
+  --header-bg:     rgba(27, 26, 23, 0.82);
+  --hero-bg:       var(--warm-black);
+  --footer-bg:     #131210;
+}
+
+/* ---- LIGHT THEME ---- */
+[data-theme="light"] {
+  --bg:            var(--ivory);
+  --ink:           var(--warm-black);
+  --muted:         var(--graphite);
+  --hairline:      rgba(199, 169, 107, 0.45);
+  --hairline-soft: rgba(59, 58, 55, 0.14);
+
+  --surface:       var(--ivory);
+  --strip-bg:      var(--warm-black);  /* strips = dark on light site */
+  --strip-ink:     var(--ivory);
+  --strip-muted:   var(--river-stone);
+  --strip-kicker:  var(--river-stone);
+
+  --header-bg:     rgba(244, 240, 232, 0.82);
+  --hero-bg:       var(--warm-black);  /* hero stays dark in both themes */
+  --footer-bg:     var(--warm-black);
+}
+
+/* Smooth theme transition */
+body, .card, .site-header, .strip-dark, .site-footer {
+  transition: background-color 400ms var(--ease), color 400ms var(--ease), border-color 400ms var(--ease);
 }
 
 /* ---------- Reset ---------- */
