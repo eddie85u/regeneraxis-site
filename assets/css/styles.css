@@ -54,6 +54,7 @@
 
   --logo-stroke:   var(--ivory);
   --header-bg:     rgba(27, 26, 23, 0.82);
+  --header-scrim:  rgba(20, 19, 15, 0.55);   /* subtle always-on backdrop over the hero */
 
   --hero-bg:       var(--warm-black);
   --hero-ink:      var(--ivory);
@@ -81,6 +82,7 @@
 
   --logo-stroke:   var(--warm-black);
   --header-bg:     rgba(244, 240, 232, 0.85);
+  --header-scrim:  rgba(244, 240, 232, 0.6);  /* subtle always-on backdrop over the hero */
 
   --hero-bg:       var(--bone);
   --hero-ink:      var(--warm-black);
@@ -201,6 +203,8 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 /* ---------- Header / Nav ---------- */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--header-scrim);
+  backdrop-filter: blur(6px);
   transition: background 300ms var(--ease), backdrop-filter 300ms var(--ease), border-color 300ms var(--ease);
   border-bottom: 1px solid transparent;
 }
@@ -221,7 +225,13 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
   transition: color 200ms var(--ease);
 }
 .nav__links a:hover, .nav__links a.active { color: var(--gold); }
-.nav__enquire { border: 1px solid var(--gold); padding: 0.7em 1.4em; color: var(--gold) !important; }
+.nav__links a.nav__enquire {
+  border: 1px solid var(--gold); padding: 0.7em 1.4em; color: var(--ink);
+  transition: background 200ms var(--ease), color 200ms var(--ease);
+}
+.nav__links a.nav__enquire:hover, .nav__links a.nav__enquire:focus-visible {
+  background: var(--gold); color: var(--warm-black);
+}
 
 .lang-toggle { display: inline-flex; border: 1px solid var(--hairline-soft); }
 .lang-toggle a { padding: 0.4em 0.8em; font-size: 0.68rem; letter-spacing: 0.15em; color: var(--deep-stone); }

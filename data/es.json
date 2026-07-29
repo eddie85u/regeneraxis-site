@@ -13,6 +13,7 @@
   "who": {
     "kicker": "Encuentra tu punto de partida",
     "title": "Para quién es esto.",
+    "lead": "¿Te identificas con alguno de estos? Fatiga que no cede, recuperación lenta, grasa que no baja por más que lo intentas y foco que se apaga a media tarde. Son señales, no sentencias, y se pueden trabajar con un plan médico.",
     "athlete": { "title": "El Atleta", "body": "Entrenas al límite. Quieres recuperarte más rápido, proteger tus articulaciones y volver más fuerte a cada sesión." },
     "executive": { "title": "El Ejecutivo", "body": "Vives bajo presión. Quieres dormir profundo, pensar con claridad y sostener tu energía todo el día." },
     "metabolic": { "title": "El Reset Metabólico", "body": "Ya intentaste dietas y disciplina. Quieres bajar grasa con respaldo médico y mantener el resultado." },
@@ -100,7 +101,13 @@
   "medellin": {
     "kicker": "El destino",
     "title": "La ciudad donde la primavera nunca termina.",
-    "body": "Medellín tiene un clima que el cuerpo encuentra naturalmente restaurador durante todo el año, la razón por la que la llaman la Ciudad de la Eterna Primavera. Aquí encuentras médicos de clase mundial, verdadera privacidad y atención premium a precios justos y transparentes. Vivas en la ciudad o vengas desde otra parte de Colombia, el entorno no es un detalle. Es parte de la terapia."
+    "body": "Medellín tiene un clima que el cuerpo encuentra naturalmente restaurador durante todo el año, la razón por la que la llaman la Ciudad de la Eterna Primavera. Aquí encuentras médicos de clase mundial, verdadera privacidad y atención premium a precios justos y transparentes. Vivas en la ciudad o vengas desde otra parte de Colombia, el entorno no es un detalle. Es parte de la terapia.",
+    "p1t": "Atención en tu idioma",
+    "p1b": "Médicos que te atienden en español e inglés, con comunicación clara en cada paso.",
+    "p2t": "Red médica vetada, precios transparentes",
+    "p2b": "Una red curada de especialistas y atención premium a precios justos, sin las cifras de Norteamérica.",
+    "p3t": "Proceso ágil, sin fricción",
+    "p3b": "Te emparejamos con el programa adecuado y coordinamos todo; si vienes de otra ciudad, puedes iniciar de forma remota."
   },
 
   "tst": {
@@ -114,8 +121,8 @@
   "science": {
     "kicker": "La ciencia",
     "title": "Primero estudiamos tu biología.",
-    "body": "Nuestros programas se apoyan en la medicina regenerativa y de longevidad: ciencia de péptidos, señalización celular y exosomas, enfoques con células madre y plasma rico en plaquetas (PRP), sueroterapia de nutrientes y optimización hormonal, todo aplicado bajo supervisión médica y personalizado mediante diagnósticos. El foco son resultados reales: recuperación, resistencia, bienestar metabólico y cardiovascular, manejo del peso y regeneración saludable. No ofrecemos soluciones genéricas. Primero estudiamos tu biología, y luego construimos el protocolo a tu medida.",
-    "note": "Nota: Esta información es educativa y no reemplaza el consejo médico individualizado."
+    "body": "Nuestros programas se apoyan en la medicina regenerativa y de longevidad: secuencias de aminoácidos dirigidas, señalización celular y exosomas, enfoques con células madre y plasma rico en plaquetas (PRP), sueroterapia de nutrientes y optimización hormonal, todo aplicado bajo supervisión médica y personalizado mediante diagnósticos. El foco son resultados reales: recuperación, resistencia, bienestar metabólico y cardiovascular, manejo del peso y regeneración saludable. No ofrecemos soluciones genéricas. Primero estudiamos tu biología, y luego construimos el protocolo a tu medida.",
+    "note": "Cada protocolo se define, personaliza y supervisa por nuestros médicos tras tu valoración. Los resultados varían de una persona a otra."
   },
 
   "faq": {

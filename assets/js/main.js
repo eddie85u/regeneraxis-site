@@ -26,6 +26,19 @@ function persistLangFromPath() {
   try { localStorage.setItem("ra_lang", lang); } catch (e) {}
 }
 
+/* ---- Language toggle: record the visitor's explicit choice BEFORE navigating,
+   so the root redirect (which sends ra_lang="en" visitors to /en/) respects a
+   switch back to Spanish instead of bouncing them straight back to English. ---- */
+function initLangToggle() {
+  document.querySelectorAll(".lang-toggle a").forEach((el) => {
+    const href = el.getAttribute("href") || "";
+    const target = /(^|\/)en\/|en\/index/.test(href) ? "en" : "es";
+    el.addEventListener("click", () => {
+      try { localStorage.setItem("ra_lang", target); } catch (e) {}
+    });
+  });
+}
+
 /* ---- Theme (dark default, remembered) ---- */
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
@@ -122,6 +135,7 @@ export function refreshReveal() { initReveal(); }
 export function boot() {
   initTheme();
   persistLangFromPath();
+  initLangToggle();
   initHeader();
   initNavToggle();
   initBookingLinks();
