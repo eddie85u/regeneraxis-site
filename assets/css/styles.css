@@ -294,15 +294,18 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 @keyframes auroraB { from { transform: translate3d(0,0,0) scale(1.05); } to { transform: translate3d(-5vw,5vw,0) scale(0.95); } }
 @keyframes auroraC { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(3vw,-5vw,0) scale(1.1); } }
 
-/* Breathing Axis Bloom watermark behind the copy */
-.hero__bloom { position: absolute; z-index: 1; right: clamp(-8rem, -4vw, 2rem); top: 50%;
-  width: min(46vw, 560px); aspect-ratio: 1; transform: translateY(-50%);
-  opacity: 0.5; pointer-events: none; }
+/* Axis Bloom: a slow-floating brand mark, balanced into the right of the hero
+   (no longer clipped off-screen). Gentle rotate + scale reads as "alive" without
+   spinning like a loader. A soft gold glow gives it depth. */
+.hero__bloom { position: absolute; z-index: 1; right: clamp(-2rem, 5vw, 7rem); top: 50%;
+  width: min(56vw, 660px); aspect-ratio: 1; transform: translateY(-50%);
+  opacity: 0.62; pointer-events: none;
+  filter: drop-shadow(0 0 46px rgba(199,169,107,0.14)); }
 .hero__bloom svg { width: 100%; height: 100%; display: block;
-  animation: bloomBreath 12s ease-in-out infinite; transform-origin: center; }
+  animation: bloomFloat 20s ease-in-out infinite; transform-origin: center; }
 .hero__bloom .b-stroke { stroke: var(--hero-ink); opacity: 0.5; }
-@keyframes bloomBreath { 0%,100% { transform: rotate(0deg) scale(0.98); } 50% { transform: rotate(6deg) scale(1.03); } }
-@media (max-width: 720px) { .hero__bloom { opacity: 0.28; right: -18vw; } }
+@keyframes bloomFloat { 0%,100% { transform: rotate(-4deg) scale(0.97); } 50% { transform: rotate(4deg) scale(1.04); } }
+@media (max-width: 720px) { .hero__bloom { opacity: 0.3; right: -16vw; width: 82vw; } }
 
 .hero__inner { position: relative; z-index: 2; padding-block: 8rem 4rem; }
 .hero h1 { color: var(--hero-ink); max-width: 15ch; }
@@ -324,6 +327,13 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 .card p { color: var(--muted); margin-bottom: 0; font-size: 0.98rem; }
 .card--link { display: flex; flex-direction: column; }
 .card--link:hover { transform: translateY(-3px); }
+/* Distinct CTA card: fills the 6th grid cell so the program grid reads as a
+   balanced 2x3, and carries the primary action in gold so it pops. */
+.card--cta { background: var(--gold); border-color: var(--gold); color: var(--warm-black); display: flex; flex-direction: column; justify-content: center; }
+.card--cta h3 { color: var(--warm-black); }
+.card--cta p { color: rgba(27,26,23,0.82); margin-bottom: 0; }
+.card--cta .card__cta { color: var(--warm-black); margin-top: 1.4rem; }
+.card--cta:hover { transform: translateY(-3px); border-color: var(--gold); }
 .card__cta { margin-top: auto; padding-top: 1.4rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
 
 /* ---------- Steps ---------- */
@@ -346,7 +356,13 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 
 /* ---------- Asymmetric feature ---------- */
 .feature { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
-.feature__media { aspect-ratio: 4/5; background: var(--bone); border: 1px solid var(--hairline-soft); }
+/* Placeholder visual for the Medellin section. Swap the .feature__bloom SVG for
+   an <img> when a real photo is ready; the img rule below already fits it. */
+.feature__media { position: relative; aspect-ratio: 4/5; overflow: hidden; border: 1px solid var(--hairline-soft);
+  background: radial-gradient(120% 90% at 72% 18%, var(--aurora-2), transparent 58%), var(--panel); }
+.feature__bloom { position: absolute; inset: 0; margin: auto; width: 66%; height: auto; color: var(--hero-ink);
+  opacity: 0.5; animation: bloomFloat 22s ease-in-out infinite; transform-origin: center; }
+.feature__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 800px) { .feature { grid-template-columns: 1fr; } }
 
 /* ---------- What to expect strip ---------- */

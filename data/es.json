@@ -1,5 +1,5 @@
 {
-  "nav": { "programs": "Programas", "process": "Proceso", "medellin": "Medellín", "faq": "Preguntas", "contact": "Contacto" },
+  "nav": { "programs": "Programas", "process": "Proceso", "medellin": "Medellín", "testimonials": "Testimonios", "faq": "Preguntas", "contact": "Contacto" },
   "cta": { "book": "Agenda tu Valoración" },
 
   "hero": {
@@ -25,6 +25,8 @@
     "title": "Cinco programas. Un método.",
     "intro": "Todo programa comienza con una valoración médica, se personaliza para ti y es supervisado por nuestros médicos del primer día al último. Los resultados varían de una persona a otra.",
     "learn": "Explorar programa",
+    "ctaTitle": "Da el primer paso",
+    "ctaBody": "Comienza con una valoración médica privada y te enrutamos al programa adecuado para ti.",
     "items": {
       "recovery": {
         "name": "Recovery & Performance",

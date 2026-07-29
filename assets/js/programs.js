@@ -23,6 +23,22 @@ function previewCard(prog, dict, lang) {
   return a;
 }
 
+/* The 6th grid cell: a gold CTA card that balances the 2x3 layout and carries
+   the primary booking action (replacing the standalone CTA strip below). */
+function ctaCard(dict) {
+  const label = get(dict, "cta.book") || "Book Your Assessment";
+  const a = document.createElement("a");
+  a.className = "card card--cta reveal";
+  a.setAttribute("data-booking", "");
+  a.href = BOOKING_URL;
+  a.innerHTML = `
+    <h3>${get(dict, "programs.ctaTitle") || ""}</h3>
+    <p>${get(dict, "programs.ctaBody") || ""}</p>
+    <span class="card__cta">${label} &rarr;</span>
+  `;
+  return a;
+}
+
 async function renderPreview() {
   const mount = document.querySelector("[data-programs-preview]");
   if (!mount) return;
@@ -30,6 +46,8 @@ async function renderPreview() {
   const lang = currentLang();
   mount.innerHTML = "";
   programs.forEach((p) => mount.appendChild(previewCard(p, dict, lang)));
+  mount.appendChild(ctaCard(dict));
+  refreshReveal();
 }
 
 /* Shared payment-reassurance strip. Rendered above final CTAs so objections

@@ -1,5 +1,5 @@
 {
-  "nav": { "programs": "Programs", "process": "Process", "medellin": "Medellín", "faq": "FAQ", "contact": "Contact" },
+  "nav": { "programs": "Programs", "process": "Process", "medellin": "Medellín", "testimonials": "Testimonials", "faq": "FAQ", "contact": "Contact" },
   "cta": { "book": "Book Your Assessment" },
 
   "hero": {
@@ -25,6 +25,8 @@
     "title": "Five programs. One method.",
     "intro": "Every program begins with a medical assessment, is personalized to you, and is supervised by our physicians from the first day to the last. Individual results vary.",
     "learn": "Explore program",
+    "ctaTitle": "Take the first step",
+    "ctaBody": "Start with a private medical assessment and we route you to the right program for you.",
     "items": {
       "recovery": {
         "name": "Recovery & Performance",
