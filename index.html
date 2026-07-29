@@ -1,43 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RegenerAxis · The Axis of Human Renewal · Medellín</title>
-  <meta name="description" content="Physician-guided regenerative programs, personalized to your biology, in Medellín, the City of Eternal Spring.">
+  <!-- Spanish is served here at the root. A saved choice (ra_lang) always wins
+       and persists until the visitor changes it with the EN/ES toggle. On a
+       first visit with no saved choice, we sniff the browser language: English
+       browsers go to /en/, everyone else stays on Spanish. -->
+  <script>(function(){try{var s=localStorage.getItem('ra_lang');var l=(s==='en'||s==='es')?s:((navigator.language||'es').toLowerCase().indexOf('en')===0?'en':'es');if(l==='en'){location.replace('./en/');}}catch(e){}})();</script>
+  <script>(function(){try{var t=localStorage.getItem('ra_theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <title>RegenerAxis · Medicina Regenerativa y Optimización Humana · Medellín</title>
+  <meta name="description" content="Programas regenerativos guiados por médicos, personalizados según tu biología, en Medellín, la Ciudad de la Eterna Primavera.">
 
-  <link rel="canonical" href="https://regeneraxis.com/es/">
-  <link rel="alternate" hreflang="es" href="https://regeneraxis.com/es/">
+  <link rel="canonical" href="https://regeneraxis.com/">
+  <link rel="alternate" hreflang="es" href="https://regeneraxis.com/">
   <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
-  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RegenerAxis · El Eje de la Renovación Humana">
+  <meta property="og:description" content="Programas regenerativos guiados por médicos, personalizados según tu biología, en Medellín.">
+  <meta property="og:image" content="https://regeneraxis.com/assets/img/og.jpg">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <!-- Language router: Spanish is primary. Honor a saved choice, otherwise
-       send English-language browsers to /en/ and everyone else to /es/. -->
-  <script>
-    (function () {
-      try {
-        var saved = null;
-        try { saved = localStorage.getItem("ra_lang"); } catch (e) {}
-        var lang = saved || ((navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es");
-        if (lang !== "en") lang = "es";
-        location.replace("./" + lang + "/");
-      } catch (e) {
-        location.replace("./es/");
-      }
-    })();
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap"></noscript>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "RegenerAxis",
+    "description": "Centro de medicina regenerativa y optimización humana en Medellín, Colombia.",
+    "url": "https://regeneraxis.com/",
+    "telephone": "+57 313 8750104",
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressCountry": "CO" },
+    "medicalSpecialty": "PreventiveMedicine"
+  }
   </script>
-  <meta http-equiv="refresh" content="0; url=./es/">
-  <style>
-    body { margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center;
-      background: #1B1A17; color: #B9AF9E; font-family: "Jost", -apple-system, Segoe UI, sans-serif;
-      font-weight: 300; letter-spacing: 0.04em; }
-    a { color: #C7A96B; text-decoration: none; }
-  </style>
 </head>
 <body>
-  <noscript>
-    <p>RegenerAxis. Choose your language: <a href="./en/">English</a> · <a href="./es/">Español</a></p>
-  </noscript>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Principal">
+        <a class="nav__brand" href="./index.html" aria-label="Inicio RegenerAxis">
+          <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
+            <g class="logo-stroke" fill="none" stroke-width="1.5">
+              <ellipse cx="50" cy="50" rx="15" ry="28"/>
+              <ellipse cx="50" cy="50" rx="28" ry="15"/>
+            </g>
+            <circle cx="50" cy="50" r="24" fill="none" stroke="#C7A96B" stroke-width="1"/>
+            <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+          </svg>
+          <span class="nav__wordmark">Regener<b>Axis</b></span>
+        </a>
+
+        <div class="nav__links" id="nav-links">
+          <a href="./index.html#programs" data-i18n="nav.programs">Programas</a>
+          <a href="./index.html#process" data-i18n="nav.process">Proceso</a>
+          <a href="./index.html#medellin" data-i18n="nav.medellin">Medellín</a>
+          <a href="./faq.html" data-i18n="nav.faq">Preguntas</a>
+          <a href="./contact.html" data-i18n="nav.contact">Contacto</a>
+          <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
+          <span class="lang-toggle">
+            <a href="en/index.html">EN</a>
+            <a href="./index.html" class="active">ES</a>
+          </span>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro u oscuro">
+            <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+          </button>
+        </div>
+
+        <button class="nav__toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hero__bloom" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="b-stroke" stroke-width="1.1" fill="none">
+            <ellipse cx="50" cy="50" rx="15" ry="30"/>
+            <ellipse cx="50" cy="50" rx="30" ry="15"/>
+          </g>
+          <circle cx="50" cy="50" r="26" fill="none" stroke="#C7A96B" stroke-width="0.7"/>
+          <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+        </svg>
+      </div>
+      <div class="wrap hero__inner reveal">
+        <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
+        <h1 data-i18n="hero.headline">Optimiza tu recuperación. Eleva tu rendimiento. Extiende tu vitalidad.</h1>
+        <p class="subline" data-i18n="hero.subline">Programas regenerativos guiados por médicos, personalizados según tu biología, en la Ciudad de la Eterna Primavera.</p>
+        <div class="btn-row">
+          <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section strip-dark manifesto">
+      <div class="wrap narrow center reveal">
+        <p data-i18n="manifesto.body">La recuperación ya no es pasiva. La longevidad ya no es solo vivir más años. El rendimiento ya no es exclusivo de atletas de élite. El futuro del bienestar es proactivo, personalizado y guiado por la ciencia. Bienvenido a una nueva era de optimización humana.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="who.kicker">Encuentra tu punto de partida</span><h2 data-i18n="who.title">Para quién es esto.</h2></div>
+        <div class="grid grid--4 reveal-stagger">
+          <article class="card"><div class="card__num">01</div><h3 data-i18n="who.athlete.title">El Atleta</h3><p data-i18n="who.athlete.body">Entrenas al límite. Quieres recuperarte más rápido, proteger tus articulaciones y volver más fuerte a cada sesión.</p></article>
+          <article class="card"><div class="card__num">02</div><h3 data-i18n="who.executive.title">El Ejecutivo</h3><p data-i18n="who.executive.body">Vives bajo presión. Quieres dormir profundo, pensar con claridad y sostener tu energía todo el día.</p></article>
+          <article class="card"><div class="card__num">03</div><h3 data-i18n="who.metabolic.title">El Reset Metabólico</h3><p data-i18n="who.metabolic.body">Ya intentaste dietas y disciplina. Quieres bajar grasa con respaldo médico y mantener el resultado.</p></article>
+          <article class="card"><div class="card__num">04</div><h3 data-i18n="who.longevity.title">El Buscador de Longevidad</h3><p data-i18n="who.longevity.body">No buscas verte joven. Quieres sentirte fuerte, lúcido y vital por muchas décadas más.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-wrap"><hr class="hairline"></div></div>
+
+    <section class="section" id="programs">
+      <div class="wrap">
+        <div class="narrow center eyebrow-center reveal">
+          <span class="kicker" data-i18n="programs.kicker">Nuestros programas</span>
+          <h2 data-i18n="programs.title">Cinco programas. Un método.</h2>
+          <p class="lead" data-i18n="programs.intro">Todo programa comienza con una valoración médica, se personaliza para ti y es supervisado por nuestros médicos del primer día al último. Los resultados varían de una persona a otra.</p>
+        </div>
+        <div class="grid grid--3 reveal-stagger" id="programs-grid" data-programs-preview></div>
+      </div>
+    </section>
+
+    <section class="section strip-dark center">
+      <div class="wrap narrow reveal">
+        <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="narrow eyebrow-center reveal"><span class="kicker" data-i18n="how.kicker">El proceso</span></div>
+        <div class="narrow steps reveal-stagger">
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Agenda tu cita</h3><p data-i18n="how.s1.body">Programa tu cita en línea o contáctanos por WhatsApp. Te guiamos para agendar tu cita de valoración médica. Los pacientes internacionales pueden iniciar de forma remota.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Valoración Médica</h3><p data-i18n="how.s2.body">Una consulta privada para entender tus objetivos, tu historia y tu estilo de vida.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Protocolo Personalizado</h3><p data-i18n="how.s3.body">Tu médico diseña un programa construido para tu cuerpo y tus objetivos.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Optimización y Seguimiento</h3><p data-i18n="how.s4.body">Monitoreamos, ajustamos y refinamos durante todo tu programa.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="medellin">
+      <div class="wrap">
+        <div class="feature reveal">
+          <div>
+            <span class="kicker" data-i18n="medellin.kicker">El destino</span>
+            <h2 data-i18n="medellin.title">La ciudad donde la primavera nunca termina.</h2>
+            <p data-i18n="medellin.body">Medellín tiene un clima que el cuerpo encuentra naturalmente restaurador durante todo el año, la razón por la que la llaman la Ciudad de la Eterna Primavera. Aquí encuentras médicos de clase mundial, verdadera privacidad y atención premium a precios justos y transparentes. Vivas en la ciudad o vengas desde otra parte de Colombia, el entorno no es un detalle. Es parte de la terapia.</p>
+          </div>
+          <div class="feature__media" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section strip-dark">
+      <div class="wrap">
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">En sus palabras</span></div>
+        <div class="grid grid--3 reveal-stagger" id="tst-featured" data-tst-featured></div>
+        <p class="tst-note center mt-lg" data-i18n="tst.note">Experiencias individuales. Los resultados varían.</p>
+        <div class="center mt-lg reveal"><a class="link-quiet" href="./testimonials.html" data-i18n="tst.all">Lee todas las experiencias</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap narrow reveal">
+        <span class="kicker" data-i18n="science.kicker">La ciencia</span>
+        <h2 data-i18n="science.title">Primero estudiamos tu biología.</h2>
+        <p data-i18n="science.body">Nuestros programas se apoyan en la medicina regenerativa: ciencia de péptidos, terapias de señalización celular y sueroterapia de nutrientes, aplicadas bajo supervisión médica y personalizadas mediante diagnósticos. No ofrecemos soluciones genéricas. Primero estudiamos tu biología, y luego construimos el protocolo a tu medida.</p>
+        <p class="tst-note" data-i18n="science.note">Nota: Esta información es educativa y no reemplaza el consejo médico individualizado.</p>
+      </div>
+    </section>
+
+    <section class="section strip-dark">
+      <div class="wrap narrow">
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="faq.kicker">Antes de agendar</span></div>
+        <div id="faq-teaser" data-faq-teaser class="reveal"></div>
+        <div class="center mt-lg reveal"><a class="link-quiet" href="./faq.html" data-i18n="faq.all">Ver todas las preguntas</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap narrow">
+        <ul class="expect reveal-stagger" aria-label="Qué esperar">
+          <li><span class="kicker" data-i18n="expect.a.k">Qué incluye</span><p data-i18n="expect.a.body">Una consulta médica privada para revisar tus objetivos, tu historia y posibles contraindicaciones, y enrutarte al programa adecuado.</p></li>
+          <li><span class="kicker" data-i18n="expect.b.k">Cuánto toma</span><p data-i18n="expect.b.body">Una sesión enfocada con tu equipo médico, y un plan claro con el que sales, decidas o no continuar.</p></li>
+          <li><span class="kicker" data-i18n="expect.c.k">Desde donde estés</span><p data-i18n="expect.c.body">Los pacientes internacionales pueden iniciar de forma remota y luego coordinar su viaje a Medellín para comenzar en persona.</p></li>
+        </ul>
+        <div class="center reveal">
+          <h2 data-i18n="final.title">Tu biología merece una estrategia.</h2>
+          <p class="lead" data-i18n="final.subline">Comienza con una valoración médica privada. Presencial en Medellín, o remota si viajas hacia nosotros.</p>
+          <div class="pay-strip reveal" aria-label="Pago">
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.a">Aceptamos las principales tarjetas</span></span>
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.b">Pago seguro</span></span>
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.c">Chequeo de elegibilidad antes del pago</span></span>
+          </div>
+          <div class="btn-row" style="justify-content:center">
+            <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
+          </div>
+          <p class="tst-note mt-lg" data-i18n="final.questions" data-i18n-html>¿Dudas antes de agendar? Lee nuestras <a href="./faq.html">preguntas frecuentes</a> o escríbenos vía WhatsApp al: +57 313 8750104</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span class="nav__wordmark" style="color:var(--ivory)">Regener<b>Axis</b></span>
+          <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">El Eje de la Renovación Humana. Medellín, Colombia.</p>
+        </div>
+        <div>
+          <h3 data-i18n="footer.explore">Explorar</h3>
+          <ul>
+            <li><a href="./index.html#programs" data-i18n="nav.programs">Programas</a></li>
+            <li><a href="./index.html#process" data-i18n="nav.process">Proceso</a></li>
+            <li><a href="./faq.html" data-i18n="nav.faq">Preguntas</a></li>
+            <li><a href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="footer.connect">Conectar</h3>
+          <ul>
+            <li><a data-whatsapp href="https://wa.me/573138750104">+57 313 8750104</a></li>
+            <li><a data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a></li>
+            <li><a href="./privacy.html" data-i18n="footer.privacy">Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="disclaimer" data-i18n="footer.disclaimer">RegenerAxis ofrece programas de bienestar regenerativo supervisados por médicos. Todo programa requiere una valoración médica previa y es personalizado y supervisado por médicos titulados. El contenido de este sitio es informativo y no sustituye el consejo, diagnóstico ni tratamiento médico profesional, y no garantiza resultados específicos, que varían de una persona a otra. Los tratamientos se realizan de manera presencial en Medellín, Colombia.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/i18n.js"></script>
+  <script type="module" src="assets/js/programs.js"></script>
+  <script type="module" src="assets/js/testimonials.js"></script>
+  <script type="module" src="assets/js/faq.js"></script>
 </body>
 </html>

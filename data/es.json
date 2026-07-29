@@ -91,10 +91,10 @@
 
   "how": {
     "kicker": "El proceso",
-    "s1": { "title": "Escríbenos o agenda", "body": "Contáctanos por WhatsApp o empieza en línea. Te guiamos para agendar tu valoración médica." },
-    "s2": { "title": "Chequeo de elegibilidad", "body": "Antes del pago, un formulario breve (tu edad y antecedentes de salud) confirma que la valoración es adecuada para ti." },
-    "s3": { "title": "Valoración médica", "body": "Una consulta privada y con costo. Revisamos tu formulario, exploramos tus objetivos e indagamos a fondo en posibles contraindicaciones." },
-    "s4": { "title": "Tu programa personalizado", "body": "Si eres apto, tu médico te enruta al programa más conveniente, de uno a varios meses. Los complementos son opcionales." }
+    "s1": { "title": "Agenda tu cita", "body": "Programa tu cita en línea o contáctanos por WhatsApp. Te guiamos para agendar tu cita de valoración médica. Los pacientes internacionales pueden iniciar de forma remota." },
+    "s2": { "title": "Valoración Médica", "body": "Una consulta privada para entender tus objetivos, tu historia y tu estilo de vida." },
+    "s3": { "title": "Protocolo Personalizado", "body": "Tu médico diseña un programa construido para tu cuerpo y tus objetivos." },
+    "s4": { "title": "Optimización y Seguimiento", "body": "Monitoreamos, ajustamos y refinamos durante todo tu programa." }
   },
 
   "medellin": {

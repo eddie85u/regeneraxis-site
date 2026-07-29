@@ -11,11 +11,13 @@
       try {
         var saved = null;
         try { saved = localStorage.getItem("ra_lang"); } catch (e) {}
-        var lang = saved || ((navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es");
-        if (lang !== "en") lang = "es";
-        // Send stray URLs back to the language home. Keep it simple and safe.
-        location.replace("/" + lang + "/");
-      } catch (e) { location.replace("/es/"); }
+        // A saved choice wins; otherwise sniff the browser language on first
+        // visit. Spanish is served at the root, English under /en/.
+        var lang = (saved === "en" || saved === "es")
+          ? saved
+          : ((navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es");
+        location.replace(lang === "en" ? "/en/" : "/");
+      } catch (e) { location.replace("/"); }
     })();
   </script>
   <style>
@@ -29,7 +31,7 @@
 <body>
   <div>
     <h1>Page not found</h1>
-    <p>Return to <a href="/en/">RegenerAxis</a> · <a href="/es/">Español</a></p>
+    <p>Return to <a href="/">RegenerAxis</a> · <a href="/en/">English</a></p>
   </div>
 </body>
 </html>

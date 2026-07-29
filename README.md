@@ -9,19 +9,18 @@ no build step, no backend. Deploys to GitHub Pages on a custom domain.
 ## Structure
 
 ```
-/                         Root language router (Spanish default; English if the browser is English)
-/es/                      Spanish site (primary)
-  index.html              Home = the funnel
+/                         Spanish site (PRIMARY, served at the root — there is no /es/)
+  index.html              Home = the funnel (also redirects to /en/ if a saved EN choice exists)
   faq.html                FAQ (data-driven accordion + FAQPage schema)
   contact.html            Contact form + WhatsApp + remote-consult note
-  testimonials.html       Filterable, data-driven testimonials grid (text + optional video)
+  testimonials.html       Filterable, data-driven testimonials grid (text + optional image/video)
   privacy.html            Privacy policy (rendered from locale)
   <program>.html          5 program pages, rendered from data by programs.js
 /en/                      English mirror (identical structure)
 /assets/
   css/styles.css          Brand style system (true light / true dark, no inverted strips)
   js/                     main, i18n, programs, faq, testimonials, contact (ES modules)
-  img/                    Logos, favicon (add og.jpg for social previews)
+  img/                    Logos, favicon, og.jpg (1200x630 brand-mark social preview)
   favicon.svg
 /data/
   en.json, es.json        Locale strings (no hardcoded copy in HTML beyond fallbacks)
@@ -45,9 +44,11 @@ no build step, no backend. Deploys to GitHub Pages on a custom domain.
 - **i18n.** No user-facing string is hardcoded (HTML text is only a no-JS/SEO fallback). Elements
   carry `data-i18n="dot.path"` resolved against `data/<lang>.json`; `data-i18n-html` allows inline
   markup; `data-i18n-attr="attr:key"` localizes attributes. Language is derived from `<html lang>`.
-- **Language.** Spanish is primary. The root router sends English-language browsers to `/en/` and
-  everyone else to `/es/`, and remembers the visitor's choice in `localStorage` (`ra_lang`). The
-  EN/ES toggle is always available.
+- **Language.** Spanish is primary and served at the site root (there is no `/es/`); English lives
+  under `/en/`. A saved choice (`ra_lang` in `localStorage`) always wins; on a first visit with no
+  saved choice, the browser language decides (English browsers go to `/en/`, everyone else stays on
+  Spanish). The root and `404.html` only redirect when the resolved language is English. The EN/ES
+  toggle is always available and updates the saved choice.
 - **Theme.** Dark is the default; light and dark are each internally consistent (no section inverts
   against the page). The toggle persists to `localStorage` (`ra_theme`) and an inline `<head>`
   script sets it before paint to avoid a flash. Contrast is checked for WCAG AA in both modes.
@@ -70,8 +71,8 @@ python -m http.server 8000
 npx serve .
 ```
 
-Then open http://localhost:8000/ (redirects to /es/). Test /es/ and /en/, the theme toggle,
-the language toggle, the WhatsApp button, and FAQ deep links (e.g. /es/faq.html#q-como-agendo).
+Then open http://localhost:8000/ (Spanish at the root; English at /en/). Test the theme toggle,
+the language toggle, the WhatsApp button, and FAQ deep links (e.g. /faq.html#q-como-agendo).
 
 ## Deployment (GitHub Pages)
 
@@ -83,10 +84,10 @@ the language toggle, the WhatsApp button, and FAQ deep links (e.g. /es/faq.html#
 
 ## Before launch
 
-- Replace `BOOKING_URL` in `assets/js/main.js` with the real paid scheduling / payment link
-  (the flow: eligibility form, then payment, then scheduling).
+- Replace `BOOKING_URL` in `assets/js/main.js` with the real link. That link hosts the flow itself:
+  brief eligibility form, then payment, then scheduling. Every `[data-booking]` CTA picks it up.
 - Replace the Formspree placeholder endpoint (`your-form-id`) in both `contact.html` files, or swap
   the contact form for your provider's embed.
-- Add `assets/img/og.jpg` (1200x630) for link/social previews.
 - Confirm the phone/WhatsApp number, prices, and payment/refund policy text match your operations.
 - Confirm `WHATSAPP_NUMBER` and the served cities are current.
+- `assets/img/og.jpg` (1200x630 brand-mark) is generated and wired on every page.

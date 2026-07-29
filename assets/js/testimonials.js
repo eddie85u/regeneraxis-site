@@ -10,13 +10,18 @@ async function loadTestimonials() {
 function card(t) {
   const el = document.createElement("figure");
   el.className = "tst reveal";
-  // Optional video: a lazy YouTube facade. The heavy iframe is only created
-  // on click, so it never touches load performance. Set "youtube" to the ID.
+  // Optional media. Priority: a lazy YouTube facade when "youtube" is set
+  // (the heavy iframe is only built on click, so it never touches load
+  // performance); otherwise a still "image" (root-absolute path, e.g.
+  // /assets/img/testimonials/name.jpg) shown in the same slot. Images now,
+  // video later is a drop-in swap.
   const media = t.youtube
     ? `<div class="tst__video" role="button" tabindex="0" aria-label="Play video">
          <img loading="lazy" src="https://i.ytimg.com/vi/${t.youtube}/hqdefault.jpg" alt="">
          <span class="tst__play" aria-hidden="true"><span></span></span>
        </div>`
+    : t.image
+    ? `<div class="tst__photo"><img loading="lazy" src="${t.image}" alt=""></div>`
     : "";
   const quote = t.quote
     ? `<blockquote>&ldquo;${t.quote}&rdquo;</blockquote>`

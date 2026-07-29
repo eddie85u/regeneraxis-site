@@ -21,7 +21,8 @@ export function currentLang() {
 }
 
 function persistLangFromPath() {
-  const lang = window.location.pathname.includes("/es/") ? "es" : "en";
+  // Spanish lives at the root; English under /en/. Only an /en/ path is English.
+  const lang = window.location.pathname.includes("/en/") ? "en" : "es";
   try { localStorage.setItem("ra_lang", lang); } catch (e) {}
 }
 

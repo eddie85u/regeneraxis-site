@@ -5,8 +5,9 @@ export function get(obj, path) {
   return path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
 }
 
-/* Path to /data from any /en/ or /es/ page. */
-export const DATA_BASE = "../data/";
+/* Root-absolute path to /data. Works uniformly from the Spanish site at the
+   root and from the English mirror under /en/ (served on the custom domain). */
+export const DATA_BASE = "/data/";
 
 let localeCache = null;
 

@@ -91,10 +91,10 @@
 
   "how": {
     "kicker": "The journey",
-    "s1": { "title": "Reach out or book", "body": "Message us on WhatsApp or start online. We guide you to schedule your medical assessment." },
-    "s2": { "title": "Quick eligibility check", "body": "Before payment, a brief form (your age and health background) confirms the assessment is right for you." },
-    "s3": { "title": "Medical assessment", "body": "A private, paid consultation. We review your form, explore your goals, and look into any contraindications in depth." },
-    "s4": { "title": "Your personalized program", "body": "If you are a good fit, your physician routes you to the most suitable program, from one to several months. Any add-ons are optional." }
+    "s1": { "title": "Book your visit", "body": "Schedule your visit online or reach us on WhatsApp. We guide you to book your medical assessment. International patients can begin remotely." },
+    "s2": { "title": "Medical Assessment", "body": "A private consultation to understand your goals, your history, and your lifestyle." },
+    "s3": { "title": "Personalized Protocol", "body": "Your physician designs a program built for your body and your goals." },
+    "s4": { "title": "Optimization & Follow-up", "body": "We monitor, adjust, and refine throughout your program." }
   },
 
   "medellin": {

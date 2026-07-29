@@ -439,6 +439,11 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 .wa-fab:hover, .wa-fab:focus-visible { transform: translateY(-2px); background: var(--gold); color: var(--warm-black); outline: none; }
 .wa-fab svg { width: 26px; height: 26px; display: block; fill: currentColor; }
 
+/* ---------- Testimonial media: still image now, lazy video later ---------- */
+.tst__photo { position: relative; aspect-ratio: 16/9; margin: 0 0 1.2rem; overflow: hidden;
+  border: 1px solid var(--hairline-soft); background: var(--surface); }
+.tst__photo img { width: 100%; height: 100%; object-fit: cover; opacity: 0.92; }
+
 /* ---------- Testimonial video facade (lazy, no heavy player) ---------- */
 .tst__video { position: relative; aspect-ratio: 16/9; margin: 0 0 1.2rem; overflow: hidden;
   border: 1px solid var(--hairline-soft); background: var(--surface); cursor: pointer; }
