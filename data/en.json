@@ -34,7 +34,14 @@
         "body": "Designed to support your body's own tissue repair. It aims to support the regeneration of muscle, tendon, and ligament, encourage collagen production, and optimize the cellular environment where recovery happens, with a calming, anti-inflammatory intent. The goal: less discomfort, better recovery between sessions, and a structure more resilient to strain.",
         "benefits": ["Faster muscle recovery after effort or strain", "Support for tendons, ligaments, and connective tissue", "Encourages collagen production and tissue regeneration", "Anti-inflammatory intent and comfort", "Joint support and better mobility", "Support for digestive and immune wellness"],
         "idealFor": "Athletes, CrossFit and HYROX, strength and endurance sports, recovery after strain or overload.",
-        "schema": "Daily application with alternating-day reinforcement. Recommended cycle: 3 months."
+        "schema": "Daily application with alternating-day reinforcement. Recommended cycle: 3 months.",
+        "symptoms": ["Joint or tendon pain that will not settle", "Recovery between sessions getting slower", "Recurring injuries or chronic overload", "Morning stiffness and reduced range of motion", "Plateaued performance despite hard training"],
+        "disqualifiers": ["Pregnancy or breastfeeding", "Active cancer or ongoing oncologic treatment", "Acute infection or fever", "Uncontrolled clotting disorders", "Chronic conditions without current medical control"],
+        "phases": [
+          { "t": "Weeks 1-2 · Preparation", "b": "We set your baseline, review your training load, and prepare the cellular ground for recovery." },
+          { "t": "Weeks 3-8 · Active regeneration", "b": "The protocol works in full: support for tissue, tendon, and joint, adjusted to your response and your training." },
+          { "t": "Week 9+ · Consolidation", "b": "We fine-tune, lock in the recovery gains, and define your maintenance plan." }
+        ]
       },
       "metabolic": {
         "name": "Metabolic Reset",
@@ -44,7 +51,14 @@
         "body": "Works on body composition on two fronts: supporting appetite regulation and satiety while supporting healthy energy metabolism at the cellular level. The intent is a sustainable approach to fat reduction, more energy, and improved metabolic efficiency, always personalized and supervised.",
         "benefits": ["Supports sustainable fat reduction", "Supports appetite regulation and satiety", "Supports healthy blood glucose ranges", "More energy and metabolic efficiency", "Nutritional accompaniment throughout", "Personalized and physician supervised"],
         "idealFor": "People seeking real, sustainable fat loss with medical backing, beyond traditional restriction.",
-        "schema": "One weekly application plus daily support. Recommended cycle: 3 months. Includes nutritional accompaniment."
+        "schema": "One weekly application plus daily support. Recommended cycle: 3 months. Includes nutritional accompaniment.",
+        "symptoms": ["Abdominal fat that will not drop despite dieting", "Cravings and hunger that are hard to control", "Energy crashing after meals", "Rebound after every diet", "A metabolism that feels slow"],
+        "disqualifiers": ["Pregnancy or breastfeeding", "Active cancer or ongoing oncologic treatment", "Active eating disorders", "Significant kidney, liver, or pancreatic disease", "Type 1 diabetes or metabolic conditions without medical control"],
+        "phases": [
+          { "t": "Weeks 1-2 · Preparation", "b": "Metabolic assessment, expectation setting, and a gentle start so your body adapts." },
+          { "t": "Weeks 3-8 · Active modulation", "b": "Deep work on appetite, satiety, and energy metabolism, with nutritional accompaniment." },
+          { "t": "Week 9+ · Stabilization", "b": "We consolidate body composition and build the habits to sustain the result." }
+        ]
       },
       "longevity": {
         "name": "Longevity Premium",
@@ -54,7 +68,14 @@
         "body": "An integrated longevity program with intent on three levels: supporting skin quality through collagen and elastin, supporting cellular energy and mental clarity, and supporting endocrine balance and sleep cycles. A considered, cell-level approach to healthy aging.",
         "benefits": ["Supports brighter, firmer skin tone", "Sustained energy and mental clarity", "Supports better sleep quality", "Supports healthy cellular aging", "Antioxidant intent", "Personalized and physician supervised"],
         "idealFor": "Those seeking a complete approach to longevity and rejuvenation.",
-        "schema": "Daily application with alternating-day reinforcement. Recommended cycle: 3 months."
+        "schema": "Daily application with alternating-day reinforcement. Recommended cycle: 3 months.",
+        "symptoms": ["Energy and vitality below your standard", "Dull skin and sleep that does not restore", "Slower recovery and mental clarity", "A sense of aging faster than you would like", "Markers you want to get ahead of"],
+        "disqualifiers": ["Pregnancy or breastfeeding", "Active cancer or ongoing oncologic treatment", "Active autoimmune disease without control", "Endocrine conditions without medical follow-up", "Acute infection"],
+        "phases": [
+          { "t": "Weeks 1-2 · Preparation", "b": "We set your baseline for energy, sleep, and vitality, and prepare the cellular ground." },
+          { "t": "Weeks 3-8 · Active modulation", "b": "The protocol supports skin, cellular energy, and sleep balance, adjusted to your response." },
+          { "t": "Week 9+ · Consolidation", "b": "We consolidate the improvements and define a maintenance plan sustainable over time." }
+        ]
       },
       "executive": {
         "name": "Executive Performance",
@@ -64,17 +85,31 @@
         "body": "Designed for the high-performing executive. It aims to support deep sleep quality, recovery, and body composition, while supporting a calmer stress response without sedation, favoring focus, memory, and emotional steadiness. Calm and performance, together.",
         "benefits": ["Supports a calmer stress response without sedation", "Supports focus, memory, and clarity", "Supports deep, restorative sleep", "Supports physical recovery", "Supports body composition", "Personalized and physician supervised"],
         "idealFor": "Leaders and entrepreneurs who need to sustain high performance without burning out.",
-        "schema": "One weekly application plus daily support. Recommended cycle: 3 months."
+        "schema": "One weekly application plus daily support. Recommended cycle: 3 months.",
+        "symptoms": ["Sustained stress and a sense of burnout", "Light or non-restorative sleep", "Focus and memory faltering under pressure", "Uneven energy through the day", "Irritability or unstable mood"],
+        "disqualifiers": ["Pregnancy or breastfeeding", "Active cancer or ongoing oncologic treatment", "Serious psychiatric disorder without control", "Cardiovascular conditions without medical follow-up", "Acute infection"],
+        "phases": [
+          { "t": "Weeks 1-2 · Preparation", "b": "We map your stress, sleep, and load, and prepare a start that fits your pace." },
+          { "t": "Weeks 3-8 · Active modulation", "b": "Support for a calmer stress response, deep sleep, and focus, without sedation." },
+          { "t": "Week 9+ · Consolidation", "b": "We consolidate calm and performance and define your plan to sustain them." }
+        ]
       },
       "cellular": {
         "name": "Advanced Cellular Regeneration",
         "tagline": "Regenerative IV therapy to support the body's own repair.",
         "kicker": "Program 05",
         "hook": "You want integral regeneration from within: more vitality, better recovery, and a body that repairs itself well.",
-        "body": "Advanced IV therapy with cellular messengers intended to support communication between your cells. The intent is to support mitochondrial efficiency and microcirculation, immune balance, and tissue regeneration, with a considered anti-aging approach. Requires prior medical assessment.",
+        "body": "Advanced IV therapy with cellular messengers intended to support communication between your cells. The intent is to support mitochondrial efficiency and microcirculation, immune balance, and tissue regeneration, with a considered cellular rejuvenation approach. Requires prior medical assessment.",
         "benefits": ["Supports cellular and tissue regeneration", "Supports energy and mitochondrial efficiency", "Supports microcirculation", "Supports immune balance", "Antioxidant intent", "Personalized and physician supervised"],
         "idealFor": "Those seeking an integral regenerative reset. Requires prior medical assessment. Not suitable in active neoplastic disease.",
-        "schema": "Per-session application, package of 6 vials, according to medical assessment."
+        "schema": "Per-session application, package of 6 vials, according to medical assessment.",
+        "symptoms": ["Deep fatigue that does not improve with rest", "Slow overall recovery", "A sense of wear after years of high demand", "Low immune resilience", "Looking for an integral regenerative reset"],
+        "disqualifiers": ["Active neoplastic disease", "Pregnancy or breastfeeding", "Acute infection or fever", "Significant organ insufficiency", "Chronic conditions without medical control"],
+        "phases": [
+          { "t": "Sessions 1-2 · Preparation", "b": "Mandatory prior assessment and first sessions to prepare the cellular ground." },
+          { "t": "Sessions 3-4 · Active regeneration", "b": "The core of the protocol: support for cellular communication, mitochondrial energy, and immune balance." },
+          { "t": "Sessions 5-6 · Consolidation", "b": "We close the cycle, evaluate your response, and define whether maintenance is worthwhile." }
+        ]
       }
     }
   },
@@ -87,7 +122,24 @@
     "investmentFrom": "Investment from",
     "investmentNote": "Final pricing depends on your medical assessment and personalization. Individual results vary.",
     "doping": "Advisory for competitive athletes: some components of these protocols may be subject to anti-doping rules (AMA / WADA). If you compete under anti-doping control, tell us before starting so we can guide you.",
-    "resultsVary": "Personalized and physician supervised. Individual results vary."
+    "resultsVary": "Personalized and physician supervised. Individual results vary.",
+    "symptomsTitle": "Signs worth addressing",
+    "candidateTitle": "Ideal candidate",
+    "disqualifiersTitle": "Not suitable if",
+    "disqualifiersNote": "This list is indicative; your eligibility is always confirmed at your medical assessment.",
+    "timelineKicker": "The 90-day journey",
+    "timelineTitle": "How your program unfolds",
+    "timelineNote": "Phases and timing are indicative and vary by person and program.",
+    "supportKicker": "Integrated support (optional)",
+    "supportTitle": "You can amplify your program",
+    "supportNote": "Optional add-ons defined at your medical assessment.",
+    "support": {
+      "nutrition": { "t": "Nutrition", "b": "Nutritional guidance aligned with your goal and your program." },
+      "exercise": { "t": "Exercise & movement", "b": "Training and movement guidance to sustain and amplify your results." },
+      "therapy": { "t": "Supportive therapy", "b": "Complementary therapies for recovery, stress management, and overall wellbeing." }
+    },
+    "gatewayStatement": "Because of the clinical, highly personalized nature of these programs, your specific formulation cannot be purchased online. It is defined and prescribed only after your comprehensive medical assessment.",
+    "gatewayCta": "Apply for Medical Assessment"
   },
 
   "how": {

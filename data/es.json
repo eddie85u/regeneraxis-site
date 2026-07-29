@@ -34,7 +34,14 @@
         "body": "Diseñado para apoyar la reparación natural de tus tejidos. Busca apoyar la regeneración de músculo, tendón y ligamento, favorecer la producción de colágeno y optimizar el entorno celular donde ocurre la recuperación, con una intención calmante y antiinflamatoria. El objetivo: menos molestias, mejor recuperación entre sesiones y una estructura más resistente al esfuerzo.",
         "benefits": ["Recuperación muscular más rápida tras el esfuerzo", "Apoyo a tendones, ligamentos y tejido conectivo", "Favorece la producción de colágeno y la regeneración de tejidos", "Intención antiinflamatoria y confort", "Apoyo articular y mejor movilidad", "Apoyo al bienestar digestivo e inmune"],
         "idealFor": "Atletas, CrossFit y HYROX, deportes de fuerza y resistencia, recuperación tras esfuerzo o sobrecarga.",
-        "schema": "Aplicación diaria con refuerzo en días alternos. Ciclo recomendado: 3 meses."
+        "schema": "Aplicación diaria con refuerzo en días alternos. Ciclo recomendado: 3 meses.",
+        "symptoms": ["Dolor articular o de tendones que no cede", "Recuperación cada vez más lenta entre sesiones", "Lesiones recurrentes o sobrecarga crónica", "Rigidez matinal y menor rango de movimiento", "Rendimiento estancado pese a entrenar duro"],
+        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Infección aguda o fiebre", "Trastornos de la coagulación no controlados", "Condiciones crónicas sin control médico actual"],
+        "phases": [
+          { "t": "Semanas 1-2 · Preparación", "b": "Establecemos tu línea base, revisamos tus cargas de entrenamiento y preparamos el terreno celular para la recuperación." },
+          { "t": "Semanas 3-8 · Regeneración activa", "b": "El protocolo trabaja de lleno: apoyo a tejido, tendón y articulación, con ajuste según tu respuesta y tu entrenamiento." },
+          { "t": "Semana 9+ · Consolidación", "b": "Afinamos, consolidamos las ganancias de recuperación y definimos tu plan de mantenimiento." }
+        ]
       },
       "metabolic": {
         "name": "Metabolic Reset",
@@ -44,7 +51,14 @@
         "body": "Trabaja la composición corporal en dos frentes: apoyando la regulación del apetito y la saciedad, y apoyando un metabolismo energético saludable a nivel celular. La intención es un enfoque sostenible para la reducción de grasa, más energía y una mejor eficiencia metabólica, siempre personalizado y supervisado.",
         "benefits": ["Apoya la reducción de grasa sostenible", "Apoya la regulación del apetito y la saciedad", "Apoya rangos saludables de glucosa en sangre", "Más energía y eficiencia metabólica", "Acompañamiento nutricional durante todo el proceso", "Personalizado y supervisado por médicos"],
         "idealFor": "Personas que buscan una pérdida de grasa real y sostenible con respaldo médico, más allá de la restricción tradicional.",
-        "schema": "Una aplicación semanal más apoyo diario. Ciclo recomendado: 3 meses. Incluye acompañamiento nutricional."
+        "schema": "Una aplicación semanal más apoyo diario. Ciclo recomendado: 3 meses. Incluye acompañamiento nutricional.",
+        "symptoms": ["Grasa abdominal que no baja pese a la dieta", "Antojos y hambre difíciles de controlar", "Energía que se desploma después de comer", "Efecto rebote tras cada dieta", "Un metabolismo que se siente lento"],
+        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Trastornos de la conducta alimentaria activos", "Enfermedad renal, hepática o pancreática significativa", "Diabetes tipo 1 o condiciones metabólicas sin control médico"],
+        "phases": [
+          { "t": "Semanas 1-2 · Preparación", "b": "Valoración metabólica, ajuste de expectativas y un arranque suave para que tu cuerpo se adapte." },
+          { "t": "Semanas 3-8 · Modulación activa", "b": "Trabajo de fondo sobre apetito, saciedad y metabolismo energético, con acompañamiento nutricional." },
+          { "t": "Semana 9+ · Estabilización", "b": "Consolidamos la composición corporal y construimos los hábitos para sostener el resultado." }
+        ]
       },
       "longevity": {
         "name": "Longevity Premium",
@@ -54,7 +68,14 @@
         "body": "Un programa integral de longevidad con intención en tres niveles: apoyar la calidad de la piel a través del colágeno y la elastina, apoyar la energía celular y la claridad mental, y apoyar el equilibrio endocrino y los ciclos de sueño. Un enfoque considerado, a nivel celular, para un envejecimiento saludable.",
         "benefits": ["Apoya un tono de piel más luminoso y firme", "Energía sostenida y claridad mental", "Apoya una mejor calidad del sueño", "Apoya un envejecimiento celular saludable", "Intención antioxidante", "Personalizado y supervisado por médicos"],
         "idealFor": "Quienes buscan un enfoque completo de longevidad y rejuvenecimiento.",
-        "schema": "Aplicación diaria con refuerzo en días alternos. Ciclo recomendado: 3 meses."
+        "schema": "Aplicación diaria con refuerzo en días alternos. Ciclo recomendado: 3 meses.",
+        "symptoms": ["Energía y vitalidad por debajo de tu estándar", "Piel apagada y sueño que no repara", "Recuperación y claridad mental más lentas", "Sensación de estar envejeciendo más rápido de lo que quisieras", "Marcadores que quieres adelantarte a cuidar"],
+        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Enfermedad autoinmune activa sin control", "Condiciones endocrinas sin seguimiento médico", "Infección aguda"],
+        "phases": [
+          { "t": "Semanas 1-2 · Preparación", "b": "Establecemos tu línea base de energía, sueño y vitalidad, y preparamos el terreno celular." },
+          { "t": "Semanas 3-8 · Modulación activa", "b": "El protocolo apoya piel, energía celular y equilibrio del sueño, ajustado según tu respuesta." },
+          { "t": "Semana 9+ · Consolidación", "b": "Consolidamos las mejoras y definimos un plan de mantenimiento sostenible en el tiempo." }
+        ]
       },
       "executive": {
         "name": "Executive Performance",
@@ -64,17 +85,31 @@
         "body": "Diseñado para el ejecutivo de alto rendimiento. Busca apoyar la calidad del sueño profundo, la recuperación y la composición corporal, a la vez que apoya una respuesta al estrés más serena sin sedación, favoreciendo el enfoque, la memoria y la estabilidad emocional. Calma y rendimiento, juntos.",
         "benefits": ["Apoya una respuesta al estrés más serena sin sedación", "Apoya el enfoque, la memoria y la claridad", "Apoya un sueño profundo y reparador", "Apoya la recuperación física", "Apoya la composición corporal", "Personalizado y supervisado por médicos"],
         "idealFor": "Líderes y emprendedores que necesitan sostener un alto rendimiento sin agotarse.",
-        "schema": "Una aplicación semanal más apoyo diario. Ciclo recomendado: 3 meses."
+        "schema": "Una aplicación semanal más apoyo diario. Ciclo recomendado: 3 meses.",
+        "symptoms": ["Estrés sostenido y sensación de agotamiento", "Sueño ligero o que no repara", "Foco y memoria que fallan bajo presión", "Energía irregular a lo largo del día", "Irritabilidad o ánimo inestable"],
+        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Trastorno psiquiátrico grave sin control", "Condiciones cardiovasculares sin seguimiento médico", "Infección aguda"],
+        "phases": [
+          { "t": "Semanas 1-2 · Preparación", "b": "Mapeamos tu estrés, tu sueño y tu carga, y preparamos un arranque acorde a tu ritmo." },
+          { "t": "Semanas 3-8 · Modulación activa", "b": "Apoyo a una respuesta al estrés más serena, al sueño profundo y al foco, sin sedación." },
+          { "t": "Semana 9+ · Consolidación", "b": "Consolidamos la calma y el rendimiento y definimos tu plan para sostenerlos." }
+        ]
       },
       "cellular": {
         "name": "Regeneración Celular Avanzada",
         "tagline": "Sueroterapia regenerativa que apoya la reparación natural del cuerpo.",
         "kicker": "Programa 05",
         "hook": "Quieres una regeneración integral desde adentro: más vitalidad, mejor recuperación y un cuerpo que se repara bien.",
-        "body": "Sueroterapia avanzada con mensajeros celulares que busca apoyar la comunicación entre tus células. La intención es apoyar la eficiencia mitocondrial y la microcirculación, el equilibrio inmune y la regeneración de tejidos, con un enfoque considerado antiedad. Requiere valoración médica previa.",
+        "body": "Sueroterapia avanzada con mensajeros celulares que busca apoyar la comunicación entre tus células. La intención es apoyar la eficiencia mitocondrial y la microcirculación, el equilibrio inmune y la regeneración de tejidos, con un enfoque considerado de rejuvenecimiento celular. Requiere valoración médica previa.",
         "benefits": ["Apoya la regeneración celular y de tejidos", "Apoya la energía y la eficiencia mitocondrial", "Apoya la microcirculación", "Apoya el equilibrio inmune", "Intención antioxidante", "Personalizado y supervisado por médicos"],
         "idealFor": "Quienes buscan un reset regenerativo integral. Requiere valoración médica previa. No es adecuado en enfermedad neoplásica activa.",
-        "schema": "Aplicación por sesión, paquete de 6 viales, según valoración médica."
+        "schema": "Aplicación por sesión, paquete de 6 viales, según valoración médica.",
+        "symptoms": ["Fatiga profunda que no mejora con el descanso", "Recuperación general lenta", "Sensación de desgaste tras años de exigencia", "Baja resiliencia inmune", "Búsqueda de un reset regenerativo integral"],
+        "disqualifiers": ["Enfermedad neoplásica activa", "Embarazo o lactancia", "Infección aguda o fiebre", "Insuficiencia orgánica significativa", "Condiciones crónicas sin control médico"],
+        "phases": [
+          { "t": "Sesiones 1-2 · Preparación", "b": "Valoración previa obligatoria y primeras sesiones para preparar el terreno celular." },
+          { "t": "Sesiones 3-4 · Regeneración activa", "b": "El núcleo del protocolo: apoyo a la comunicación celular, la energía mitocondrial y el equilibrio inmune." },
+          { "t": "Sesiones 5-6 · Consolidación", "b": "Cerramos el ciclo, evaluamos tu respuesta y definimos si conviene un mantenimiento." }
+        ]
       }
     }
   },
@@ -87,7 +122,24 @@
     "investmentFrom": "Inversión desde",
     "investmentNote": "El precio final depende de tu valoración médica y de la personalización. Los resultados varían de una persona a otra.",
     "doping": "Aviso para deportistas de competición: algunos componentes de estos protocolos pueden estar sujetos a la normativa antidopaje (AMA / WADA). Si compites bajo control antidopaje, infórmanos antes de iniciar para orientarte.",
-    "resultsVary": "Personalizado y supervisado por médicos. Los resultados varían de una persona a otra."
+    "resultsVary": "Personalizado y supervisado por médicos. Los resultados varían de una persona a otra.",
+    "symptomsTitle": "Señales que vale la pena atender",
+    "candidateTitle": "Candidato ideal",
+    "disqualifiersTitle": "No es adecuado si",
+    "disqualifiersNote": "Esta lista es orientativa; tu elegibilidad siempre se confirma en la valoración médica.",
+    "timelineKicker": "El recorrido de 90 días",
+    "timelineTitle": "Cómo evoluciona tu programa",
+    "timelineNote": "Las fases y los tiempos son orientativos y varían según la persona y el programa.",
+    "supportKicker": "Apoyo integral (opcional)",
+    "supportTitle": "Puedes potenciar tu programa",
+    "supportNote": "Complementos opcionales que se definen en tu valoración médica.",
+    "support": {
+      "nutrition": { "t": "Nutrición", "b": "Acompañamiento nutricional alineado con tu objetivo y tu programa." },
+      "exercise": { "t": "Ejercicio y movimiento", "b": "Pautas de entrenamiento y movimiento para sostener y amplificar tus resultados." },
+      "therapy": { "t": "Terapias de apoyo", "b": "Terapias complementarias para recuperación, manejo del estrés y bienestar general." }
+    },
+    "gatewayStatement": "Por la naturaleza clínica y altamente personalizada de estos programas, tu formulación específica no se adquiere en línea. Se define y se prescribe únicamente tras tu valoración médica integral.",
+    "gatewayCta": "Solicita tu Valoración Médica"
   },
 
   "how": {

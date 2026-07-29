@@ -69,11 +69,20 @@ async function renderProgramPage() {
   const t = get(dict, `programs.items.${id}`) || {};
 
   const benefits = (t.benefits || []).map((b) => `<li>${b}</li>`).join("");
+  const symptoms = (t.symptoms || []).map((s) => `<li>${s}</li>`).join("");
+  const flags = (t.disqualifiers || []).map((s) => `<li>${s}</li>`).join("");
+  const phases = (t.phases || [])
+    .map((p) => `<div class="step"><div class="step__n"></div><div><h3>${p.t || ""}</h3><p>${p.b || ""}</p></div></div>`)
+    .join("");
   const doping = prog.antiDoping
     ? `<p class="doping-note">${get(dict, "program.doping") || ""}</p>`
     : "";
   const cta = get(dict, "cta.book") || "Book Your Assessment";
   const L = (k, f) => get(dict, k) || f;
+  const supportCard = (k) => {
+    const s = get(dict, `program.support.${k}`) || {};
+    return `<article class="card"><h3>${s.t || ""}</h3><p>${s.b || ""}</p></article>`;
+  };
 
   document.title = `${t.name || id} · RegenerAxis`;
 
@@ -90,26 +99,54 @@ async function renderProgramPage() {
     <section class="section"><div class="wrap narrow reveal">
       <span class="kicker">${L("program.whatItDoes", "What it does in your body")}</span>
       <p>${t.body || ""}</p>
-    </div></section>
-
-    <section class="section strip-dark"><div class="wrap narrow reveal">
-      <span class="kicker">${L("program.benefits", "Benefits")}</span>
       <ul class="benefits">${benefits}</ul>
     </div></section>
 
-    <section class="section"><div class="wrap narrow reveal">
+    <section class="section strip-dark"><div class="wrap reveal">
       <div class="grid grid--2">
         <div>
-          <span class="kicker">${L("program.idealFor", "Ideal for")}</span>
-          <p>${t.idealFor || ""}</p>
+          <span class="kicker">${L("program.symptomsTitle", "Signs worth addressing")}</span>
+          <ul class="benefits">${symptoms}</ul>
         </div>
+        <div>
+          <span class="kicker">${L("program.candidateTitle", "Ideal candidate")}</span>
+          <p>${t.idealFor || ""}</p>
+          <span class="kicker" style="margin-top:1.6rem">${L("program.disqualifiersTitle", "Not suitable if")}</span>
+          <ul class="flags">${flags}</ul>
+          <p class="tst-note">${L("program.disqualifiersNote", "")}</p>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="wrap narrow reveal">
+      <div class="eyebrow-center" style="text-align:left">
+        <span class="kicker">${L("program.timelineKicker", "The 90-day journey")}</span>
+        <h2>${L("program.timelineTitle", "How your program unfolds")}</h2>
+      </div>
+      <div class="steps reveal-stagger">${phases}</div>
+      <p class="tst-note">${L("program.timelineNote", "")}</p>
+    </div></section>
+
+    <section class="section strip-dark"><div class="wrap narrow reveal">
+      <div class="grid grid--2">
         <div>
           <span class="kicker">${L("program.schema", "Schema & cycle")}</span>
           <p>${t.schema || ""}</p>
+          ${doping}
         </div>
+        <div>${priceLine(prog, dict)}</div>
       </div>
-      ${priceLine(prog, dict)}
-      ${doping}
+    </div></section>
+
+    <section class="section"><div class="wrap reveal">
+      <div class="narrow center eyebrow-center">
+        <span class="kicker">${L("program.supportKicker", "Integrated support (optional)")}</span>
+        <h2>${L("program.supportTitle", "You can amplify your program")}</h2>
+      </div>
+      <div class="grid grid--3 reveal-stagger">
+        ${supportCard("nutrition")}${supportCard("exercise")}${supportCard("therapy")}
+      </div>
+      <p class="tst-note center mt-lg">${L("program.supportNote", "")}</p>
     </div></section>
 
     <section class="section"><div class="wrap narrow center reveal">
@@ -118,10 +155,12 @@ async function renderProgramPage() {
         <li><span class="kicker">${L("expect.b.k","How long it takes")}</span><p>${L("expect.b.body","")}</p></li>
         <li><span class="kicker">${L("expect.c.k","From anywhere")}</span><p>${L("expect.c.body","")}</p></li>
       </ul>
-      <h2>${L("final.title","Your biology deserves a strategy.")}</h2>
-      ${payStrip(dict)}
-      <div class="btn-row" style="justify-content:center"><a class="btn" data-booking href="#booking-placeholder">${cta}</a></div>
-      <p class="tst-note">${L("program.resultsVary","Personalized and physician supervised. Individual results vary.")}</p>
+      <div class="gateway reveal">
+        <p class="gateway__statement">${L("program.gatewayStatement", "")}</p>
+        ${payStrip(dict)}
+        <div class="btn-row" style="justify-content:center"><a class="btn" data-booking href="#booking-placeholder">${L("program.gatewayCta", cta)}</a></div>
+        <p class="tst-note">${L("program.resultsVary","Personalized and physician supervised. Individual results vary.")}</p>
+      </div>
     </div></section>
   `;
 

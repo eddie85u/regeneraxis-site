@@ -428,6 +428,20 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 .price__amount { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); color: var(--gold); line-height: 1; margin-bottom: 0.6rem; }
 .doping-note { border: 1px solid var(--hairline-soft); padding: 1.1rem 1.3rem; font-size: 0.88rem; color: var(--muted); margin-top: 1.5rem; }
 
+/* Disqualifying conditions: caution-flagged list (distinct from the gold-dot benefits) */
+.flags { list-style: none; padding: 0; margin: 0.6rem 0 0.8rem; display: grid; gap: 0.7rem; }
+.flags li { position: relative; padding-left: 1.9rem; color: var(--muted); font-size: 0.96rem; }
+.flags li::before {
+  content: "!"; position: absolute; left: 0; top: 0.12em;
+  width: 1.15rem; height: 1.15rem; display: flex; align-items: center; justify-content: center;
+  font-family: var(--sans); font-size: 0.72rem; font-weight: 500; line-height: 1;
+  color: var(--warm-black); background: var(--gold); border-radius: 3px;
+}
+
+/* Clinical gateway: the compliant close on every program page */
+.gateway { border: 1px solid var(--hairline); background: var(--surface); padding: clamp(1.8rem, 4vw, 3rem); margin-top: clamp(2rem, 5vw, 3.5rem); }
+.gateway__statement { font-family: var(--serif); font-weight: 300; font-size: clamp(1.2rem, 2.4vw, 1.6rem); line-height: 1.4; color: var(--ink); max-width: 42ch; margin: 0 auto 1.8rem; }
+
 /* ---------- Rich text (privacy / legal body from data-i18n-html) ---------- */
 .rich h2 { font-family: var(--sans); font-weight: 400; font-size: clamp(1.05rem, 2vw, 1.3rem);
   letter-spacing: 0.02em; text-transform: none; color: var(--kicker-ink); margin: 1.9rem 0 0.5rem; }
