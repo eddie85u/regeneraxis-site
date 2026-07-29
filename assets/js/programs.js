@@ -1,4 +1,4 @@
-import { currentLang, BOOKING_URL } from "./main.js";
+import { currentLang, BOOKING_URL, refreshReveal } from "./main.js";
 import { loadLocale, DATA_BASE, get } from "./i18n.js";
 
 async function loadPrograms() {
@@ -166,6 +166,9 @@ async function renderProgramPage() {
 
   // Re-wire the newly injected booking buttons.
   document.querySelectorAll("[data-booking]").forEach((el) => el.setAttribute("href", BOOKING_URL));
+  // The whole page was injected after the initial reveal pass, so (re)observe it
+  // now — otherwise every .reveal element stays at opacity:0 and the page looks empty.
+  refreshReveal();
   document.dispatchEvent(new CustomEvent("program:rendered"));
 }
 
