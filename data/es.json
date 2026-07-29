@@ -1,6 +1,6 @@
 {
   "nav": { "programs": "Programas", "process": "Proceso", "medellin": "Medellín", "testimonials": "Testimonios", "faq": "Preguntas", "contact": "Contacto" },
-  "cta": { "book": "Agenda tu Valoración", "bookShort": "Cita de Valoración" },
+  "cta": { "book": "Agenda tu Valoración", "bookShort": "Agendar cita" },
 
   "hero": {
     "kicker": "Medellín · Colombia",
@@ -22,7 +22,7 @@
 
   "programs": {
     "kicker": "Nuestros programas",
-    "title": "Cinco programas. Un método.",
+    "title": "Cinco programas.",
     "intro": "Todo programa comienza con una valoración médica, se personaliza para ti y es supervisado por nuestros médicos del primer día al último. Los resultados varían de una persona a otra.",
     "learn": "Explorar programa",
     "ctaTitle": "Da el primer paso",
