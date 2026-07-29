@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RegenerAxis · The Axis of Human Renewal · Medellín</title>
+  <meta name="description" content="Physician-guided regenerative programs, personalized to your biology, in Medellín, the City of Eternal Spring.">
+
+  <link rel="canonical" href="https://regeneraxis.com/en/">
+  <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
+  <link rel="alternate" hreflang="es" href="https://regeneraxis.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/en/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Language router: honor saved choice, else browser language, default English. -->
+  <script>
+    (function () {
+      try {
+        var saved = null;
+        try { saved = localStorage.getItem("ra_lang"); } catch (e) {}
+        var lang = saved || ((navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en");
+        if (lang !== "es") lang = "en";
+        location.replace("./" + lang + "/");
+      } catch (e) {
+        location.replace("./en/");
+      }
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0; url=./en/">
+  <style>
+    body { margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: #1B1A17; color: #B9AF9E; font-family: "Jost", -apple-system, Segoe UI, sans-serif;
+      font-weight: 300; letter-spacing: 0.04em; }
+    a { color: #C7A96B; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <noscript>
+    <p>RegenerAxis. Choose your language: <a href="./en/">English</a> · <a href="./es/">Español</a></p>
+  </noscript>
+</body>
+</html>

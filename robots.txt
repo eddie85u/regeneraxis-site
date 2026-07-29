@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /en/privacy.html
+Disallow: /es/privacy.html
+
+Sitemap: https://regeneraxis.com/sitemap.xml

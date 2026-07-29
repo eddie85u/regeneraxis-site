@@ -142,7 +142,23 @@
     "title": "Let's talk before you book.",
     "body": "International clients can begin with a remote consultation before traveling. Send us a note and we will get back to you.",
     "name": "Name", "country": "Country", "program": "Program of interest", "message": "Message", "send": "Send message",
-    "phone": "Or call us", "remote": "International clients can begin with a remote consultation before traveling."
+    "phone": "Or call us", "remote": "International clients can begin with a remote consultation before traveling.",
+    "selectProgram": "Select a program",
+    "sent": "Thank you. We have received your message and will get back to you soon."
+  },
+
+  "testimonials": {
+    "kicker": "In their words",
+    "title": "Experiences from those who started.",
+    "intro": "Individual experiences of service and process. Results vary by individual."
+  },
+
+  "privacy": {
+    "kicker": "Legal",
+    "title": "Privacy Policy",
+    "updated": "Last updated: to be defined.",
+    "body": "This is a preliminary version of the RegenerAxis privacy policy. Final content will be reviewed by legal counsel before launch. RegenerAxis collects only the information you voluntarily share through our contact and booking forms, in order to respond to your requests and coordinate your care. We do not sell or share your personal data with third parties for advertising purposes. For questions about your data, write to us through the contact page.",
+    "back": "Back to home"
   },
 
   "footer": {

@@ -1,4 +1,4 @@
-import { currentLang } from "./main.js";
+import { currentLang, BOOKING_URL } from "./main.js";
 import { loadLocale, DATA_BASE, get } from "./i18n.js";
 
 async function loadPrograms() {
@@ -111,7 +111,7 @@ async function renderProgramPage() {
   `;
 
   // Re-wire the newly injected booking buttons.
-  document.querySelectorAll("[data-booking]").forEach((el) => el.setAttribute("href", "#booking-placeholder"));
+  document.querySelectorAll("[data-booking]").forEach((el) => el.setAttribute("href", BOOKING_URL));
   document.dispatchEvent(new CustomEvent("program:rendered"));
 }
 
