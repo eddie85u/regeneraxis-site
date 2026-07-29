@@ -66,12 +66,10 @@
 
         <div class="nav__links" id="nav-links">
           <a href="./index.html#programs" data-i18n="nav.programs">Programas</a>
-          <a href="./index.html#process" data-i18n="nav.process">Proceso</a>
-          <a href="./index.html#medellin" data-i18n="nav.medellin">Medellín</a>
           <a href="./testimonials.html" data-i18n="nav.testimonials">Testimonios</a>
           <a href="./faq.html" data-i18n="nav.faq">Preguntas</a>
           <a href="./contact.html" data-i18n="nav.contact">Contacto</a>
-          <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
+          <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.bookShort">Cita de Valoración</a>
           <span class="lang-toggle">
             <a href="en/index.html">EN</a>
             <a href="./index.html" class="active">ES</a>
@@ -91,25 +89,29 @@
 
   <main id="main">
 
-    <section class="hero">
+    <section class="hero hero--home">
       <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="hero__bloom" aria-hidden="true">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="b-stroke" stroke-width="0.8" fill="none">
-            <ellipse cx="50" cy="50" rx="14" ry="34"/>
-            <ellipse cx="50" cy="50" rx="34" ry="14"/>
-            <ellipse cx="50" cy="50" rx="26" ry="26" transform="rotate(45 50 50)"/>
-          </g>
-          <circle cx="50" cy="50" r="31" fill="none" stroke="#C7A96B" stroke-width="0.5" opacity="0.55"/>
-          <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
-        </svg>
-      </div>
       <div class="wrap hero__inner reveal">
-        <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
-        <h1 data-i18n="hero.headline">Optimiza tu recuperación. Eleva tu rendimiento. Extiende tu vitalidad.</h1>
-        <p class="subline" data-i18n="hero.subline">Programas regenerativos guiados por médicos, personalizados según tu biología, en la Ciudad de la Eterna Primavera.</p>
-        <div class="btn-row">
-          <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
+        <div class="hero__content">
+          <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
+          <h1 data-i18n="hero.headline">Optimiza tu recuperación. Eleva tu rendimiento. Extiende tu vitalidad.</h1>
+          <p class="subline" data-i18n="hero.subline">Programas regenerativos guiados por médicos, personalizados según tu biología, en la Ciudad de la Eterna Primavera.</p>
+          <div class="btn-row">
+            <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__bloom">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g class="b-stroke" stroke-width="0.8" fill="none">
+                <ellipse cx="50" cy="50" rx="14" ry="34"/>
+                <ellipse cx="50" cy="50" rx="34" ry="14"/>
+                <ellipse cx="50" cy="50" rx="26" ry="26" transform="rotate(45 50 50)"/>
+              </g>
+              <circle cx="50" cy="50" r="31" fill="none" stroke="#C7A96B" stroke-width="0.5" opacity="0.55"/>
+              <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -143,13 +145,13 @@
       <div class="wrap">
         <div class="narrow center eyebrow-center reveal">
           <span class="kicker" data-i18n="who.kicker">Encuentra tu punto de partida</span>
-          <h2 data-i18n="who.title">Para quién es esto.</h2>
+          <h2 data-i18n="who.title">¿Es esto para ti?</h2>
           <p class="lead" data-i18n="who.lead">¿Te identificas con alguno de estos? Fatiga que no cede, recuperación lenta, grasa que no baja por más que lo intentas y foco que se apaga a media tarde. Son señales, no sentencias, y se pueden trabajar con un plan médico.</p>
         </div>
         <div class="grid grid--4 reveal-stagger">
           <article class="card"><div class="card__num">01</div><h3 data-i18n="who.athlete.title">El Atleta</h3><p data-i18n="who.athlete.body">Entrenas al límite. Quieres recuperarte más rápido, proteger tus articulaciones y volver más fuerte a cada sesión.</p></article>
           <article class="card"><div class="card__num">02</div><h3 data-i18n="who.executive.title">El Ejecutivo</h3><p data-i18n="who.executive.body">Vives bajo presión. Quieres dormir profundo, pensar con claridad y sostener tu energía todo el día.</p></article>
-          <article class="card"><div class="card__num">03</div><h3 data-i18n="who.metabolic.title">El Reset Metabólico</h3><p data-i18n="who.metabolic.body">Ya intentaste dietas y disciplina. Quieres bajar grasa con respaldo médico y mantener el resultado.</p></article>
+          <article class="card"><div class="card__num">03</div><h3 data-i18n="who.metabolic.title">El Reinicio Metabólico</h3><p data-i18n="who.metabolic.body">Ya intentaste dietas y disciplina. Quieres bajar grasa con respaldo médico y mantener el resultado.</p></article>
           <article class="card"><div class="card__num">04</div><h3 data-i18n="who.longevity.title">El Buscador de Longevidad</h3><p data-i18n="who.longevity.body">No buscas verte joven. Quieres sentirte fuerte, lúcido y vital por muchas décadas más.</p></article>
         </div>
       </div>
@@ -184,9 +186,8 @@
 
     <section class="section strip-dark">
       <div class="wrap">
-        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">En sus palabras</span></div>
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">Testimonios</span><h2 data-i18n="tst.title">Lo que dicen nuestros pacientes</h2></div>
         <div class="grid grid--3 reveal-stagger" id="tst-featured" data-tst-featured></div>
-        <p class="tst-note center mt-lg" data-i18n="tst.note">Experiencias individuales. Los resultados varían.</p>
         <div class="center mt-lg reveal"><a class="link-quiet" href="./testimonials.html" data-i18n="tst.all">Lee todas las experiencias</a></div>
       </div>
     </section>

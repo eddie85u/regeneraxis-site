@@ -62,12 +62,10 @@
 
         <div class="nav__links" id="nav-links">
           <a href="./index.html#programs" data-i18n="nav.programs">Programs</a>
-          <a href="./index.html#process" data-i18n="nav.process">Process</a>
-          <a href="./index.html#medellin" data-i18n="nav.medellin">Medellín</a>
           <a href="./testimonials.html" data-i18n="nav.testimonials">Testimonials</a>
           <a href="./faq.html" data-i18n="nav.faq">FAQ</a>
           <a href="./contact.html" data-i18n="nav.contact">Contact</a>
-          <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
+          <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.bookShort">Book Assessment</a>
           <span class="lang-toggle">
             <a href="../en/index.html" class="active">EN</a>
             <a href="../index.html">ES</a>
@@ -87,25 +85,29 @@
 
   <main id="main">
 
-    <section class="hero">
+    <section class="hero hero--home">
       <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="hero__bloom" aria-hidden="true">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="b-stroke" stroke-width="0.8" fill="none">
-            <ellipse cx="50" cy="50" rx="14" ry="34"/>
-            <ellipse cx="50" cy="50" rx="34" ry="14"/>
-            <ellipse cx="50" cy="50" rx="26" ry="26" transform="rotate(45 50 50)"/>
-          </g>
-          <circle cx="50" cy="50" r="31" fill="none" stroke="#C7A96B" stroke-width="0.5" opacity="0.55"/>
-          <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
-        </svg>
-      </div>
       <div class="wrap hero__inner reveal">
-        <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
-        <h1 data-i18n="hero.headline">Optimize recovery. Elevate performance. Extend healthspan.</h1>
-        <p class="subline" data-i18n="hero.subline">Physician-guided regenerative programs, personalized to your biology, delivered in the City of Eternal Spring.</p>
-        <div class="btn-row">
-          <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
+        <div class="hero__content">
+          <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
+          <h1 data-i18n="hero.headline">Optimize recovery. Elevate performance. Extend healthspan.</h1>
+          <p class="subline" data-i18n="hero.subline">Physician-guided regenerative programs, personalized to your biology, delivered in the City of Eternal Spring.</p>
+          <div class="btn-row">
+            <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__bloom">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g class="b-stroke" stroke-width="0.8" fill="none">
+                <ellipse cx="50" cy="50" rx="14" ry="34"/>
+                <ellipse cx="50" cy="50" rx="34" ry="14"/>
+                <ellipse cx="50" cy="50" rx="26" ry="26" transform="rotate(45 50 50)"/>
+              </g>
+              <circle cx="50" cy="50" r="31" fill="none" stroke="#C7A96B" stroke-width="0.5" opacity="0.55"/>
+              <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -139,7 +141,7 @@
       <div class="wrap">
         <div class="narrow center eyebrow-center reveal">
           <span class="kicker" data-i18n="who.kicker">Find your starting point</span>
-          <h2 data-i18n="who.title">Who this is for.</h2>
+          <h2 data-i18n="who.title">Is this for you?</h2>
           <p class="lead" data-i18n="who.lead">Recognize any of these? Persistent fatigue, slow recovery, fat that will not budge no matter what you try, and focus that fades by mid-afternoon. These are signals, not sentences, and they can be addressed with a medical plan.</p>
         </div>
         <div class="grid grid--4 reveal-stagger">
@@ -180,9 +182,8 @@
 
     <section class="section strip-dark">
       <div class="wrap">
-        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">In their words</span></div>
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">Testimonials</span><h2 data-i18n="tst.title">What our patients say</h2></div>
         <div class="grid grid--3 reveal-stagger" id="tst-featured" data-tst-featured></div>
-        <p class="tst-note center mt-lg" data-i18n="tst.note">Individual experiences. Results vary.</p>
         <div class="center mt-lg reveal"><a class="link-quiet" href="./testimonials.html" data-i18n="tst.all">Read all experiences</a></div>
       </div>
     </section>

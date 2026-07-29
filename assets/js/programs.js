@@ -164,7 +164,6 @@ async function renderProgramPage() {
       <div class="grid grid--3 reveal-stagger">
         ${supportCard("nutrition")}${supportCard("exercise")}${supportCard("therapy")}
       </div>
-      <p class="tst-note center mt-lg">${L("program.supportNote", "")}</p>
     </div></section>
 
     <section class="section"><div class="wrap narrow center reveal">

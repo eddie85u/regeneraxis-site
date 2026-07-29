@@ -1,6 +1,6 @@
 {
   "nav": { "programs": "Programs", "process": "Process", "medellin": "Medellín", "testimonials": "Testimonials", "faq": "FAQ", "contact": "Contact" },
-  "cta": { "book": "Book Your Assessment" },
+  "cta": { "book": "Book Your Assessment", "bookShort": "Book Assessment" },
 
   "hero": {
     "kicker": "Medellín · Colombia",
@@ -12,7 +12,7 @@
 
   "who": {
     "kicker": "Find your starting point",
-    "title": "Who this is for.",
+    "title": "Is this for you?",
     "lead": "Recognize any of these? Persistent fatigue, slow recovery, fat that will not budge no matter what you try, and focus that fades by mid-afternoon. These are signals, not sentences, and they can be addressed with a medical plan.",
     "athlete": { "title": "The Athlete", "body": "You train at the limit. You want to recover faster, protect your joints, and return stronger to every session." },
     "executive": { "title": "The Executive", "body": "You carry pressure all day. You want deeper sleep, sharper focus, and energy that lasts past noon." },
@@ -134,7 +134,6 @@
     "timelineNote": "Phases and timing are indicative and vary by person and program.",
     "supportKicker": "Integrated support (optional)",
     "supportTitle": "You can amplify your program",
-    "supportNote": "Optional add-ons defined at your medical assessment.",
     "support": {
       "nutrition": { "t": "Nutrition", "b": "Nutritional guidance aligned with your goal and your program." },
       "exercise": { "t": "Exercise & movement", "b": "Training and movement guidance to sustain and amplify your results." },
@@ -165,11 +164,10 @@
   },
 
   "tst": {
-    "kicker": "In their words",
-    "note": "Individual experiences. Results vary.",
+    "kicker": "Testimonials",
     "all": "Read all experiences",
     "filterAll": "All",
-    "title": "In their words"
+    "title": "What our patients say"
   },
 
   "science": {
@@ -216,7 +214,7 @@
   },
 
   "testimonials": {
-    "kicker": "In their words",
+    "kicker": "Testimonials",
     "title": "Experiences from those who started.",
     "intro": "Individual experiences of service and process. Results vary by individual."
   },
