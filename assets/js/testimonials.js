@@ -10,10 +10,30 @@ async function loadTestimonials() {
 function card(t) {
   const el = document.createElement("figure");
   el.className = "tst reveal";
-  el.innerHTML = `
-    <blockquote>&ldquo;${t.quote}&rdquo;</blockquote>
-    <figcaption class="tst__meta"><b>${t.name}</b> &middot; ${t.country} &middot; ${t.program}</figcaption>
-  `;
+  // Optional video: a lazy YouTube facade. The heavy iframe is only created
+  // on click, so it never touches load performance. Set "youtube" to the ID.
+  const media = t.youtube
+    ? `<div class="tst__video" role="button" tabindex="0" aria-label="Play video">
+         <img loading="lazy" src="https://i.ytimg.com/vi/${t.youtube}/hqdefault.jpg" alt="">
+         <span class="tst__play" aria-hidden="true"><span></span></span>
+       </div>`
+    : "";
+  const quote = t.quote
+    ? `<blockquote>&ldquo;${t.quote}&rdquo;</blockquote>`
+    : "";
+  el.innerHTML = `${media}${quote}
+    <figcaption class="tst__meta"><b>${t.name}</b> &middot; ${t.country} &middot; ${t.program}</figcaption>`;
+
+  const v = el.querySelector(".tst__video");
+  if (v) {
+    const play = () => {
+      v.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${t.youtube}?autoplay=1&rel=0" title="${t.name}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+    };
+    v.addEventListener("click", play);
+    v.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(); }
+    });
+  }
   return el;
 }
 

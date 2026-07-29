@@ -12,6 +12,7 @@
 
   "who": {
     "kicker": "Encuentra tu punto de partida",
+    "title": "Para quién es esto.",
     "athlete": { "title": "El Atleta", "body": "Entrenas al límite. Quieres recuperarte más rápido, proteger tus articulaciones y volver más fuerte a cada sesión." },
     "executive": { "title": "El Ejecutivo", "body": "Vives bajo presión. Quieres dormir profundo, pensar con claridad y sostener tu energía todo el día." },
     "metabolic": { "title": "El Reset Metabólico", "body": "Ya intentaste dietas y disciplina. Quieres bajar grasa con respaldo médico y mantener el resultado." },
@@ -21,7 +22,7 @@
   "programs": {
     "kicker": "Nuestros programas",
     "title": "Cinco programas. Un método.",
-    "intro": "Todo protocolo comienza con una valoración médica, se construye a partir de tu historia clínica y tus exámenes de laboratorio, y es supervisado por nuestros médicos del primer día al último. Los resultados varían de una persona a otra.",
+    "intro": "Todo programa comienza con una valoración médica, se personaliza para ti y es supervisado por nuestros médicos del primer día al último. Los resultados varían de una persona a otra.",
     "learn": "Explorar programa",
     "items": {
       "recovery": {
@@ -90,16 +91,16 @@
 
   "how": {
     "kicker": "El proceso",
-    "s1": { "title": "Valoración Médica", "body": "Una consulta privada para entender tus objetivos, tu historia y tu estilo de vida. Los pacientes internacionales pueden iniciar de forma remota." },
-    "s2": { "title": "Revisión de Biomarcadores", "body": "Los exámenes de laboratorio nos dan una imagen objetiva de tu biología." },
-    "s3": { "title": "Protocolo Personalizado", "body": "Tu médico diseña un programa construido para tu cuerpo y tus objetivos." },
-    "s4": { "title": "Optimización y Seguimiento", "body": "Monitoreamos, ajustamos y refinamos durante todo tu ciclo." }
+    "s1": { "title": "Escríbenos o agenda", "body": "Contáctanos por WhatsApp o empieza en línea. Te guiamos para agendar tu valoración médica." },
+    "s2": { "title": "Chequeo de elegibilidad", "body": "Antes del pago, un formulario breve (tu edad y antecedentes de salud) confirma que la valoración es adecuada para ti." },
+    "s3": { "title": "Valoración médica", "body": "Una consulta privada y con costo. Revisamos tu formulario, exploramos tus objetivos e indagamos a fondo en posibles contraindicaciones." },
+    "s4": { "title": "Tu programa personalizado", "body": "Si eres apto, tu médico te enruta al programa más conveniente, de uno a varios meses. Los complementos son opcionales." }
   },
 
   "medellin": {
     "kicker": "El destino",
     "title": "La ciudad donde la primavera nunca termina.",
-    "body": "Medellín tiene el clima exacto que el cuerpo encuentra más restaurador, cerca de Norteamérica pero lejos de su ruido. Médicos de clase mundial, verdadera privacidad y atención premium a una fracción del costo de otros destinos. El entorno no es un detalle. Es parte de la terapia."
+    "body": "Medellín tiene un clima que el cuerpo encuentra naturalmente restaurador durante todo el año, la razón por la que la llaman la Ciudad de la Eterna Primavera. Aquí encuentras médicos de clase mundial, verdadera privacidad y atención premium a precios justos y transparentes. Vivas en la ciudad o vengas desde otra parte de Colombia, el entorno no es un detalle. Es parte de la terapia."
   },
 
   "tst": {
@@ -113,7 +114,7 @@
   "science": {
     "kicker": "La ciencia",
     "title": "Primero estudiamos tu biología.",
-    "body": "Nuestros programas se apoyan en la medicina regenerativa: ciencia de péptidos, terapias de señalización celular y sueroterapia de nutrientes, aplicadas bajo supervisión médica y personalizadas mediante diagnósticos. No ofrecemos soluciones genéricas. Primero estudiamos tu biología, y luego construimos el protocolo a tu medida.",
+    "body": "Nuestros programas se apoyan en la medicina regenerativa y de longevidad: ciencia de péptidos, señalización celular y exosomas, enfoques con células madre y plasma rico en plaquetas (PRP), sueroterapia de nutrientes y optimización hormonal, todo aplicado bajo supervisión médica y personalizado mediante diagnósticos. El foco son resultados reales: recuperación, resistencia, bienestar metabólico y cardiovascular, manejo del peso y regeneración saludable. No ofrecemos soluciones genéricas. Primero estudiamos tu biología, y luego construimos el protocolo a tu medida.",
     "note": "Nota: Esta información es educativa y no reemplaza el consejo médico individualizado."
   },
 
@@ -126,23 +127,29 @@
   },
 
   "expect": {
-    "a": { "k": "Qué incluye", "body": "Una consulta médica privada, la revisión de tus objetivos y tu historia, y los biomarcadores de laboratorio para personalizar tu programa." },
+    "a": { "k": "Qué incluye", "body": "Una consulta médica privada para revisar tus objetivos, tu historia y posibles contraindicaciones, y enrutarte al programa adecuado." },
     "b": { "k": "Cuánto toma", "body": "Una sesión enfocada con tu equipo médico, y un plan claro con el que sales, decidas o no continuar." },
-    "c": { "k": "Desde donde estés", "body": "Los pacientes internacionales pueden iniciar de forma remota y luego coordinar su viaje a Medellín para comenzar en persona." }
+    "c": { "k": "Antes de pagar", "body": "Primero un breve formulario de elegibilidad. Si un programa no es adecuado para ti, te lo diremos con honestidad." }
+  },
+
+  "pay": {
+    "a": "Aceptamos las principales tarjetas",
+    "b": "Pago seguro",
+    "c": "Chequeo de elegibilidad antes del pago"
   },
 
   "final": {
     "title": "Tu biología merece una estrategia.",
     "subline": "Comienza con una valoración médica privada. Presencial en Medellín, o remota si viajas hacia nosotros.",
-    "questions": "¿Dudas antes de agendar? Lee nuestras <a href=\"./faq.html\">preguntas frecuentes</a> o escríbenos vía WhatsApp al: +57 313 8750104"
+    "questions": "¿Dudas antes de agendar? Lee nuestras <a href=\"./faq.html\">preguntas frecuentes</a> o escríbenos por <a href=\"https://wa.me/573138750104\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>."
   },
 
   "contact": {
     "kicker": "¿Dudas antes de agendar?",
     "title": "Hablemos antes de que agendes.",
-    "body": "Los pacientes internacionales pueden iniciar con una consulta remota antes de viajar. Envíanos un mensaje y te responderemos.",
+    "body": "¿Vienes de otra ciudad de Colombia o del exterior? Puedes iniciar con una consulta remota antes de viajar. Envíanos un mensaje y te responderemos.",
     "name": "Nombre", "country": "País", "program": "Programa de interés", "message": "Mensaje", "send": "Enviar mensaje",
-    "phone": "O llámanos", "remote": "Los pacientes internacionales pueden iniciar con una consulta remota antes de viajar.",
+    "phone": "O escríbenos por WhatsApp", "remote": "Si vienes de otra ciudad de Colombia o del exterior, puedes iniciar con una consulta remota antes de viajar.",
     "selectProgram": "Selecciona un programa",
     "sent": "Gracias. Hemos recibido tu mensaje y te responderemos pronto."
   },
@@ -156,14 +163,14 @@
   "privacy": {
     "kicker": "Legal",
     "title": "Política de Privacidad",
-    "updated": "Última actualización: por definir.",
-    "body": "Esta es una versión preliminar de la política de privacidad de RegenerAxis. El contenido definitivo será revisado por asesoría legal antes del lanzamiento. RegenerAxis recopila únicamente la información que compartes de forma voluntaria a través de nuestros formularios de contacto y de agendamiento, con el fin de responder a tus solicitudes y coordinar tu atención. No vendemos ni compartimos tus datos personales con terceros para fines publicitarios. Para consultas sobre tus datos, escríbenos a través de la página de contacto.",
+    "updated": "Última actualización: 28 de julio de 2026.",
+    "body": "<p>En RegenerAxis (\"nosotros\") respetamos tu privacidad y protegemos los datos personales que compartes con nosotros. Esta política explica qué recopilamos, con qué fin y qué derechos tienes sobre tu información.</p><h2>Información que recopilamos</h2><p>Recopilamos únicamente los datos que nos proporcionas de forma voluntaria a través de nuestros formularios de contacto y de agendamiento y por WhatsApp: tu nombre, país o ciudad, programa de interés y el contenido de tu mensaje. Al agendar una valoración con costo, el agendamiento y el pago los gestionan nuestros proveedores de reservas y de pagos, que tratan tus datos bajo sus propios términos.</p><h2>Cómo la usamos</h2><p>Usamos tus datos para responder tus consultas, realizar un chequeo de elegibilidad, coordinar tu valoración médica y brindarte la atención que solicitas. No vendemos tus datos personales ni los compartimos con terceros con fines publicitarios.</p><h2>Proveedores de servicio</h2><p>Nos apoyamos en proveedores de confianza para agendamiento, procesamiento de pagos, alojamiento y analítica de tráfico básica y respetuosa de la privacidad. Estos proveedores solo reciben los datos necesarios para cumplir su función.</p><h2>Conservación de datos</h2><p>Conservamos tus datos solo el tiempo necesario para atender tu solicitud y cumplir nuestras obligaciones legales y contables, tras lo cual se eliminan o anonimizan.</p><h2>Tus derechos</h2><p>Conforme a la ley colombiana de protección de datos (Ley 1581 de 2012, Habeas Data), puedes solicitar el acceso, la corrección, la actualización o la eliminación de tus datos personales, y retirar tu consentimiento en cualquier momento. Para ejercer estos derechos, escríbenos desde la página de contacto o por WhatsApp.</p>",
     "back": "Volver al inicio"
   },
 
   "footer": {
     "tagline": "El Eje de la Renovación Humana. Medellín, Colombia.",
     "explore": "Explorar", "connect": "Conectar", "privacy": "Privacidad",
-    "disclaimer": "La información de este sitio tiene fines exclusivamente educativos y no constituye consejo médico, diagnóstico ni garantía de resultados. Todos los programas requieren valoración médica previa y son personalizados y supervisados por médicos titulados. Los tratamientos se realizan de manera presencial en Medellín, Colombia. Los resultados varían de una persona a otra."
+    "disclaimer": "RegenerAxis ofrece programas de bienestar regenerativo supervisados por médicos. Todo programa requiere una valoración médica previa y es personalizado y supervisado por médicos titulados. El contenido de este sitio es informativo y no sustituye el consejo, diagnóstico ni tratamiento médico profesional, y no garantiza resultados específicos, que varían de una persona a otra. Los tratamientos se realizan de manera presencial en Medellín, Colombia."
   }
 }

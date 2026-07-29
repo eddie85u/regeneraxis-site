@@ -6,27 +6,28 @@
   <title>RegenerAxis · The Axis of Human Renewal · Medellín</title>
   <meta name="description" content="Physician-guided regenerative programs, personalized to your biology, in Medellín, the City of Eternal Spring.">
 
-  <link rel="canonical" href="https://regeneraxis.com/en/">
-  <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
+  <link rel="canonical" href="https://regeneraxis.com/es/">
   <link rel="alternate" hreflang="es" href="https://regeneraxis.com/es/">
-  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/en/">
+  <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/es/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <!-- Language router: honor saved choice, else browser language, default English. -->
+  <!-- Language router: Spanish is primary. Honor a saved choice, otherwise
+       send English-language browsers to /en/ and everyone else to /es/. -->
   <script>
     (function () {
       try {
         var saved = null;
         try { saved = localStorage.getItem("ra_lang"); } catch (e) {}
-        var lang = saved || ((navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en");
-        if (lang !== "es") lang = "en";
+        var lang = saved || ((navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es");
+        if (lang !== "en") lang = "es";
         location.replace("./" + lang + "/");
       } catch (e) {
-        location.replace("./en/");
+        location.replace("./es/");
       }
     })();
   </script>
-  <meta http-equiv="refresh" content="0; url=./en/">
+  <meta http-equiv="refresh" content="0; url=./es/">
   <style>
     body { margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center;
       background: #1B1A17; color: #B9AF9E; font-family: "Jost", -apple-system, Segoe UI, sans-serif;

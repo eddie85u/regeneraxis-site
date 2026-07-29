@@ -11,11 +11,11 @@
       try {
         var saved = null;
         try { saved = localStorage.getItem("ra_lang"); } catch (e) {}
-        var lang = saved || ((navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en");
-        if (lang !== "es") lang = "en";
+        var lang = saved || ((navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es");
+        if (lang !== "en") lang = "es";
         // Send stray URLs back to the language home. Keep it simple and safe.
         location.replace("/" + lang + "/");
-      } catch (e) { location.replace("/en/"); }
+      } catch (e) { location.replace("/es/"); }
     })();
   </script>
   <style>

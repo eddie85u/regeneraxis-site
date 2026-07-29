@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://regeneraxis.com/en/">
   <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
   <link rel="alternate" hreflang="es" href="https://regeneraxis.com/es/">
-  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/es/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="RegenerAxis · The Axis of Human Renewal">
@@ -23,7 +23,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap"></noscript>
 
   <link rel="stylesheet" href="../assets/css/styles.css">
 
@@ -86,8 +87,16 @@
   <main id="main">
 
     <section class="hero">
-      <div class="hero__media">
-        <img src="../assets/img/hero.jpg" alt="" loading="eager" onerror="this.style.display='none'">
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hero__bloom" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="b-stroke" stroke-width="1.1" fill="none">
+            <ellipse cx="50" cy="50" rx="15" ry="30"/>
+            <ellipse cx="50" cy="50" rx="30" ry="15"/>
+          </g>
+          <circle cx="50" cy="50" r="26" fill="none" stroke="#C7A96B" stroke-width="0.7"/>
+          <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+        </svg>
       </div>
       <div class="wrap hero__inner reveal">
         <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
@@ -107,7 +116,7 @@
 
     <section class="section">
       <div class="wrap">
-        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="who.kicker">Find your starting point</span></div>
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="who.kicker">Find your starting point</span><h2 data-i18n="who.title">Who this is for.</h2></div>
         <div class="grid grid--4 reveal-stagger">
           <article class="card"><div class="card__num">01</div><h3 data-i18n="who.athlete.title">The Athlete</h3><p data-i18n="who.athlete.body">You train at the limit. You want to recover faster, protect your joints, and return stronger to every session.</p></article>
           <article class="card"><div class="card__num">02</div><h3 data-i18n="who.executive.title">The Executive</h3><p data-i18n="who.executive.body">You carry pressure all day. You want deeper sleep, sharper focus, and energy that lasts past noon.</p></article>
@@ -140,10 +149,10 @@
       <div class="wrap">
         <div class="narrow eyebrow-center reveal"><span class="kicker" data-i18n="how.kicker">The journey</span></div>
         <div class="narrow steps reveal-stagger">
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Medical Assessment</h3><p data-i18n="how.s1.body">A private consultation to understand your goals, history, and lifestyle. International clients may begin remotely.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Biomarker Review</h3><p data-i18n="how.s2.body">Laboratory testing gives us an objective picture of your biology.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Personalized Protocol</h3><p data-i18n="how.s3.body">Your physician designs a program built for your body and your objectives.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Optimization & Follow-Up</h3><p data-i18n="how.s4.body">We monitor, adjust, and refine throughout your cycle.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Reach out or book</h3><p data-i18n="how.s1.body">Message us on WhatsApp or start online. We guide you to schedule your medical assessment.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Quick eligibility check</h3><p data-i18n="how.s2.body">Before payment, a brief form (your age and health background) confirms the assessment is right for you.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Medical assessment</h3><p data-i18n="how.s3.body">A private, paid consultation. We review your form, explore your goals, and look into any contraindications in depth.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Your personalized program</h3><p data-i18n="how.s4.body">If you are a good fit, your physician routes you to the most suitable program, from one to several months. Any add-ons are optional.</p></div></div>
         </div>
       </div>
     </section>
@@ -197,6 +206,11 @@
         <div class="center reveal">
           <h2 data-i18n="final.title">Your biology deserves a strategy.</h2>
           <p class="lead" data-i18n="final.subline">Begin with a private medical assessment. In person in Medellín, or remotely if you are traveling to us.</p>
+          <div class="pay-strip reveal" aria-label="Payment">
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.a">All major cards accepted</span></span>
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.b">Secure checkout</span></span>
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.c">Quick eligibility check before payment</span></span>
+          </div>
           <div class="btn-row" style="justify-content:center">
             <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
           </div>
@@ -215,7 +229,7 @@
           <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">The Axis of Human Renewal. Medellín, Colombia.</p>
         </div>
         <div>
-          <h4 data-i18n="footer.explore">Explore</h4>
+          <h3 data-i18n="footer.explore">Explore</h3>
           <ul>
             <li><a href="./index.html#programs" data-i18n="nav.programs">Programs</a></li>
             <li><a href="./index.html#process" data-i18n="nav.process">Process</a></li>
@@ -224,9 +238,9 @@
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.connect">Connect</h4>
+          <h3 data-i18n="footer.connect">Connect</h3>
           <ul>
-            <li><a href="tel:+573138750104">+57 313 8750104</a></li>
+            <li><a data-whatsapp href="https://wa.me/573138750104">+57 313 8750104</a></li>
             <li><a data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a></li>
             <li><a href="./privacy.html" data-i18n="footer.privacy">Privacy</a></li>
           </ul>

@@ -1,0 +1,10 @@
+# Local-only working guides. These are served publicly if committed (GitHub
+# Pages publishes the repo root), so they are kept out of the repo. They stay
+# on your disk as internal references.
+COMPLIANCE.md
+COPY_EN.md
+COPY_ES.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

@@ -32,6 +32,20 @@ async function renderPreview() {
   programs.forEach((p) => mount.appendChild(previewCard(p, dict, lang)));
 }
 
+/* Shared payment-reassurance strip. Rendered above final CTAs so objections
+   about paying for the assessment are answered before the click. */
+export function payStrip(dict) {
+  const ic = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>';
+  const a = get(dict, "pay.a") || "All major cards accepted";
+  const b = get(dict, "pay.b") || "Secure checkout";
+  const c = get(dict, "pay.c") || "Quick eligibility check before payment";
+  return `<div class="pay-strip" aria-label="Payment">
+      <span class="pay-item">${ic}${a}</span>
+      <span class="pay-item">${ic}${b}</span>
+      <span class="pay-item">${ic}${c}</span>
+    </div>`;
+}
+
 /* --- Full program page renderer (used by program pages) --- */
 function priceLine(prog, dict) {
   if (!prog.priceFrom) return "";
@@ -105,6 +119,7 @@ async function renderProgramPage() {
         <li><span class="kicker">${L("expect.c.k","From anywhere")}</span><p>${L("expect.c.body","")}</p></li>
       </ul>
       <h2>${L("final.title","Your biology deserves a strategy.")}</h2>
+      ${payStrip(dict)}
       <div class="btn-row" style="justify-content:center"><a class="btn" data-booking href="#booking-placeholder">${cta}</a></div>
       <p class="tst-note">${L("program.resultsVary","Personalized and physician supervised. Individual results vary.")}</p>
     </div></section>

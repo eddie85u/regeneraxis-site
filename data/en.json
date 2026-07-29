@@ -12,6 +12,7 @@
 
   "who": {
     "kicker": "Find your starting point",
+    "title": "Who this is for.",
     "athlete": { "title": "The Athlete", "body": "You train at the limit. You want to recover faster, protect your joints, and return stronger to every session." },
     "executive": { "title": "The Executive", "body": "You carry pressure all day. You want deeper sleep, sharper focus, and energy that lasts past noon." },
     "metabolic": { "title": "The Metabolic Reset", "body": "You have tried diets and discipline. You want to lose fat with medical guidance and keep it off." },
@@ -21,7 +22,7 @@
   "programs": {
     "kicker": "Our programs",
     "title": "Five programs. One method.",
-    "intro": "Every protocol begins with a medical assessment, is built from your clinical history and lab biomarkers, and is supervised by our physicians from the first day to the last. Individual results vary.",
+    "intro": "Every program begins with a medical assessment, is personalized to you, and is supervised by our physicians from the first day to the last. Individual results vary.",
     "learn": "Explore program",
     "items": {
       "recovery": {
@@ -90,16 +91,16 @@
 
   "how": {
     "kicker": "The journey",
-    "s1": { "title": "Medical Assessment", "body": "A private consultation to understand your goals, history, and lifestyle. International clients may begin remotely." },
-    "s2": { "title": "Biomarker Review", "body": "Laboratory testing gives us an objective picture of your biology." },
-    "s3": { "title": "Personalized Protocol", "body": "Your physician designs a program built for your body and your objectives." },
-    "s4": { "title": "Optimization & Follow-Up", "body": "We monitor, adjust, and refine throughout your cycle." }
+    "s1": { "title": "Reach out or book", "body": "Message us on WhatsApp or start online. We guide you to schedule your medical assessment." },
+    "s2": { "title": "Quick eligibility check", "body": "Before payment, a brief form (your age and health background) confirms the assessment is right for you." },
+    "s3": { "title": "Medical assessment", "body": "A private, paid consultation. We review your form, explore your goals, and look into any contraindications in depth." },
+    "s4": { "title": "Your personalized program", "body": "If you are a good fit, your physician routes you to the most suitable program, from one to several months. Any add-ons are optional." }
   },
 
   "medellin": {
     "kicker": "The destination",
     "title": "The city where spring never ends.",
-    "body": "Medellín sits at the exact climate the body finds most restorative, within easy reach of North America yet apart from its noise. World-class clinicians, genuine privacy, and premium care at a fraction of the cost found elsewhere. The setting is not an afterthought. It is part of the therapy."
+    "body": "Medellín holds a climate the body finds naturally restorative all year long, the reason it is known as the City of Eternal Spring. Here you will find world-class clinicians, genuine privacy, and premium care at fair, transparent prices. Whether you live in the city or travel in from elsewhere in Colombia, the setting is not a detail. It is part of the therapy."
   },
 
   "tst": {
@@ -113,7 +114,7 @@
   "science": {
     "kicker": "The science",
     "title": "We study your biology first.",
-    "body": "Our programs draw on regenerative medicine: peptide science, cellular signaling therapies, and IV nutrient support, applied under medical supervision and personalized through diagnostics. We do not offer generic solutions. We study your biology first, then build the protocol around it.",
+    "body": "Our programs draw on regenerative and longevity medicine: peptide science, cellular signaling and exosomes, stem cell and platelet-rich plasma (PRP) approaches, IV nutrient therapy, and hormone optimization, all applied under medical supervision and personalized through diagnostics. The focus is real outcomes: recovery, endurance, metabolic and cardiovascular wellness, weight management, and healthy regeneration. We do not offer generic solutions. We study your biology first, then build the protocol around it.",
     "note": "Note: This information is educational and does not replace individualized medical advice."
   },
 
@@ -126,23 +127,29 @@
   },
 
   "expect": {
-    "a": { "k": "What it includes", "body": "A private physician consultation, review of your goals and history, and the lab biomarkers to personalize your program." },
-    "b": { "k": "How long it takes", "body": "A focused session with your medical team, plus a clear plan you leave with whether or not you continue." },
-    "c": { "k": "From anywhere", "body": "International clients can begin remotely, then coordinate travel to Medellín to start in person." }
+    "a": { "k": "What it includes", "body": "A private physician consultation to review your goals, your history, and any contraindications, then routing to the right program." },
+    "b": { "k": "How long it takes", "body": "A focused session with your medical team, plus a clear plan you leave with, whether or not you continue." },
+    "c": { "k": "Before you pay", "body": "A quick eligibility form comes first. If a program is not right for you, we will tell you honestly." }
+  },
+
+  "pay": {
+    "a": "All major cards accepted",
+    "b": "Secure checkout",
+    "c": "Quick eligibility check before payment"
   },
 
   "final": {
     "title": "Your biology deserves a strategy.",
     "subline": "Begin with a private medical assessment. In person in Medellín, or remotely if you are traveling to us.",
-    "questions": "Questions before booking? Read our <a href=\"./faq.html\">FAQ</a> or write via WhatsApp: +57 313 8750104"
+    "questions": "Questions before booking? Read our <a href=\"./faq.html\">FAQ</a> or message us on <a href=\"https://wa.me/573138750104\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>."
   },
 
   "contact": {
     "kicker": "Have questions first?",
     "title": "Let's talk before you book.",
-    "body": "International clients can begin with a remote consultation before traveling. Send us a note and we will get back to you.",
+    "body": "Coming from another city in Colombia or from abroad? You can begin with a remote consultation before traveling. Send us a note and we will get back to you.",
     "name": "Name", "country": "Country", "program": "Program of interest", "message": "Message", "send": "Send message",
-    "phone": "Or call us", "remote": "International clients can begin with a remote consultation before traveling.",
+    "phone": "Or message us on WhatsApp", "remote": "Coming from another city in Colombia or abroad, you can begin with a remote consultation before traveling.",
     "selectProgram": "Select a program",
     "sent": "Thank you. We have received your message and will get back to you soon."
   },
@@ -156,14 +163,14 @@
   "privacy": {
     "kicker": "Legal",
     "title": "Privacy Policy",
-    "updated": "Last updated: to be defined.",
-    "body": "This is a preliminary version of the RegenerAxis privacy policy. Final content will be reviewed by legal counsel before launch. RegenerAxis collects only the information you voluntarily share through our contact and booking forms, in order to respond to your requests and coordinate your care. We do not sell or share your personal data with third parties for advertising purposes. For questions about your data, write to us through the contact page.",
+    "updated": "Last updated: July 28, 2026.",
+    "body": "<p>RegenerAxis (\"we\", \"us\") respects your privacy and protects the personal data you share with us. This policy explains what we collect, why, and the rights you have over your information.</p><h2>Information we collect</h2><p>We collect only the data you provide voluntarily through our contact and booking forms and through WhatsApp: your name, country or city, program of interest, and the contents of your message. When you book a paid assessment, scheduling and payment are handled by our booking and payment providers, who process your data under their own terms.</p><h2>How we use it</h2><p>We use your data to respond to your enquiries, complete an eligibility check, coordinate your medical assessment, and provide the care you request. We do not sell your personal data, and we do not share it with third parties for advertising.</p><h2>Service providers</h2><p>We rely on trusted providers for scheduling, payment processing, hosting, and basic, privacy-respecting traffic analytics. These providers only receive the data needed to perform their function.</p><h2>Data retention</h2><p>We keep your data only as long as needed to attend to your request and to meet our legal and accounting obligations, after which it is deleted or anonymized.</p><h2>Your rights</h2><p>Under Colombian data-protection law (Ley 1581 de 2012, Habeas Data), you may request access to, correction, updating, or deletion of your personal data, and you may withdraw consent at any time. To exercise these rights, contact us through the contact page or via WhatsApp.</p>",
     "back": "Back to home"
   },
 
   "footer": {
     "tagline": "The Axis of Human Renewal. Medellín, Colombia.",
     "explore": "Explore", "connect": "Connect", "privacy": "Privacy",
-    "disclaimer": "The information on this site is for educational purposes only and does not constitute medical advice, diagnosis, or a guarantee of results. All programs require prior medical evaluation and are personalized and supervised by licensed physicians. Treatments are provided in person in Medellín, Colombia. Individual results vary."
+    "disclaimer": "RegenerAxis provides physician-supervised regenerative wellness programs. Every program requires a prior medical assessment and is personalized and supervised by licensed physicians. Content on this site is informational and is not a substitute for professional medical advice, diagnosis, or treatment, and it does not guarantee specific results, which vary by individual. Treatments are provided in person in Medellín, Colombia."
   }
 }

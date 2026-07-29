@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://regeneraxis.com/es/">
   <link rel="alternate" hreflang="es" href="https://regeneraxis.com/es/">
   <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
-  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/es/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="RegenerAxis · El Eje de la Renovación Humana">
@@ -23,7 +23,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap"></noscript>
 
   <link rel="stylesheet" href="../assets/css/styles.css">
 
@@ -85,8 +86,16 @@
   <main id="main">
 
     <section class="hero">
-      <div class="hero__media">
-        <img src="../assets/img/hero.jpg" alt="" loading="eager" onerror="this.style.display='none'">
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hero__bloom" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="b-stroke" stroke-width="1.1" fill="none">
+            <ellipse cx="50" cy="50" rx="15" ry="30"/>
+            <ellipse cx="50" cy="50" rx="30" ry="15"/>
+          </g>
+          <circle cx="50" cy="50" r="26" fill="none" stroke="#C7A96B" stroke-width="0.7"/>
+          <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+        </svg>
       </div>
       <div class="wrap hero__inner reveal">
         <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
@@ -106,7 +115,7 @@
 
     <section class="section">
       <div class="wrap">
-        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="who.kicker">Encuentra tu punto de partida</span></div>
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="who.kicker">Encuentra tu punto de partida</span><h2 data-i18n="who.title">Para quién es esto.</h2></div>
         <div class="grid grid--4 reveal-stagger">
           <article class="card"><div class="card__num">01</div><h3 data-i18n="who.athlete.title">El Atleta</h3><p data-i18n="who.athlete.body">Entrenas al límite. Quieres recuperarte más rápido, proteger tus articulaciones y volver más fuerte a cada sesión.</p></article>
           <article class="card"><div class="card__num">02</div><h3 data-i18n="who.executive.title">El Ejecutivo</h3><p data-i18n="who.executive.body">Vives bajo presión. Quieres dormir profundo, pensar con claridad y sostener tu energía todo el día.</p></article>
@@ -139,10 +148,10 @@
       <div class="wrap">
         <div class="narrow eyebrow-center reveal"><span class="kicker" data-i18n="how.kicker">El proceso</span></div>
         <div class="narrow steps reveal-stagger">
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Valoración Médica</h3><p data-i18n="how.s1.body">Una consulta privada para entender tus objetivos, tu historia y tu estilo de vida. Los pacientes internacionales pueden iniciar de forma remota.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Revisión de Biomarcadores</h3><p data-i18n="how.s2.body">Los exámenes de laboratorio nos dan una imagen objetiva de tu biología.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Protocolo Personalizado</h3><p data-i18n="how.s3.body">Tu médico diseña un programa construido para tu cuerpo y tus objetivos.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Optimización y Seguimiento</h3><p data-i18n="how.s4.body">Monitoreamos, ajustamos y refinamos durante todo tu ciclo.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Escríbenos o agenda</h3><p data-i18n="how.s1.body">Contáctanos por WhatsApp o empieza en línea. Te guiamos para agendar tu valoración médica.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Chequeo de elegibilidad</h3><p data-i18n="how.s2.body">Antes del pago, un formulario breve (tu edad y antecedentes de salud) confirma que la valoración es adecuada para ti.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Valoración médica</h3><p data-i18n="how.s3.body">Una consulta privada y con costo. Revisamos tu formulario, exploramos tus objetivos e indagamos a fondo en posibles contraindicaciones.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Tu programa personalizado</h3><p data-i18n="how.s4.body">Si eres apto, tu médico te enruta al programa más conveniente, de uno a varios meses. Los complementos son opcionales.</p></div></div>
         </div>
       </div>
     </section>
@@ -196,6 +205,11 @@
         <div class="center reveal">
           <h2 data-i18n="final.title">Tu biología merece una estrategia.</h2>
           <p class="lead" data-i18n="final.subline">Comienza con una valoración médica privada. Presencial en Medellín, o remota si viajas hacia nosotros.</p>
+          <div class="pay-strip reveal" aria-label="Pago">
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.a">Aceptamos las principales tarjetas</span></span>
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.b">Pago seguro</span></span>
+            <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.c">Chequeo de elegibilidad antes del pago</span></span>
+          </div>
           <div class="btn-row" style="justify-content:center">
             <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
           </div>
@@ -214,7 +228,7 @@
           <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">El Eje de la Renovación Humana. Medellín, Colombia.</p>
         </div>
         <div>
-          <h4 data-i18n="footer.explore">Explorar</h4>
+          <h3 data-i18n="footer.explore">Explorar</h3>
           <ul>
             <li><a href="./index.html#programs" data-i18n="nav.programs">Programas</a></li>
             <li><a href="./index.html#process" data-i18n="nav.process">Proceso</a></li>
@@ -223,9 +237,9 @@
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.connect">Conectar</h4>
+          <h3 data-i18n="footer.connect">Conectar</h3>
           <ul>
-            <li><a href="tel:+573138750104">+57 313 8750104</a></li>
+            <li><a data-whatsapp href="https://wa.me/573138750104">+57 313 8750104</a></li>
             <li><a data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a></li>
             <li><a href="./privacy.html" data-i18n="footer.privacy">Privacidad</a></li>
           </ul>

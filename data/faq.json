@@ -1,8 +1,8 @@
 [
   { "lang": "en", "order": 1, "category": "The Assessment & Booking", "question": "What does the medical assessment include?", "answer": "A private consultation with our medical team to review your goals, clinical history, and lifestyle, and to define which lab biomarkers you need. It is the required first step of every program." },
   { "lang": "en", "order": 2, "category": "The Assessment & Booking", "question": "Why does the assessment have a cost?", "answer": "Because it is a real medical consultation, not a sales call. You leave with a professional reading of your case and a clear path, whether or not you continue with a program." },
-  { "lang": "en", "order": 3, "category": "The Assessment & Booking", "question": "How do I book?", "answer": "Click Book Your Assessment, choose your time, and complete payment in the same link. You will receive a confirmation with your appointment details." },
-  { "lang": "en", "order": 4, "category": "The Assessment & Booking", "question": "Can I reschedule my appointment?", "answer": "Yes, you can reschedule with at least [24/48] hours notice from your confirmation link. [Policy to be defined.]" },
+  { "lang": "en", "order": 3, "category": "The Assessment & Booking", "question": "How do I book?", "answer": "Click Book Your Assessment. A short eligibility form comes first; if everything checks out, you choose your time and complete payment in the same flow. You will then receive a confirmation with your appointment details." },
+  { "lang": "en", "order": 4, "category": "The Assessment & Booking", "question": "Can I reschedule my appointment?", "answer": "Yes. You can reschedule with at least 24 hours notice using the link in your confirmation." },
   { "lang": "en", "order": 5, "category": "The Assessment & Booking", "question": "Does the assessment commit me to buying a program?", "answer": "No. The assessment is independent. If a program is right for you, your physician will propose it with full transparency." },
 
   { "lang": "en", "order": 6, "category": "Programs & Protocols", "question": "How long does a program last?", "answer": "The recommended cycle for most programs is 3 months, with medical follow-up throughout the process." },
@@ -12,21 +12,21 @@
 
   { "lang": "en", "order": 10, "category": "Safety & Medical", "question": "Who supervises my program?", "answer": "Licensed physicians, from the initial assessment to the final follow-up. No protocol is delivered without prior medical evaluation." },
   { "lang": "en", "order": 11, "category": "Safety & Medical", "question": "Is it safe?", "answer": "Every protocol is personalized to your clinical history and lab results and is medically supervised. At your assessment we review contraindications and answer all of your questions." },
-  { "lang": "en", "order": 12, "category": "Safety & Medical", "question": "Do I need lab tests?", "answer": "Yes. Biomarkers are the foundation of personalization. We tell you which ones at your assessment. If you have recent labs, bring them." },
+  { "lang": "en", "order": 12, "category": "Safety & Medical", "question": "Do I need lab tests?", "answer": "Sometimes. Lab tests are not required for every program. If they would help personalize yours, your physician will tell you at your assessment. If you have recent labs, bring them." },
 
   { "lang": "en", "order": 13, "category": "International Clients & Travel", "question": "I live outside Colombia. How does it work?", "answer": "You can begin with a remote assessment, complete your lab tests, and coordinate your trip to Medellín to start your program in person. Follow-up afterward can be remote." },
   { "lang": "en", "order": 14, "category": "International Clients & Travel", "question": "How long should I stay in Medellín?", "answer": "It depends on the program. We define it with you at your assessment so you can plan your trip clearly." },
   { "lang": "en", "order": 15, "category": "International Clients & Travel", "question": "Do you attend in English?", "answer": "Yes, our team attends clients in English and Spanish." },
   { "lang": "en", "order": 16, "category": "International Clients & Travel", "question": "Do you help with travel logistics?", "answer": "We can guide you on recommended areas, accommodation, and transfers. [Adjust to your concierge service.]" },
 
-  { "lang": "en", "order": 17, "category": "Payments & Policies", "question": "What payment methods do you accept?", "answer": "[Cards, transfer, international payment links. To be defined.]" },
-  { "lang": "en", "order": 18, "category": "Payments & Policies", "question": "Do prices include lab tests?", "answer": "[To be defined.]" },
-  { "lang": "en", "order": 19, "category": "Payments & Policies", "question": "What is the cancellation and refund policy for the assessment?", "answer": "[To be defined. Important to set before charging for appointments.]" },
+  { "lang": "en", "order": 17, "category": "Payments & Policies", "question": "What payment methods do you accept?", "answer": "Major credit and debit cards and bank transfer. International cards are welcome." },
+  { "lang": "en", "order": 18, "category": "Payments & Policies", "question": "Do prices include lab tests?", "answer": "Your assessment covers the consultation and your personalized plan. Program pricing and any lab tests are quoted separately." },
+  { "lang": "en", "order": 19, "category": "Payments & Policies", "question": "What is the cancellation and refund policy for the assessment?", "answer": "The assessment fee is non-refundable once your appointment is confirmed, but you may reschedule with at least 24 hours notice." },
 
   { "lang": "es", "order": 1, "category": "La Valoración y la Reserva", "question": "¿Qué incluye la valoración médica?", "answer": "Una consulta privada con nuestro equipo médico para revisar tus objetivos, tu historia clínica y tu estilo de vida, y definir qué exámenes de laboratorio necesitas. Es el primer paso obligatorio de todo programa." },
   { "lang": "es", "order": 2, "category": "La Valoración y la Reserva", "question": "¿Por qué la valoración tiene costo?", "answer": "Porque es una consulta médica real, no una llamada de ventas. Sales de ella con una lectura profesional de tu caso y una ruta clara, decidas o no continuar con un programa." },
-  { "lang": "es", "order": 3, "category": "La Valoración y la Reserva", "question": "¿Cómo agendo?", "answer": "Haz clic en Agenda tu Valoración, elige tu horario y completa el pago en el mismo enlace. Recibirás confirmación con los detalles de tu cita." },
-  { "lang": "es", "order": 4, "category": "La Valoración y la Reserva", "question": "¿Puedo reagendar mi cita?", "answer": "Sí, puedes reagendar con al menos [24/48] horas de anticipación desde el enlace de tu confirmación. [Política por definir.]" },
+  { "lang": "es", "order": 3, "category": "La Valoración y la Reserva", "question": "¿Cómo agendo?", "answer": "Haz clic en Agenda tu Valoración. Primero completas un breve formulario de elegibilidad; si todo está en orden, eliges tu horario y realizas el pago en el mismo flujo. Luego recibirás la confirmación con los detalles de tu cita." },
+  { "lang": "es", "order": 4, "category": "La Valoración y la Reserva", "question": "¿Puedo reagendar mi cita?", "answer": "Sí. Puedes reagendar con al menos 24 horas de anticipación usando el enlace de tu confirmación." },
   { "lang": "es", "order": 5, "category": "La Valoración y la Reserva", "question": "¿La valoración me compromete a comprar un programa?", "answer": "No. La valoración es independiente. Si un programa es adecuado para ti, tu médico te lo propondrá con total transparencia." },
 
   { "lang": "es", "order": 6, "category": "Programas y Protocolos", "question": "¿Cuánto dura un programa?", "answer": "El ciclo recomendado de la mayoría de programas es de 3 meses, con seguimiento médico durante todo el proceso." },
@@ -36,14 +36,14 @@
 
   { "lang": "es", "order": 10, "category": "Seguridad y Respaldo Médico", "question": "¿Quién supervisa mi programa?", "answer": "Médicos titulados, desde la valoración inicial hasta el seguimiento final. Ningún protocolo se entrega sin evaluación médica previa." },
   { "lang": "es", "order": 11, "category": "Seguridad y Respaldo Médico", "question": "¿Es seguro?", "answer": "Todos los protocolos se personalizan según tu historia clínica y tus exámenes, y se supervisan médicamente. En tu valoración revisamos contraindicaciones y resolvemos todas tus preguntas." },
-  { "lang": "es", "order": 12, "category": "Seguridad y Respaldo Médico", "question": "¿Necesito exámenes de laboratorio?", "answer": "Sí. Los biomarcadores son la base de la personalización. Te indicamos cuáles en tu valoración; si tienes exámenes recientes, tráelos." },
+  { "lang": "es", "order": 12, "category": "Seguridad y Respaldo Médico", "question": "¿Necesito exámenes de laboratorio?", "answer": "A veces. Los exámenes de laboratorio no son obligatorios para todos los programas. Si ayudan a personalizar el tuyo, tu médico te lo indicará en la valoración; si tienes exámenes recientes, tráelos." },
 
   { "lang": "es", "order": 13, "category": "Pacientes Internacionales y Viaje", "question": "Vivo fuera de Colombia, ¿cómo funciona?", "answer": "Puedes iniciar con una valoración remota, realizar tus exámenes, y coordinar tu viaje a Medellín para el inicio presencial de tu programa. El seguimiento posterior puede ser remoto." },
   { "lang": "es", "order": 14, "category": "Pacientes Internacionales y Viaje", "question": "¿Cuánto tiempo debo quedarme en Medellín?", "answer": "Depende del programa. Lo definimos contigo en la valoración para que puedas planear tu viaje con claridad." },
   { "lang": "es", "order": 15, "category": "Pacientes Internacionales y Viaje", "question": "¿Atienden en inglés?", "answer": "Sí, nuestro equipo atiende pacientes en inglés y español." },
   { "lang": "es", "order": 16, "category": "Pacientes Internacionales y Viaje", "question": "¿Me ayudan con la logística del viaje?", "answer": "Podemos orientarte sobre zonas, alojamiento y traslados recomendados. [Ajustar según servicio concierge real.]" },
 
-  { "lang": "es", "order": 17, "category": "Pagos y Políticas", "question": "¿Qué medios de pago aceptan?", "answer": "[Tarjetas, transferencia, links de pago internacionales. Por definir.]" },
-  { "lang": "es", "order": 18, "category": "Pagos y Políticas", "question": "¿Los precios incluyen los exámenes de laboratorio?", "answer": "[Por definir.]" },
-  { "lang": "es", "order": 19, "category": "Pagos y Políticas", "question": "¿Cuál es la política de cancelación y reembolso de la valoración?", "answer": "[Por definir. Importante tenerla antes de cobrar citas.]" }
+  { "lang": "es", "order": 17, "category": "Pagos y Políticas", "question": "¿Qué medios de pago aceptan?", "answer": "Tarjetas de crédito y débito principales y transferencia bancaria. Aceptamos tarjetas internacionales." },
+  { "lang": "es", "order": 18, "category": "Pagos y Políticas", "question": "¿Los precios incluyen los exámenes de laboratorio?", "answer": "Tu valoración cubre la consulta y tu plan personalizado. El precio de cada programa y cualquier examen de laboratorio se cotizan por separado." },
+  { "lang": "es", "order": 19, "category": "Pagos y Políticas", "question": "¿Cuál es la política de cancelación y reembolso de la valoración?", "answer": "La valoración no es reembolsable una vez confirmada tu cita, pero puedes reagendar con al menos 24 horas de anticipación." }
 ]
