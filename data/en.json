@@ -4,7 +4,7 @@
 
   "hero": {
     "kicker": "Medellín · Colombia",
-    "headline": "Optimize recovery. Elevate performance. Extend healthspan.",
+    "headline": "<span class='hero__line'>Optimize <span class='hero__key'>recovery.</span></span><span class='hero__line'>Elevate <span class='hero__key'>performance.</span></span><span class='hero__line'>Extend <span class='hero__key'>healthspan.</span></span>",
     "subline": "Physician-guided regenerative programs, personalized to your biology, delivered in the City of Eternal Spring."
   },
 

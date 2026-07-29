@@ -4,7 +4,7 @@
 
   "hero": {
     "kicker": "Medellín · Colombia",
-    "headline": "Optimiza tu recuperación. Eleva tu rendimiento. Extiende tu vitalidad.",
+    "headline": "<span class='hero__line'>Optimiza tu <span class='hero__key'>recuperación.</span></span><span class='hero__line'>Eleva tu <span class='hero__key'>rendimiento.</span></span><span class='hero__line'>Extiende tu <span class='hero__key'>vitalidad.</span></span>",
     "subline": "Programas regenerativos guiados por médicos, personalizados según tu biología, en la Ciudad de la Eterna Primavera."
   },
 

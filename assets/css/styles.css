@@ -309,6 +309,12 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 
 .hero__inner { position: relative; z-index: 2; padding-block: clamp(7rem, 12vh, 9rem) clamp(3rem, 8vh, 4.5rem); }
 .hero h1 { color: var(--hero-ink); max-width: 15ch; }
+/* Home headline: three scannable sentence-lines with breathing room and a
+   gold accent on each payoff noun, so it reads as rhythm rather than a block. */
+.hero--home h1 { max-width: 18ch; line-height: 1.12; }
+.hero__line { display: block; }
+.hero__line + .hero__line { margin-top: 0.42em; }
+.hero__key { color: var(--gold); }
 .hero .kicker { color: var(--kicker-ink); }
 .hero .subline { color: var(--hero-muted); max-width: 42ch; font-size: 1.22rem; margin-bottom: 2.2rem; }
 
