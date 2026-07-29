@@ -57,18 +57,18 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/faq.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/faq.html"/></url>
 
-  <url><loc>https://regeneraxis.com/testimonials.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/testimonials.html"/>
+  <url><loc>https://regeneraxis.com/testimonios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/testimonios.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/testimonials.html"/></url>
   <url><loc>https://regeneraxis.com/en/testimonials.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/testimonials.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/testimonios.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/testimonials.html"/></url>
 
-  <url><loc>https://regeneraxis.com/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/contact.html"/>
+  <url><loc>https://regeneraxis.com/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/contacto.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/contact.html"/></url>
   <url><loc>https://regeneraxis.com/en/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/contacto.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/contact.html"/></url>
 
 </urlset>
