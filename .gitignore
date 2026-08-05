@@ -4,6 +4,14 @@
 COMPLIANCE.md
 COPY_EN.md
 COPY_ES.md
+INTAKE_SCREENING.md
+
+# Internal reference material. Never publish: GitHub Pages would serve the
+# brandbooks and the consultant's notes as downloadable public files. Kept on
+# disk under _private/ so they are easy to find and delete when no longer
+# needed. (The leading underscore alone is not protection: a .nojekyll file or
+# a change of build would expose it. The ignore rule is what keeps it out.)
+_private/
 
 # OS / editor cruft
 .DS_Store

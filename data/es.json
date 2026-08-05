@@ -1,11 +1,16 @@
 {
-  "nav": { "programs": "Programas", "process": "Proceso", "medellin": "Medellín", "testimonials": "Testimonios", "faq": "Preguntas", "contact": "Contacto" },
+  "nav": { "programs": "Programas", "process": "Proceso", "about": "Nosotros", "medellin": "Medellín", "testimonials": "Testimonios", "faq": "Preguntas", "contact": "Contacto" },
   "cta": { "book": "Agenda tu Valoración", "bookShort": "Agendar cita" },
 
+  "brand": {
+    "entity": "Centro de Longevidad y Regeneración",
+    "slogan": "Diseñamos la estrategia para darle más vida a tus años."
+  },
+
   "hero": {
-    "kicker": "Medellín · Colombia",
+    "kicker": "Centro de Longevidad y Regeneración · Medellín",
     "headline": "<span class='hero__line'>Optimiza tu <span class='hero__key'>recuperación.</span></span><span class='hero__line'>Eleva tu <span class='hero__key'>rendimiento.</span></span><span class='hero__line'>Extiende tu <span class='hero__key'>vitalidad.</span></span>",
-    "subline": "Programas regenerativos guiados por médicos, personalizados según tu biología, en la Ciudad de la Eterna Primavera."
+    "subline": "Diseñamos la estrategia para darle más vida a tus años. Programas personalizados según tu biología, en la Ciudad de la Eterna Primavera."
   },
 
   "manifesto": { "body": "La recuperación ya no es pasiva. La longevidad ya no es solo vivir más años. El rendimiento ya no es exclusivo de atletas de élite. El futuro del bienestar es proactivo, personalizado y guiado por la ciencia. Bienvenido a una nueva era de optimización humana." },
@@ -13,49 +18,51 @@
   "who": {
     "kicker": "Encuentra tu punto de partida",
     "title": "¿Es esto para ti?",
-    "lead": "¿Te identificas con alguno de estos? Fatiga que no cede, recuperación lenta, grasa que no baja por más que lo intentas y foco que se apaga a media tarde. Son señales, no sentencias, y se pueden trabajar con un plan médico.",
+    "lead": "¿Te identificas con alguno de estos? Fatiga que no cede, recuperación lenta, grasa que no baja por más que lo intentas y foco que se apaga a media tarde. Son señales, no sentencias, y se pueden trabajar con un plan hecho para ti.",
     "athlete": { "title": "El Atleta", "body": "Entrenas al límite. Quieres recuperarte más rápido, proteger tus articulaciones y volver más fuerte a cada sesión." },
     "executive": { "title": "El Ejecutivo", "body": "Vives bajo presión. Quieres dormir profundo, pensar con claridad y sostener tu energía todo el día." },
-    "metabolic": { "title": "El Reinicio Metabólico", "body": "Ya intentaste dietas y disciplina. Quieres bajar grasa con respaldo médico y mantener el resultado." },
+    "metabolic": { "title": "El Reinicio Metabólico", "body": "Ya intentaste dietas y disciplina. Quieres bajar grasa con acompañamiento profesional y mantener el resultado." },
     "longevity": { "title": "El Buscador de Longevidad", "body": "No buscas verte joven. Quieres sentirte fuerte, lúcido y vital por muchas décadas más." }
   },
 
   "programs": {
     "kicker": "Nuestros programas",
     "title": "Cinco programas.",
-    "intro": "Todo programa comienza con una valoración médica, se personaliza para ti y es supervisado por nuestros médicos del primer día al último. Los resultados varían de una persona a otra.",
+    "intro": "Cada programa empieza con una valoración inicial y se construye a tu medida.",
     "learn": "Explorar programa",
     "ctaTitle": "Da el primer paso",
-    "ctaBody": "Comienza con una valoración médica privada y te enrutamos al programa adecuado para ti.",
+    "ctaBody": "Comienza con una valoración inicial privada y te enrutamos al programa adecuado para ti.",
     "items": {
       "recovery": {
         "name": "Recuperación y Rendimiento",
+        "bridge": "Rendimiento deportivo y recuperación muscular en Medellín",
         "tagline": "Regeneración y resiliencia para deportistas y entrenamiento exigente.",
         "kicker": "Programa 01",
         "hook": "Entrenas al límite y quieres recuperarte más rápido, proteger tus articulaciones y volver más fuerte a cada sesión.",
+        "outcome": "Volver a entrenar al día siguiente sintiéndote listo, no roto.",
         "body": "Diseñado para apoyar la reparación natural de tus tejidos. Busca apoyar la regeneración de músculo, tendón y ligamento, favorecer la producción de colágeno y optimizar el entorno celular donde ocurre la recuperación, con una intención calmante y antiinflamatoria. El objetivo: menos molestias, mejor recuperación entre sesiones y una estructura más resistente al esfuerzo.",
         "benefits": ["Recuperación muscular más rápida tras el esfuerzo", "Apoyo a tendones, ligamentos y tejido conectivo", "Favorece la producción de colágeno y la regeneración de tejidos", "Intención antiinflamatoria y confort", "Apoyo articular y mejor movilidad", "Apoyo al bienestar digestivo e inmune"],
         "idealFor": "Atletas, CrossFit y HYROX, deportes de fuerza y resistencia, recuperación tras esfuerzo o sobrecarga.",
         "schema": "Aplicación diaria con refuerzo en días alternos. Ciclo recomendado: 3 meses.",
-        "symptoms": ["Dolor articular o de tendones que no cede", "Recuperación cada vez más lenta entre sesiones", "Lesiones recurrentes o sobrecarga crónica", "Rigidez matinal y menor rango de movimiento", "Rendimiento estancado pese a entrenar duro"],
-        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Infección aguda o fiebre", "Trastornos de la coagulación no controlados", "Condiciones crónicas sin control médico actual"],
+        "signals": ["Recuperación cada vez más lenta entre sesiones", "Sobrecarga que se repite temporada tras temporada", "Menos rango de movimiento del que solías tener", "Rendimiento estancado pese a entrenar duro", "Sensación de que el cuerpo tarda más en volver"],
         "phases": [
           { "t": "Semanas 1-2 · Preparación", "b": "Establecemos tu línea base, revisamos tus cargas de entrenamiento y preparamos el terreno celular para la recuperación." },
-          { "t": "Semanas 3-8 · Regeneración activa", "b": "El protocolo trabaja de lleno: apoyo a tejido, tendón y articulación, con ajuste según tu respuesta y tu entrenamiento." },
+          { "t": "Semanas 3-8 · Regeneración activa", "b": "El plan trabaja de lleno: apoyo a tejido, tendón y articulación, con ajuste según tu respuesta y tu entrenamiento." },
           { "t": "Semana 9+ · Consolidación", "b": "Afinamos, consolidamos las ganancias de recuperación y definimos tu plan de mantenimiento." }
         ]
       },
       "metabolic": {
         "name": "Reinicio Metabólico",
-        "tagline": "Pérdida de grasa sostenible con guía médica y acompañamiento nutricional.",
+        "bridge": "Pérdida de grasa y peso · sueros metabólicos en Medellín",
+        "tagline": "Pérdida de grasa sostenible con acompañamiento profesional y nutricional.",
         "kicker": "Programa 02",
-        "hook": "Ya intentaste dietas y disciplina. Quieres reducir grasa con guía médica y mantener el resultado.",
-        "body": "Trabaja la composición corporal en dos frentes: apoyando la regulación del apetito y la saciedad, y apoyando un metabolismo energético saludable a nivel celular. La intención es un enfoque sostenible para la reducción de grasa, más energía y una mejor eficiencia metabólica, siempre personalizado y supervisado.",
-        "benefits": ["Apoya la reducción de grasa sostenible", "Apoya la regulación del apetito y la saciedad", "Apoya rangos saludables de glucosa en sangre", "Más energía y eficiencia metabólica", "Acompañamiento nutricional durante todo el proceso", "Personalizado y supervisado por médicos"],
-        "idealFor": "Personas que buscan una pérdida de grasa real y sostenible con respaldo médico, más allá de la restricción tradicional.",
+        "hook": "Ya intentaste dietas y disciplina. Quieres reducir grasa con acompañamiento real y mantener el resultado.",
+        "outcome": "Perder grasa sin vivir con hambre, y no recuperarla al mes siguiente.",
+        "body": "Trabaja la composición corporal en dos frentes: apoyando la regulación del apetito y la saciedad, y apoyando un metabolismo energético saludable a nivel celular. La intención es un enfoque sostenible para la reducción de grasa, más energía y una mejor eficiencia metabólica.",
+        "benefits": ["Apoya la reducción de grasa sostenible", "Apoya la regulación del apetito y la saciedad", "Apoya rangos saludables de glucosa en sangre", "Más energía y eficiencia metabólica", "Sueros metabólicos según tu plan", "Acompañamiento nutricional durante todo el proceso"],
+        "idealFor": "Personas que buscan una pérdida de grasa real y sostenible, más allá de la restricción tradicional.",
         "schema": "Una aplicación semanal más apoyo diario. Ciclo recomendado: 3 meses. Incluye acompañamiento nutricional.",
-        "symptoms": ["Grasa abdominal que no baja pese a la dieta", "Antojos y hambre difíciles de controlar", "Energía que se desploma después de comer", "Efecto rebote tras cada dieta", "Un metabolismo que se siente lento"],
-        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Trastornos de la conducta alimentaria activos", "Enfermedad renal, hepática o pancreática significativa", "Diabetes tipo 1 o condiciones metabólicas sin control médico"],
+        "signals": ["Grasa abdominal que no baja pese a la dieta", "Antojos y hambre difíciles de controlar", "Energía que se desploma después de comer", "Efecto rebote tras cada dieta", "Un metabolismo que se siente lento"],
         "phases": [
           { "t": "Semanas 1-2 · Preparación", "b": "Valoración metabólica, ajuste de expectativas y un arranque suave para que tu cuerpo se adapte." },
           { "t": "Semanas 3-8 · Modulación activa", "b": "Trabajo de fondo sobre apetito, saciedad y metabolismo energético, con acompañamiento nutricional." },
@@ -64,32 +71,36 @@
       },
       "longevity": {
         "name": "Longevidad Premium",
+        "bridge": "Longevidad extendida · sueroterapia regenerativa en Medellín",
         "tagline": "Energía, piel, sueño y vitalidad celular para los años que vienen.",
         "kicker": "Programa 03",
         "hook": "Quieres retrasar el reloj: más energía, mejor piel, sueño profundo y una vitalidad que sientes por dentro y por fuera.",
-        "body": "Un programa integral de longevidad con intención en tres niveles: apoyar la calidad de la piel a través del colágeno y la elastina, apoyar la energía celular y la claridad mental, y apoyar el equilibrio endocrino y los ciclos de sueño. Un enfoque considerado, a nivel celular, para un envejecimiento saludable.",
-        "benefits": ["Apoya un tono de piel más luminoso y firme", "Energía sostenida y claridad mental", "Apoya una mejor calidad del sueño", "Apoya un envejecimiento celular saludable", "Intención antioxidante", "Personalizado y supervisado por médicos"],
+        "outcome": "Llegar a los sesenta con la energía que tenías a los cuarenta.",
+        "body": "Un programa integral de longevidad con intención en tres niveles: apoyar la calidad de la piel a través del colágeno y la elastina, apoyar la energía celular y la claridad mental, y apoyar el equilibrio del descanso y los ciclos de sueño. Un enfoque considerado, a nivel celular, para un envejecimiento saludable.",
+        "benefits": ["Apoya un tono de piel más luminoso y firme", "Energía sostenida y claridad mental", "Apoya una mejor calidad del sueño", "Apoya un envejecimiento celular saludable", "Sueroterapia regenerativa según tu plan", "Intención antioxidante"],
         "idealFor": "Quienes buscan un enfoque completo de longevidad y rejuvenecimiento.",
         "schema": "Aplicación diaria con refuerzo en días alternos. Ciclo recomendado: 3 meses.",
-        "symptoms": ["Energía y vitalidad por debajo de tu estándar", "Piel apagada y sueño que no repara", "Recuperación y claridad mental más lentas", "Sensación de estar envejeciendo más rápido de lo que quisieras", "Marcadores que quieres adelantarte a cuidar"],
-        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Enfermedad autoinmune activa sin control", "Condiciones endocrinas sin seguimiento médico", "Infección aguda"],
+        "complementsTitle": "Complementos estéticos (opcional)",
+        "complements": "Si tu objetivo también es estético, este programa admite complementos de armonización facial, apoyo con colágeno y sueros de vitalidad para la piel. Se conversan en tu valoración inicial y se suman solo si tienen sentido para tu plan.",
+        "signals": ["Energía y vitalidad por debajo de tu estándar", "Piel apagada y sueño que no repara", "Recuperación y claridad mental más lentas", "Sensación de estar envejeciendo más rápido de lo que quisieras", "Marcadores que quieres adelantarte a cuidar"],
         "phases": [
           { "t": "Semanas 1-2 · Preparación", "b": "Establecemos tu línea base de energía, sueño y vitalidad, y preparamos el terreno celular." },
-          { "t": "Semanas 3-8 · Modulación activa", "b": "El protocolo apoya piel, energía celular y equilibrio del sueño, ajustado según tu respuesta." },
+          { "t": "Semanas 3-8 · Modulación activa", "b": "El plan apoya piel, energía celular y equilibrio del sueño, ajustado según tu respuesta." },
           { "t": "Semana 9+ · Consolidación", "b": "Consolidamos las mejoras y definimos un plan de mantenimiento sostenible en el tiempo." }
         ]
       },
       "executive": {
         "name": "Rendimiento Ejecutivo",
+        "bridge": "Manejo de la fatiga y el desgaste · enfoque y sueño en Medellín",
         "tagline": "Calma, enfoque y recuperación para vidas de alta exigencia.",
         "kicker": "Programa 04",
         "hook": "Vives bajo presión y quieres rendir al máximo: enfoque, calma, mejor sueño y una recuperación de alto nivel.",
+        "outcome": "Terminar el día con algo de energía todavía tuya.",
         "body": "Diseñado para el ejecutivo de alto rendimiento. Busca apoyar la calidad del sueño profundo, la recuperación y la composición corporal, a la vez que apoya una respuesta al estrés más serena sin sedación, favoreciendo el enfoque, la memoria y la estabilidad emocional. Calma y rendimiento, juntos.",
-        "benefits": ["Apoya una respuesta al estrés más serena sin sedación", "Apoya el enfoque, la memoria y la claridad", "Apoya un sueño profundo y reparador", "Apoya la recuperación física", "Apoya la composición corporal", "Personalizado y supervisado por médicos"],
+        "benefits": ["Apoya una respuesta al estrés más serena sin sedación", "Apoya el enfoque, la memoria y la claridad", "Apoya un sueño profundo y reparador", "Apoya la recuperación física", "Apoya la composición corporal", "Acompañamiento a lo largo del ciclo"],
         "idealFor": "Líderes y emprendedores que necesitan sostener un alto rendimiento sin agotarse.",
         "schema": "Una aplicación semanal más apoyo diario. Ciclo recomendado: 3 meses.",
-        "symptoms": ["Estrés sostenido y sensación de agotamiento", "Sueño ligero o que no repara", "Foco y memoria que fallan bajo presión", "Energía irregular a lo largo del día", "Irritabilidad o ánimo inestable"],
-        "disqualifiers": ["Embarazo o lactancia", "Cáncer activo o en tratamiento oncológico", "Trastorno psiquiátrico grave sin control", "Condiciones cardiovasculares sin seguimiento médico", "Infección aguda"],
+        "signals": ["Estrés sostenido y sensación de desgaste", "Sueño ligero o que no repara", "Foco y memoria que fallan bajo presión", "Energía irregular a lo largo del día", "Irritabilidad o ánimo inestable"],
         "phases": [
           { "t": "Semanas 1-2 · Preparación", "b": "Mapeamos tu estrés, tu sueño y tu carga, y preparamos un arranque acorde a tu ritmo." },
           { "t": "Semanas 3-8 · Modulación activa", "b": "Apoyo a una respuesta al estrés más serena, al sueño profundo y al foco, sin sedación." },
@@ -98,18 +109,19 @@
       },
       "cellular": {
         "name": "Regeneración Celular Avanzada",
+        "bridge": "Terapia intravenosa · sueros antioxidantes en Medellín",
         "tagline": "Sueroterapia regenerativa que apoya la reparación natural del cuerpo.",
         "kicker": "Programa 05",
         "hook": "Quieres una regeneración integral desde adentro: más vitalidad, mejor recuperación y un cuerpo que se repara bien.",
-        "body": "Sueroterapia avanzada con mensajeros celulares que busca apoyar la comunicación entre tus células. La intención es apoyar la eficiencia mitocondrial y la microcirculación, el equilibrio inmune y la regeneración de tejidos, con un enfoque considerado de rejuvenecimiento celular. Requiere valoración médica previa.",
-        "benefits": ["Apoya la regeneración celular y de tejidos", "Apoya la energía y la eficiencia mitocondrial", "Apoya la microcirculación", "Apoya el equilibrio inmune", "Intención antioxidante", "Personalizado y supervisado por médicos"],
-        "idealFor": "Quienes buscan un reset regenerativo integral. Requiere valoración médica previa. No es adecuado en enfermedad neoplásica activa.",
-        "schema": "Aplicación por sesión, paquete de 6 viales, según valoración médica.",
-        "symptoms": ["Fatiga profunda que no mejora con el descanso", "Recuperación general lenta", "Sensación de desgaste tras años de exigencia", "Baja resiliencia inmune", "Búsqueda de un reset regenerativo integral"],
-        "disqualifiers": ["Enfermedad neoplásica activa", "Embarazo o lactancia", "Infección aguda o fiebre", "Insuficiencia orgánica significativa", "Condiciones crónicas sin control médico"],
+        "outcome": "Levantarte descansado después de años de no estarlo.",
+        "body": "Terapia intravenosa avanzada que busca apoyar la comunicación entre tus células. La intención es apoyar la eficiencia mitocondrial y la microcirculación, el equilibrio inmune y la regeneración de tejidos, con un enfoque considerado de rejuvenecimiento celular.",
+        "benefits": ["Apoya la regeneración celular y de tejidos", "Apoya la energía y la eficiencia mitocondrial", "Apoya la microcirculación", "Apoya el equilibrio inmune", "Sueros antioxidantes según tu plan", "Sesiones en nuestro espacio de Medellín"],
+        "idealFor": "Quienes buscan un reset regenerativo integral.",
+        "schema": "Aplicación por sesión, paquete de 6 sesiones, según tu valoración inicial.",
+        "signals": ["Fatiga profunda que no mejora con el descanso", "Recuperación general lenta", "Sensación de desgaste tras años de exigencia", "Baja resiliencia frente a los cambios de ritmo", "Búsqueda de un reset regenerativo integral"],
         "phases": [
-          { "t": "Sesiones 1-2 · Preparación", "b": "Valoración previa obligatoria y primeras sesiones para preparar el terreno celular." },
-          { "t": "Sesiones 3-4 · Regeneración activa", "b": "El núcleo del protocolo: apoyo a la comunicación celular, la energía mitocondrial y el equilibrio inmune." },
+          { "t": "Sesiones 1-2 · Preparación", "b": "Valoración inicial obligatoria y primeras sesiones para preparar el terreno celular." },
+          { "t": "Sesiones 3-4 · Regeneración activa", "b": "El núcleo del plan: apoyo a la comunicación celular, la energía mitocondrial y el equilibrio inmune." },
           { "t": "Sesiones 5-6 · Consolidación", "b": "Cerramos el ciclo, evaluamos tu respuesta y definimos si conviene un mantenimiento." }
         ]
       }
@@ -118,17 +130,18 @@
 
   "program": {
     "whatItDoes": "Qué hace en tu cuerpo",
+    "outcomeKicker": "Lo que buscas",
     "benefits": "Beneficios",
     "idealFor": "Ideal para",
     "schema": "Esquema y ciclo",
     "investmentFrom": "Inversión desde",
-    "investmentNote": "El precio final depende de tu valoración médica y de la personalización. Los resultados varían de una persona a otra.",
-    "doping": "Aviso para deportistas de competición: algunos componentes de estos protocolos pueden estar sujetos a la normativa antidopaje (AMA / WADA). Si compites bajo control antidopaje, infórmanos antes de iniciar para orientarte.",
-    "resultsVary": "Personalizado y supervisado por médicos. Los resultados varían de una persona a otra.",
-    "symptomsTitle": "Señales que vale la pena atender",
+    "investmentNote": "El precio final depende de tu valoración inicial y de la personalización.",
+    "doping": "Aviso para deportistas de competición: algunos componentes de estos programas pueden estar sujetos a la normativa antidopaje (AMA / WADA). Si compites bajo control antidopaje, infórmanos antes de iniciar para orientarte.",
+    "resultsVary": "Guiado por personal profesional certificado. Los resultados varían de una persona a otra.",
+    "signalsTitle": "¿Te reconoces en esto?",
     "candidateTitle": "Candidato ideal",
-    "disqualifiersTitle": "No es adecuado si",
-    "disqualifiersNote": "Esta lista es orientativa; tu elegibilidad siempre se confirma en la valoración médica.",
+    "eligibilityTitle": "Antes de empezar",
+    "eligibilityBody": "Algunas condiciones y etapas de vida no son compatibles con este programa. Las revisamos contigo, una por una, en tu valoración inicial, y te lo decimos con honestidad si no es el momento.",
     "timelineKicker": "El recorrido de 90 días",
     "timelineTitle": "Cómo evoluciona tu programa",
     "timelineNote": "Las fases y los tiempos son orientativos y varían según la persona y el programa.",
@@ -137,44 +150,62 @@
     "support": {
       "nutrition": { "t": "Nutrición", "b": "Acompañamiento nutricional alineado con tu objetivo y tu programa." },
       "exercise": { "t": "Ejercicio y movimiento", "b": "Pautas de entrenamiento y movimiento para sostener y amplificar tus resultados." },
-      "therapy": { "t": "Terapias de apoyo", "b": "Terapias complementarias para recuperación, manejo del estrés y bienestar general." }
+      "therapy": { "t": "Apoyo complementario", "b": "Prácticas complementarias para recuperación, manejo del estrés y bienestar general." }
     },
-    "gatewayStatement": "Por la naturaleza clínica y altamente personalizada de estos programas, tu formulación específica no se adquiere en línea. Se define y se prescribe únicamente tras tu valoración médica integral.",
-    "gatewayCta": "Solicita tu Valoración Médica"
+    "gatewayStatement": "Por lo personalizado de estos programas, tu plan específico no se adquiere en línea. Se define únicamente tras tu valoración inicial.",
+    "gatewayCta": "Solicita tu Valoración Inicial"
   },
 
   "how": {
     "kicker": "El proceso",
-    "s1": { "title": "Agenda tu cita", "body": "Programa tu cita en línea o contáctanos por WhatsApp. Te guiamos para agendar tu cita de valoración médica. Los pacientes internacionales pueden iniciar de forma remota." },
-    "s2": { "title": "Valoración Médica", "body": "Una consulta privada para entender tus objetivos, tu historia y tu estilo de vida." },
-    "s3": { "title": "Protocolo Personalizado", "body": "Tu médico diseña un programa construido para tu cuerpo y tus objetivos." },
-    "s4": { "title": "Optimización y Seguimiento", "body": "Monitoreamos, ajustamos y refinamos durante todo tu programa." }
+    "title": "Cuatro pasos, sin sorpresas.",
+    "s1": { "title": "Agenda tu cita", "body": "Reserva en línea o escríbenos por WhatsApp. Te guiamos para agendar tu cita de valoración. Si vienes de otra ciudad o del exterior, puedes empezar de forma remota." },
+    "s2": { "title": "Valoración inicial", "body": "Una cita privada para entender tus objetivos, tu historia y tu estilo de vida." },
+    "s3": { "title": "Plan personalizado", "body": "Diseñamos un programa construido para tu cuerpo y tus objetivos." },
+    "s4": { "title": "Ajuste y seguimiento", "body": "Medimos, ajustamos y refinamos durante todo tu programa." }
+  },
+
+  "method": {
+    "kicker": "Cómo funciona",
+    "title": "Primero estudiamos tu biología.",
+    "lead": "No tenemos un catálogo de soluciones esperando a que alguien encaje. Tenemos un método.",
+    "beats": [
+      { "t": "Empezamos por tus datos", "b": "Tu valoración inicial reúne tus objetivos, tu historia, tus hábitos y tus análisis de laboratorio. Nada empieza antes de eso." },
+      { "t": "Construimos sobre ti, no sobre un catálogo", "b": "Con esa lectura diseñamos un plan para tu cuerpo y para tu momento. Dos personas con el mismo objetivo rara vez reciben el mismo plan." },
+      { "t": "Ajustamos con lo que tu cuerpo responde", "b": "Medimos, revisamos y corregimos a lo largo del ciclo. El plan del mes tres no es el mismo del mes uno." },
+      { "t": "Cuidamos lo que sostiene el resultado", "b": "Nutrición, movimiento y descanso van dentro del programa, porque son lo que hace que lo demás dure." }
+    ],
+    "note": "Guiado por personal profesional certificado. Los resultados varían de una persona a otra."
   },
 
   "medellin": {
-    "kicker": "El destino",
-    "title": "La ciudad donde la primavera nunca termina.",
-    "body": "Medellín tiene un clima que el cuerpo encuentra naturalmente restaurador durante todo el año, la razón por la que la llaman la Ciudad de la Eterna Primavera. Aquí encuentras médicos de clase mundial, verdadera privacidad y atención premium a precios justos y transparentes. Vivas en la ciudad o vengas desde otra parte de Colombia, el entorno no es un detalle. Es parte de la terapia.",
+    "kicker": "Dónde estamos",
+    "title": "Medellín, la ciudad donde la primavera nunca termina.",
     "p1t": "Atención en tu idioma",
-    "p1b": "Médicos que te atienden en español e inglés, con comunicación clara en cada paso.",
-    "p2t": "Red médica vetada, precios transparentes",
-    "p2b": "Una red curada de especialistas y atención premium a precios justos, sin las cifras de Norteamérica.",
+    "p1b": "Te atendemos en español e inglés, con comunicación clara en cada paso.",
+    "p2t": "Precios transparentes",
+    "p2b": "Atención premium a precios justos, sin las cifras de Norteamérica, y todo dicho por adelantado.",
     "p3t": "Proceso ágil, sin fricción",
-    "p3b": "Te emparejamos con el programa adecuado y coordinamos todo; si vienes de otra ciudad, puedes iniciar de forma remota."
+    "p3b": "Te emparejamos con el programa adecuado y coordinamos todo. Si vienes de otra ciudad, puedes iniciar de forma remota.",
+    "more": "Por qué Medellín"
+  },
+
+  "about": {
+    "kicker": "Nosotros",
+    "title": "Por qué Medellín.",
+    "lead": "El entorno no es un detalle del programa. Es parte de por qué funciona.",
+    "body": "<p>Medellín tiene un clima que el cuerpo encuentra naturalmente restaurador durante todo el año, la razón por la que la llaman la Ciudad de la Eterna Primavera. No hay invierno que interrumpa un ciclo de tres meses, ni un verano que lo haga insostenible.</p><p>Alrededor de ese clima creció una de las redes de atención más sólidas de América Latina: profesionales certificados, formados dentro y fuera del país, con estándares que la ciudad lleva décadas exportando. Esa red es la razón por la que miles de personas viajan cada año a Medellín para cuidarse, y la razón por la que la atención premium aquí no cuesta lo que cuesta en Norteamérica.</p><p>Vivas en la ciudad o vengas desde otra parte, trabajamos igual: te emparejamos con el programa adecuado, coordinamos lo que haya que coordinar y te acompañamos durante todo el ciclo.</p>",
+    "manifestoKicker": "Nuestra posición",
+    "visitKicker": "Si vienes de fuera",
+    "visitTitle": "Cómo funciona a distancia.",
+    "visitBody": "Puedes empezar tu valoración inicial de forma remota, antes de comprar un tiquete. Si el programa tiene sentido para ti, coordinamos tus fechas y dejamos todo listo para que tu tiempo en Medellín sea el programa, no la logística."
   },
 
   "tst": {
     "kicker": "Testimonios",
     "all": "Lee todas las experiencias",
     "filterAll": "Todos",
-    "title": "Lo que dicen nuestros pacientes"
-  },
-
-  "science": {
-    "kicker": "La ciencia",
-    "title": "Primero estudiamos tu biología.",
-    "body": "Nuestros programas se apoyan en la medicina regenerativa y de longevidad: secuencias de aminoácidos dirigidas, señalización celular y exosomas, enfoques con células madre y plasma rico en plaquetas (PRP), sueroterapia de nutrientes y optimización hormonal, todo aplicado bajo supervisión médica y personalizado mediante diagnósticos. El foco son resultados reales: recuperación, resistencia, bienestar metabólico y cardiovascular, manejo del peso y regeneración saludable. No ofrecemos soluciones genéricas. Primero estudiamos tu biología, y luego construimos el protocolo a tu medida.",
-    "note": "Cada protocolo se define, personaliza y supervisa por nuestros médicos tras tu valoración. Los resultados varían de una persona a otra."
+    "title": "Lo que dicen quienes ya empezaron"
   },
 
   "faq": {
@@ -185,9 +216,19 @@
     "stillBody": "Lee todas las preguntas frecuentes o escríbenos. Con gusto te ayudamos antes de que agendes."
   },
 
+  "trust": {
+    "kicker": "Antes de agendar, lo concreto",
+    "priceT": "Valoración inicial",
+    "priceB": "$50.000 COP · $25 USD. Es una cita pagada, no una llamada de ventas.",
+    "placeT": "Dónde",
+    "placeB": "Medellín, Colombia. Las sesiones son presenciales; la valoración puede ser remota.",
+    "hoursT": "Horario",
+    "hoursB": "Lunes a viernes y sábados en la mañana. Confirmamos tu hora al agendar."
+  },
+
   "expect": {
-    "a": { "k": "Qué incluye", "body": "Una consulta médica privada para revisar tus objetivos, tu historia y posibles contraindicaciones, y enrutarte al programa adecuado." },
-    "b": { "k": "Cuánto toma", "body": "Una sesión enfocada con tu equipo médico, y un plan claro con el que sales, decidas o no continuar." },
+    "a": { "k": "Qué incluye", "body": "Una cita privada para revisar tus objetivos, tu historia y tu elegibilidad, y enrutarte al programa adecuado." },
+    "b": { "k": "Cuánto toma", "body": "Una sesión enfocada con tu equipo, y un plan claro con el que sales, decidas o no continuar." },
     "c": { "k": "Antes de pagar", "body": "Primero un breve formulario de elegibilidad. Si un programa no es adecuado para ti, te lo diremos con honestidad." }
   },
 
@@ -199,16 +240,16 @@
 
   "final": {
     "title": "Tu biología merece una estrategia.",
-    "subline": "Comienza con una valoración médica privada. Presencial en Medellín, o remota si viajas hacia nosotros.",
-    "questions": "¿Dudas antes de agendar? Lee nuestras <a href=\"./faq.html\">preguntas frecuentes</a> o escríbenos por <a href=\"https://wa.me/573138750104\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>."
+    "subline": "Comienza con una valoración inicial privada. Presencial en Medellín, o remota si viajas hacia nosotros.",
+    "questions": "¿Dudas antes de agendar? Lee nuestras <a href=\"./preguntas.html\">preguntas frecuentes</a> o escríbenos por <a href=\"https://wa.me/573138750104\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>."
   },
 
   "contact": {
     "kicker": "¿Dudas antes de agendar?",
     "title": "Hablemos antes de que agendes.",
-    "body": "¿Vienes de otra ciudad de Colombia o del exterior? Puedes iniciar con una consulta remota antes de viajar. Envíanos un mensaje y te responderemos.",
+    "body": "¿Vienes de otra ciudad de Colombia o del exterior? Puedes iniciar con una valoración remota antes de viajar. Envíanos un mensaje y te responderemos.",
     "name": "Nombre", "country": "País", "program": "Programa de interés", "message": "Mensaje", "send": "Enviar mensaje",
-    "phone": "O escríbenos por WhatsApp", "remote": "Si vienes de otra ciudad de Colombia o del exterior, puedes iniciar con una consulta remota antes de viajar.",
+    "phone": "O escríbenos por WhatsApp", "remote": "Si vienes de otra ciudad de Colombia o del exterior, puedes iniciar con una valoración remota antes de viajar.",
     "selectProgram": "Selecciona un programa",
     "sent": "Gracias. Hemos recibido tu mensaje y te responderemos pronto."
   },
@@ -222,14 +263,14 @@
   "privacy": {
     "kicker": "Legal",
     "title": "Política de Privacidad",
-    "updated": "Última actualización: 28 de julio de 2026.",
-    "body": "<p>En RegenerAxis (\"nosotros\") respetamos tu privacidad y protegemos los datos personales que compartes con nosotros. Esta política explica qué recopilamos, con qué fin y qué derechos tienes sobre tu información.</p><h2>Información que recopilamos</h2><p>Recopilamos únicamente los datos que nos proporcionas de forma voluntaria a través de nuestros formularios de contacto y de agendamiento y por WhatsApp: tu nombre, país o ciudad, programa de interés y el contenido de tu mensaje. Al agendar una valoración con costo, el agendamiento y el pago los gestionan nuestros proveedores de reservas y de pagos, que tratan tus datos bajo sus propios términos.</p><h2>Cómo la usamos</h2><p>Usamos tus datos para responder tus consultas, realizar un chequeo de elegibilidad, coordinar tu valoración médica y brindarte la atención que solicitas. No vendemos tus datos personales ni los compartimos con terceros con fines publicitarios.</p><h2>Proveedores de servicio</h2><p>Nos apoyamos en proveedores de confianza para agendamiento, procesamiento de pagos, alojamiento y analítica de tráfico básica y respetuosa de la privacidad. Estos proveedores solo reciben los datos necesarios para cumplir su función.</p><h2>Conservación de datos</h2><p>Conservamos tus datos solo el tiempo necesario para atender tu solicitud y cumplir nuestras obligaciones legales y contables, tras lo cual se eliminan o anonimizan.</p><h2>Tus derechos</h2><p>Conforme a la ley colombiana de protección de datos (Ley 1581 de 2012, Habeas Data), puedes solicitar el acceso, la corrección, la actualización o la eliminación de tus datos personales, y retirar tu consentimiento en cualquier momento. Para ejercer estos derechos, escríbenos desde la página de contacto o por WhatsApp.</p>",
+    "updated": "Última actualización: 5 de agosto de 2026.",
+    "body": "<p>En RegenerAxis (\"nosotros\") respetamos tu privacidad y protegemos los datos personales que compartes con nosotros. Esta política explica qué recopilamos, con qué fin y qué derechos tienes sobre tu información.</p><h2>Información que recopilamos</h2><p>Recopilamos únicamente los datos que nos proporcionas de forma voluntaria a través de nuestros formularios de contacto y de agendamiento y por WhatsApp: tu nombre, país o ciudad, programa de interés y el contenido de tu mensaje. Al agendar una valoración con costo, el agendamiento y el pago los gestionan nuestros proveedores de reservas y de pagos, que tratan tus datos bajo sus propios términos.</p><h2>Cómo la usamos</h2><p>Usamos tus datos para responder tus preguntas, realizar un chequeo de elegibilidad, coordinar tu valoración inicial y brindarte la atención que solicitas. No vendemos tus datos personales ni los compartimos con terceros con fines publicitarios.</p><h2>Proveedores de servicio</h2><p>Nos apoyamos en proveedores de confianza para agendamiento, procesamiento de pagos, alojamiento y analítica de tráfico básica y respetuosa de la privacidad. Estos proveedores solo reciben los datos necesarios para cumplir su función.</p><h2>Conservación de datos</h2><p>Conservamos tus datos solo el tiempo necesario para atender tu solicitud y cumplir nuestras obligaciones legales y contables, tras lo cual se eliminan o anonimizan.</p><h2>Tus derechos</h2><p>Conforme a la ley colombiana de protección de datos (Ley 1581 de 2012, Habeas Data), puedes solicitar el acceso, la corrección, la actualización o la eliminación de tus datos personales, y retirar tu consentimiento en cualquier momento. Para ejercer estos derechos, escríbenos desde la página de contacto o por WhatsApp.</p>",
     "back": "Volver al inicio"
   },
 
   "footer": {
-    "tagline": "El Eje de la Renovación Humana. Medellín, Colombia.",
+    "tagline": "Centro de Longevidad y Regeneración. Medellín, Colombia.",
     "explore": "Explorar", "connect": "Conectar", "privacy": "Privacidad",
-    "disclaimer": "RegenerAxis ofrece programas de bienestar regenerativo supervisados por médicos. Todo programa requiere una valoración médica previa y es personalizado y supervisado por médicos titulados. El contenido de este sitio es informativo y no sustituye el consejo, diagnóstico ni tratamiento médico profesional, y no garantiza resultados específicos, que varían de una persona a otra. Los tratamientos se realizan de manera presencial en Medellín, Colombia."
+    "disclaimer": "RegenerAxis es un centro de longevidad y regeneración. Nuestros programas son guiados por personal profesional certificado y requieren una valoración inicial previa. El contenido de este sitio es informativo, no sustituye la orientación profesional y no garantiza resultados específicos, que varían de una persona a otra. Los programas se realizan de manera presencial en Medellín, Colombia."
   }
 }

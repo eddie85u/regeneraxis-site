@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>(function(){try{var t=localStorage.getItem('ra_theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
-  <title>Metabolic Reset · RegenerAxis · Medellín</title>
-  <meta name="description" content="Metabolic Reset: un programa regenerativo supervisado por médicos en RegenerAxis, Medellín. Comienza con una valoración médica. Personalizado según tu biología. Los resultados varían.">
+  <title>Preguntas Frecuentes · RegenerAxis · Medellín</title>
+  <meta name="description" content="Respuestas sobre la valoración inicial, los programas, la seguridad, los clientes internacionales y los pagos en RegenerAxis, Medellín.">
 
-  <link rel="canonical" href="https://regeneraxis.com/metabolic-reset.html">
-  <link rel="alternate" hreflang="es" href="https://regeneraxis.com/metabolic-reset.html">
-  <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/metabolic-reset.html">
-  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/metabolic-reset.html">
+  <link rel="canonical" href="https://regeneraxis.com/preguntas.html">
+  <link rel="alternate" hreflang="es" href="https://regeneraxis.com/preguntas.html">
+  <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/faq.html">
+  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/preguntas.html">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="RegenerAxis · Metabolic Reset">
-  <meta property="og:description" content="Programa regenerativo supervisado por médicos. Personalizado según tu biología.">
+  <meta property="og:title" content="RegenerAxis · Preguntas Frecuentes">
+  <meta property="og:description" content="Respuestas sobre la valoración inicial, los programas, la seguridad, los clientes internacionales y los pagos.">
   <meta property="og:image" content="https://regeneraxis.com/assets/img/og.jpg">
   <meta property="og:locale" content="es_CO">
   <meta property="og:locale:alternate" content="en_US">
@@ -44,19 +43,16 @@
           <span class="nav__wordmark">Regener<b>Axis</b></span>
         </a>
         <div class="nav__links" id="nav-links">
-          <a href="./#programas" class="active" data-i18n="nav.programs">Programas</a>
+          <a href="./#programas" data-i18n="nav.programs">Programas</a>
+          <a href="./nosotros.html" data-i18n="nav.about">Nosotros</a>
           <a href="./testimonios.html" data-i18n="nav.testimonials">Testimonios</a>
-          <a href="./faq.html" data-i18n="nav.faq">Preguntas</a>
+          <a href="./preguntas.html" class="active" data-i18n="nav.faq">Preguntas</a>
           <a href="./contacto.html" data-i18n="nav.contact">Contacto</a>
           <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.bookShort">Agendar cita</a>
           <span class="lang-toggle">
-            <a href="en/metabolic-reset.html">EN</a>
-            <a href="./metabolic-reset.html" class="active">ES</a>
+            <a href="en/faq.html">EN</a>
+            <a href="./preguntas.html" class="active">ES</a>
           </span>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro u oscuro">
-            <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-            <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
-          </button>
         </div>
         <button class="nav__toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
           <span></span><span></span><span></span>
@@ -65,16 +61,31 @@
     </div>
   </header>
 
-  <main id="main" data-program-page="metabolic">
-    <noscript>
-      <section class="section" style="padding-top:calc(var(--section-y) + 3rem)">
-        <div class="wrap narrow">
-          <h1>Metabolic Reset</h1>
-          <p>Todo programa comienza con una valoración médica presencial en Medellín, se personaliza según tu perfil y tus objetivos, y es supervisado por médicos. Los resultados varían de una persona a otra.</p>
-          <p><a class="btn" href="#booking-placeholder">Agenda tu Valoración</a></p>
+  <main id="main">
+    <section class="section stage--night" style="padding-top:calc(var(--section-y) + 3rem)">
+      <div class="wrap narrow reveal">
+        <span class="kicker" data-i18n="faq.kicker">Antes de agendar</span>
+        <h1 data-i18n="faq.title">Preguntas frecuentes</h1>
+      </div>
+    </section>
+
+    <section class="section stage--bone">
+      <div class="wrap narrow">
+        <div id="faq-full" data-faq-full></div>
+      </div>
+    </section>
+
+    <section class="section stage--graphite">
+      <div class="wrap narrow center reveal">
+        <span class="kicker" data-i18n="faq.kicker">Antes de agendar</span>
+        <h2 data-i18n="faq.stillTitle">¿Aún tienes dudas?</h2>
+        <p class="lead" data-i18n="faq.stillBody">Lee todas las preguntas frecuentes o escríbenos. Con gusto te ayudamos antes de que agendes.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn--dark" href="./contacto.html" data-i18n="nav.contact">Contacto</a>
+          <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
         </div>
-      </section>
-    </noscript>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -82,14 +93,15 @@
       <div class="footer-grid">
         <div>
           <span class="nav__wordmark" style="color:var(--ivory)">Regener<b>Axis</b></span>
-          <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">El Eje de la Renovación Humana. Medellín, Colombia.</p>
+          <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">Centro de Longevidad y Regeneración. Medellín, Colombia.</p>
         </div>
         <div>
           <h3 data-i18n="footer.explore">Explorar</h3>
           <ul>
             <li><a href="./#programas" data-i18n="nav.programs">Programas</a></li>
+            <li><a href="./nosotros.html" data-i18n="nav.about">Nosotros</a></li>
             <li><a href="./#proceso" data-i18n="nav.process">Proceso</a></li>
-            <li><a href="./faq.html" data-i18n="nav.faq">Preguntas</a></li>
+            <li><a href="./preguntas.html" data-i18n="nav.faq">Preguntas</a></li>
             <li><a href="./contacto.html" data-i18n="nav.contact">Contacto</a></li>
           </ul>
         </div>
@@ -98,16 +110,16 @@
           <ul>
             <li><a data-whatsapp href="https://wa.me/573138750104">+57 313 8750104</a></li>
             <li><a data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a></li>
-            <li><a href="./privacy.html" data-i18n="footer.privacy">Privacidad</a></li>
+            <li><a href="./privacidad.html" data-i18n="footer.privacy">Privacidad</a></li>
           </ul>
         </div>
       </div>
-      <p class="disclaimer" data-i18n="footer.disclaimer">RegenerAxis ofrece programas de bienestar regenerativo supervisados por médicos. Todo programa requiere una valoración médica previa y es personalizado y supervisado por médicos titulados. El contenido de este sitio es informativo y no sustituye el consejo, diagnóstico ni tratamiento médico profesional, y no garantiza resultados específicos, que varían de una persona a otra. Los tratamientos se realizan de manera presencial en Medellín, Colombia.</p>
+      <p class="disclaimer" data-i18n="footer.disclaimer">RegenerAxis es un centro de longevidad y regeneración. Nuestros programas son guiados por personal profesional certificado y requieren una valoración inicial previa. El contenido de este sitio es informativo, no sustituye la orientación profesional y no garantiza resultados específicos, que varían de una persona a otra. Los programas se realizan de manera presencial en Medellín, Colombia.</p>
     </div>
   </footer>
 
   <script type="module" src="assets/js/main.js"></script>
   <script type="module" src="assets/js/i18n.js"></script>
-  <script type="module" src="assets/js/programs.js"></script>
+  <script type="module" src="assets/js/faq.js"></script>
 </body>
 </html>

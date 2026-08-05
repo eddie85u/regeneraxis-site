@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>(function(){try{var t=localStorage.getItem('ra_theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
-  <title>RegenerAxis · Regenerative Medicine & Human Optimization · Medellín</title>
-  <meta name="description" content="Physician-guided regenerative programs, personalized to your biology, in Medellín, the City of Eternal Spring.">
+  <title>RegenerAxis · Longevity &amp; Regeneration Center in Medellín</title>
+  <meta name="description" content="Longevity &amp; Regeneration Center in Medellín. We design the strategy that puts more life into your years, with programs personalized to your biology.">
 
   <link rel="canonical" href="https://regeneraxis.com/en/">
   <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/">
@@ -13,8 +12,8 @@
   <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="RegenerAxis · The Axis of Human Renewal">
-  <meta property="og:description" content="Physician-guided regenerative programs, personalized to your biology, in Medellín.">
+  <meta property="og:title" content="RegenerAxis · Longevity &amp; Regeneration Center">
+  <meta property="og:description" content="We design the strategy that puts more life into your years. Medellín, Colombia.">
   <meta property="og:image" content="https://regeneraxis.com/assets/img/og.jpg">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_CO">
@@ -31,13 +30,14 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "HealthAndBeautyBusiness",
     "name": "RegenerAxis",
-    "description": "Regenerative medicine and human optimization center in Medellín, Colombia.",
+    "description": "Longevity and regeneration center in Medellín, Colombia. Personalized programs for longevity, performance, and regeneration.",
     "url": "https://regeneraxis.com/en/",
     "telephone": "+57 313 8750104",
     "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressCountry": "CO" },
-    "medicalSpecialty": "PreventiveMedicine"
+    "areaServed": "Medellín, Colombia",
+    "slogan": "We design the strategy that puts more life into your years."
   }
   </script>
 </head>
@@ -48,32 +48,32 @@
     <div class="wrap">
       <nav class="nav" aria-label="Primary">
         <a class="nav__brand" href="./" aria-label="RegenerAxis home">
-          <!-- Inline Axis Bloom mark. Strokes recolor by theme via .logo-stroke. Gold node fixed. -->
-          <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
+          <!-- Axis Bloom mark. The gold electrons ride the ellipse paths; the
+               animation is defined in CSS and disabled under reduced motion. -->
+          <svg class="mark" viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
             <g class="logo-stroke" fill="none" stroke-width="1.5">
               <ellipse cx="50" cy="50" rx="15" ry="28"/>
               <ellipse cx="50" cy="50" rx="28" ry="15"/>
             </g>
             <circle cx="50" cy="50" r="24" fill="none" stroke="#C7A96B" stroke-width="1"/>
             <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+            <circle class="mark__e mark__e--a" cx="50" cy="50" r="2.2" fill="#C7A96B"/>
+            <circle class="mark__e mark__e--b" cx="50" cy="50" r="2.2" fill="#C7A96B"/>
           </svg>
           <span class="nav__wordmark">Regener<b>Axis</b></span>
         </a>
 
         <div class="nav__links" id="nav-links">
           <a href="./#programs" data-i18n="nav.programs">Programs</a>
+          <a href="./about.html" data-i18n="nav.about">About</a>
           <a href="./testimonials.html" data-i18n="nav.testimonials">Testimonials</a>
           <a href="./faq.html" data-i18n="nav.faq">FAQ</a>
           <a href="./contact.html" data-i18n="nav.contact">Contact</a>
           <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.bookShort">Book Assessment</a>
           <span class="lang-toggle">
-            <a href="../en/" class="active">EN</a>
-            <a href="../">ES</a>
+            <a href="/en/" class="active">EN</a>
+            <a href="/">ES</a>
           </span>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light or dark theme">
-            <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-            <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
-          </button>
         </div>
 
         <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
@@ -85,20 +85,22 @@
 
   <main id="main">
 
-    <section class="hero hero--home">
+    <!-- 1 · Hero -->
+    <section class="hero hero--home stage--night">
       <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="wrap hero__inner reveal">
         <div class="hero__content">
-          <span class="kicker" data-i18n="hero.kicker">Medellín · Colombia</span>
-          <h1 data-i18n="hero.headline">Optimize recovery. Elevate performance. Extend healthspan.</h1>
-          <p class="subline" data-i18n="hero.subline">Physician-guided regenerative programs, personalized to your biology, delivered in the City of Eternal Spring.</p>
+          <span class="kicker" data-i18n="hero.kicker">Longevity &amp; Regeneration Center · Medellín</span>
+          <h1 data-i18n="hero.headline" data-i18n-html><span class='hero__line'>Optimize <span class='hero__key'>recovery.</span></span><span class='hero__line'>Elevate <span class='hero__key'>performance.</span></span><span class='hero__line'>Extend <span class='hero__key'>vitality.</span></span></h1>
+          <p class="subline" data-i18n="hero.subline">We design the strategy that puts more life into your years. Programs personalized to your biology, in the City of Eternal Spring.</p>
           <div class="btn-row">
             <a class="btn btn--dark" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
+            <a class="link-quiet" href="#programs" data-i18n="nav.programs">Programs</a>
           </div>
         </div>
         <div class="hero__visual" aria-hidden="true">
           <div class="hero__bloom">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="bloom" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g class="b-stroke" stroke-width="0.8" fill="none">
                 <ellipse cx="50" cy="50" rx="14" ry="34"/>
                 <ellipse cx="50" cy="50" rx="34" ry="14"/>
@@ -106,98 +108,108 @@
               </g>
               <circle cx="50" cy="50" r="31" fill="none" stroke="#C7A96B" stroke-width="0.5" opacity="0.55"/>
               <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+              <!-- Electrons. Each rides one of the ellipse paths above. -->
+              <circle class="bloom__e bloom__e--1" cx="50" cy="50" r="1.9" fill="#C7A96B"/>
+              <circle class="bloom__e bloom__e--2" cx="50" cy="50" r="1.9" fill="#C7A96B"/>
+              <circle class="bloom__e bloom__e--3" cx="50" cy="50" r="1.6" fill="#D9C6A0"/>
             </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="programs">
-      <div class="wrap">
-        <div class="narrow center eyebrow-center reveal">
-          <span class="kicker" data-i18n="programs.kicker">Our programs</span>
-          <h2 data-i18n="programs.title">Five programs.</h2>
-          <p class="lead" data-i18n="programs.intro">Every program begins with a medical assessment, is personalized to you, and is supervised by our physicians from the first day to the last. Individual results vary.</p>
-        </div>
-        <div class="grid grid--3 reveal-stagger" id="programs-grid" data-programs-preview></div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="wrap">
-        <div class="narrow eyebrow-center reveal"><span class="kicker" data-i18n="how.kicker">The journey</span></div>
-        <div class="narrow steps reveal-stagger">
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Book your visit</h3><p data-i18n="how.s1.body">Schedule your visit online or reach us on WhatsApp. We guide you to book your medical assessment. International patients can begin remotely.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Medical Assessment</h3><p data-i18n="how.s2.body">A private consultation to understand your goals, your history, and your lifestyle.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Personalized Protocol</h3><p data-i18n="how.s3.body">Your physician designs a program built for your body and your goals.</p></div></div>
-          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Optimization &amp; Follow-up</h3><p data-i18n="how.s4.body">We monitor, adjust, and refine throughout your program.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><div class="divider-wrap"><hr class="hairline"></div></div>
-
-    <section class="section">
+    <!-- 2 · Problem and empathy. The visitor before the catalog. -->
+    <section class="section stage--bone" id="is-this-for-you">
       <div class="wrap">
         <div class="narrow center eyebrow-center reveal">
           <span class="kicker" data-i18n="who.kicker">Find your starting point</span>
           <h2 data-i18n="who.title">Is this for you?</h2>
-          <p class="lead" data-i18n="who.lead">Recognize any of these? Persistent fatigue, slow recovery, fat that will not budge no matter what you try, and focus that fades by mid-afternoon. These are signals, not sentences, and they can be addressed with a medical plan.</p>
+          <p class="lead" data-i18n="who.lead">Recognize any of these? Persistent fatigue, slow recovery, fat that will not budge no matter what you try, and focus that fades by mid-afternoon. These are signals, not sentences, and they can be worked on with a plan built for you.</p>
         </div>
         <div class="grid grid--4 reveal-stagger">
           <article class="card"><div class="card__num">01</div><h3 data-i18n="who.athlete.title">The Athlete</h3><p data-i18n="who.athlete.body">You train at the limit. You want to recover faster, protect your joints, and return stronger to every session.</p></article>
           <article class="card"><div class="card__num">02</div><h3 data-i18n="who.executive.title">The Executive</h3><p data-i18n="who.executive.body">You carry pressure all day. You want deeper sleep, sharper focus, and energy that lasts past noon.</p></article>
-          <article class="card"><div class="card__num">03</div><h3 data-i18n="who.metabolic.title">The Metabolic Reset</h3><p data-i18n="who.metabolic.body">You have tried diets and discipline. You want to lose fat with medical guidance and keep it off.</p></article>
+          <article class="card"><div class="card__num">03</div><h3 data-i18n="who.metabolic.title">The Metabolic Reset</h3><p data-i18n="who.metabolic.body">You have tried diets and discipline. You want to lose fat with real guidance and keep it off.</p></article>
           <article class="card"><div class="card__num">04</div><h3 data-i18n="who.longevity.title">The Longevity Seeker</h3><p data-i18n="who.longevity.body">You are not chasing youth. You want to feel strong, clear, and vital for decades to come.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="medellin">
-      <div class="wrap">
-        <div class="feature reveal">
-          <div>
-            <span class="kicker" data-i18n="medellin.kicker">The destination</span>
-            <h2 data-i18n="medellin.title">The city where spring never ends.</h2>
-            <p data-i18n="medellin.body">Medellín holds a climate the body finds naturally restorative all year long, the reason it is known as the City of Eternal Spring. Here you will find world-class clinicians, genuine privacy, and premium care at fair, transparent prices. Whether you live in the city or travel in from elsewhere in Colombia, the setting is not a detail. It is part of the therapy.</p>
+    <!-- 3 · Method. The flagship pinned section: the stage holds while the four
+         beats advance, then releases. Pinning is switched on by method.js only
+         on wide screens with motion allowed; otherwise this stacks normally. -->
+    <section class="section method stage--olive" id="how-it-works" data-method>
+      <div class="method__track">
+        <div class="method__stage">
+          <div class="wrap method__inner">
+            <div class="method__intro reveal">
+              <span class="kicker" data-i18n="method.kicker">How it works</span>
+              <h2 data-i18n="method.title">We study your biology first.</h2>
+              <p class="lead" data-i18n="method.lead">We do not keep a catalog of solutions waiting for someone to fit. We have a method.</p>
+              <p class="tst-note" data-i18n="method.note">Guided by certified professional personnel. Individual results vary.</p>
+            </div>
+            <ol class="method__beats reveal-stagger" data-method-beats></ol>
           </div>
-          <div class="feature__media" aria-hidden="true">
-            <svg class="feature__bloom" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6">
-                <ellipse cx="50" cy="50" rx="14" ry="34"/>
-                <ellipse cx="50" cy="50" rx="34" ry="14"/>
-                <ellipse cx="50" cy="50" rx="26" ry="26" transform="rotate(45 50 50)"/>
-              </g>
-              <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
-            </svg>
-          </div>
-        </div>
-        <div class="grid grid--3 reveal-stagger" style="margin-top:3rem">
-          <article class="card"><h3 data-i18n="medellin.p1t">Care in your language</h3><p data-i18n="medellin.p1b">Physicians who attend you in English and Spanish, with clear communication at every step.</p></article>
-          <article class="card"><h3 data-i18n="medellin.p2t">A vetted network, transparent pricing</h3><p data-i18n="medellin.p2b">A curated network of specialists and premium care at fair prices, without North American figures.</p></article>
-          <article class="card"><h3 data-i18n="medellin.p3t">Streamlined, low-friction</h3><p data-i18n="medellin.p3b">We match you to the right program and coordinate everything; if you travel in from another city, you can begin remotely.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section strip-dark">
+    <!-- 4 · Programs. Earned by this point in the story. -->
+    <section class="section stage--night" id="programs">
       <div class="wrap">
-        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">Testimonials</span><h2 data-i18n="tst.title">What our patients say</h2></div>
+        <div class="narrow center eyebrow-center reveal">
+          <span class="kicker" data-i18n="programs.kicker">Our programs</span>
+          <h2 data-i18n="programs.title">Five programs.</h2>
+          <p class="lead" data-i18n="programs.intro">Every program starts with an initial assessment and is built around you.</p>
+        </div>
+        <div class="grid grid--3 reveal-stagger" id="programs-grid" data-programs-preview></div>
+      </div>
+    </section>
+
+    <!-- 5 · Proof -->
+    <section class="section stage--bone">
+      <div class="wrap">
+        <div class="eyebrow-center reveal"><span class="kicker" data-i18n="tst.kicker">Testimonials</span><h2 data-i18n="tst.title">What those who started say</h2></div>
         <div class="grid grid--3 reveal-stagger" id="tst-featured" data-tst-featured></div>
         <div class="center mt-lg reveal"><a class="link-quiet" href="./testimonials.html" data-i18n="tst.all">Read all experiences</a></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap narrow reveal">
-        <span class="kicker" data-i18n="science.kicker">The science</span>
-        <h2 data-i18n="science.title">We study your biology first.</h2>
-        <p data-i18n="science.body">Our programs draw on regenerative and longevity medicine: targeted amino acid sequences, cellular signaling and exosomes, stem cell and platelet-rich plasma (PRP) approaches, IV nutrient therapy, and hormone optimization, all applied under medical supervision and personalized through diagnostics. We do not offer generic solutions. We study your biology first, then build the protocol around it.</p>
-        <p class="tst-note" data-i18n="science.note">Every protocol is defined, personalized, and supervised by our physicians after your assessment. Individual results vary.</p>
+    <!-- 6 · How to start -->
+    <section class="section stage--graphite" id="process">
+      <div class="wrap">
+        <div class="narrow eyebrow-center reveal">
+          <span class="kicker" data-i18n="how.kicker">The process</span>
+          <h2 data-i18n="how.title">Four steps, no surprises.</h2>
+        </div>
+        <div class="narrow steps reveal-stagger">
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s1.title">Book your visit</h3><p data-i18n="how.s1.body">Book online or write to us on WhatsApp. We guide you to schedule your assessment. If you are coming from another city or from abroad, you can begin remotely.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s2.title">Initial assessment</h3><p data-i18n="how.s2.body">A private appointment to understand your goals, your history, and your lifestyle.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s3.title">Personalized plan</h3><p data-i18n="how.s3.body">We design a program built for your body and your goals.</p></div></div>
+          <div class="step"><div class="step__n"></div><div><h3 data-i18n="how.s4.title">Adjustment &amp; follow-up</h3><p data-i18n="how.s4.body">We measure, adjust, and refine throughout your program.</p></div></div>
+        </div>
       </div>
     </section>
 
-    <section class="section strip-dark">
+    <!-- 7 · Medellin, condensed to three trust points. The full
+         longer travel-and-place narrative lives on /en/about.html. -->
+    <section class="section stage--ivory" id="medellin">
+      <div class="wrap">
+        <div class="narrow center eyebrow-center reveal">
+          <span class="kicker" data-i18n="medellin.kicker">Where we are</span>
+          <h2 data-i18n="medellin.title">Medellín, the city where spring never ends.</h2>
+        </div>
+        <div class="grid grid--3 reveal-stagger">
+          <article class="card"><h3 data-i18n="medellin.p1t">Care in your language</h3><p data-i18n="medellin.p1b">We attend you in English and Spanish, with clear communication at every step.</p></article>
+          <article class="card"><h3 data-i18n="medellin.p2t">Transparent pricing</h3><p data-i18n="medellin.p2b">Premium care at fair prices, without North American figures, and everything said up front.</p></article>
+          <article class="card"><h3 data-i18n="medellin.p3t">Streamlined, low-friction</h3><p data-i18n="medellin.p3b">We match you to the right program and coordinate everything. If you travel in from another city, you can begin remotely.</p></article>
+        </div>
+        <div class="center mt-lg reveal"><a class="link-quiet" href="./about.html" data-i18n="medellin.more">Why Medellín</a></div>
+      </div>
+    </section>
+
+    <!-- 8 · Objections -->
+    <section class="section stage--night">
       <div class="wrap narrow">
         <div class="eyebrow-center reveal"><span class="kicker" data-i18n="faq.kicker">Before you book</span></div>
         <div id="faq-teaser" data-faq-teaser class="reveal"></div>
@@ -205,16 +217,17 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- 9 · The ask. The one gold stage on the page. -->
+    <section class="section stage--gold" id="book">
       <div class="wrap narrow">
-        <ul class="expect reveal-stagger" aria-label="What to expect">
-          <li><span class="kicker" data-i18n="expect.a.k">What it includes</span><p data-i18n="expect.a.body">A private physician consultation to review your goals, your history, and any contraindications, then routing to the right program.</p></li>
-          <li><span class="kicker" data-i18n="expect.b.k">How long it takes</span><p data-i18n="expect.b.body">A focused session with your medical team, plus a clear plan you leave with whether or not you continue.</p></li>
-          <li><span class="kicker" data-i18n="expect.c.k">From anywhere</span><p data-i18n="expect.c.body">International clients can begin remotely, then coordinate travel to Medellín to start in person.</p></li>
+        <ul class="expect reveal-stagger" aria-label="The concrete details">
+          <li><span class="kicker" data-i18n="trust.priceT">Initial assessment</span><p data-i18n="trust.priceB">$50,000 COP · $25 USD. It is a paid appointment, not a sales call.</p></li>
+          <li><span class="kicker" data-i18n="trust.placeT">Where</span><p data-i18n="trust.placeB">Medellín, Colombia. Sessions are in person; the assessment can be remote.</p></li>
+          <li><span class="kicker" data-i18n="trust.hoursT">Hours</span><p data-i18n="trust.hoursB">Monday to Friday, and Saturday mornings. We confirm your time when you book.</p></li>
         </ul>
         <div class="center reveal">
           <h2 data-i18n="final.title">Your biology deserves a strategy.</h2>
-          <p class="lead" data-i18n="final.subline">Begin with a private medical assessment. In person in Medellín, or remotely if you are traveling to us.</p>
+          <p class="lead" data-i18n="final.subline">Begin with a private initial assessment. In person in Medellín, or remotely if you are traveling to us.</p>
           <div class="pay-strip reveal" aria-label="Payment">
             <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.a">All major cards accepted</span></span>
             <span class="pay-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pay.b">Secure checkout</span></span>
@@ -223,7 +236,7 @@
           <div class="btn-row" style="justify-content:center">
             <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
           </div>
-          <p class="tst-note mt-lg" data-i18n="final.questions" data-i18n-html>Questions before booking? Read our <a href="./faq.html">FAQ</a> or write via WhatsApp: +57 313 8750104</p>
+          <p class="tst-note mt-lg" data-i18n="final.questions" data-i18n-html>Questions before booking? Read our <a href="./faq.html">FAQ</a> or message us on WhatsApp.</p>
         </div>
       </div>
     </section>
@@ -235,12 +248,13 @@
       <div class="footer-grid">
         <div>
           <span class="nav__wordmark" style="color:var(--ivory)">Regener<b>Axis</b></span>
-          <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">The Axis of Human Renewal. Medellín, Colombia.</p>
+          <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">Longevity &amp; Regeneration Center. Medellín, Colombia.</p>
         </div>
         <div>
           <h3 data-i18n="footer.explore">Explore</h3>
           <ul>
             <li><a href="./#programs" data-i18n="nav.programs">Programs</a></li>
+            <li><a href="./about.html" data-i18n="nav.about">About</a></li>
             <li><a href="./#process" data-i18n="nav.process">Process</a></li>
             <li><a href="./faq.html" data-i18n="nav.faq">FAQ</a></li>
             <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -255,12 +269,13 @@
           </ul>
         </div>
       </div>
-      <p class="disclaimer" data-i18n="footer.disclaimer">RegenerAxis provides physician-supervised regenerative wellness programs. Every program requires a prior medical assessment and is personalized and supervised by licensed physicians. Content on this site is informational and is not a substitute for professional medical advice, diagnosis, or treatment, and it does not guarantee specific results, which vary by individual. Treatments are provided in person in Medellín, Colombia.</p>
+      <p class="disclaimer" data-i18n="footer.disclaimer">RegenerAxis is a longevity and regeneration center. Our programs are guided by certified professional personnel and require a prior initial assessment. Content on this site is informational, is not a substitute for professional guidance, and does not guarantee specific results, which vary by individual. Programs are delivered in person in Medellín, Colombia.</p>
     </div>
   </footer>
 
   <script type="module" src="../assets/js/main.js"></script>
   <script type="module" src="../assets/js/i18n.js"></script>
+  <script type="module" src="../assets/js/method.js"></script>
   <script type="module" src="../assets/js/programs.js"></script>
   <script type="module" src="../assets/js/testimonials.js"></script>
   <script type="module" src="../assets/js/faq.js"></script>

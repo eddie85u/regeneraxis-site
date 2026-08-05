@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>(function(){try{var t=localStorage.getItem('ra_theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
   <title>Contact · RegenerAxis · Medellín</title>
-  <meta name="description" content="Have questions before booking? International clients can begin with a remote consultation before traveling to Medellín.">
+  <meta name="description" content="Have questions before booking? If you are coming from another city or from abroad, you can begin with a remote assessment before traveling to Medellín.">
 
   <link rel="canonical" href="https://regeneraxis.com/en/contact.html">
   <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/contact.html">
@@ -14,7 +13,7 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="RegenerAxis · Contact">
-  <meta property="og:description" content="Have questions before booking? Write to us or start with a remote consultation.">
+  <meta property="og:description" content="Have questions before booking? Write to us or start with a remote assessment.">
   <meta property="og:image" content="https://regeneraxis.com/assets/img/og.jpg">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_CO">
@@ -45,6 +44,7 @@
         </a>
         <div class="nav__links" id="nav-links">
           <a href="./#programs" data-i18n="nav.programs">Programs</a>
+          <a href="./about.html" data-i18n="nav.about">About</a>
           <a href="./testimonials.html" data-i18n="nav.testimonials">Testimonials</a>
           <a href="./faq.html" data-i18n="nav.faq">FAQ</a>
           <a href="./contact.html" class="active" data-i18n="nav.contact">Contact</a>
@@ -53,10 +53,6 @@
             <a href="../en/contact.html" class="active">EN</a>
             <a href="../contacto.html">ES</a>
           </span>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light or dark theme">
-            <svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-            <svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="#C7A96B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
-          </button>
         </div>
         <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
           <span></span><span></span><span></span>
@@ -66,16 +62,30 @@
   </header>
 
   <main id="main">
-    <section class="section" style="padding-top:calc(var(--section-y) + 3rem)">
+    <section class="section stage--night" style="padding-top:calc(var(--section-y) + 3rem)">
       <div class="wrap">
         <div class="feature reveal">
           <div>
             <span class="kicker" data-i18n="contact.kicker">Have questions first?</span>
             <h1 data-i18n="contact.title">Let's talk before you book.</h1>
-            <p data-i18n="contact.body">International clients can begin with a remote consultation before traveling. Send us a note and we will get back to you.</p>
+            <p data-i18n="contact.body">International clients can begin with a remote assessment before traveling. Send us a note and we will get back to you.</p>
 
-            <!-- TODO: replace the action with your real Formspree endpoint,
-                 e.g. https://formspree.io/f/your-form-id  (or embed a Tally form). -->
+            <!-- ============================================================
+                 TODO (integration pending): two things, not one:
+
+                 1. CONTACT FORM (this one). Replace the action with your real
+                    Formspree endpoint, e.g. https://formspree.io/f/your-form-id
+                    (or embed a Tally form).
+
+                 2. ELIGIBILITY + BOOKING FLOW (separate). This is what sits
+                    behind "Book Your Assessment". It must collect the exclusion
+                    criteria that are no longer published on the program pages:
+                    the list lives in INTAKE_SCREENING.md (local, out of the
+                    repo). Screening privately is safety; publishing the same
+                    list is advertising. Once it exists, point BOOKING_URL in
+                    assets/js/main.js at that flow and every CTA on the site is
+                    connected at once.
+                 ============================================================ -->
             <form class="form" data-contact-form action="https://formspree.io/f/your-form-id" method="POST" style="margin-top:2rem">
               <div>
                 <label for="c-name" data-i18n="contact.name">Name</label>
@@ -106,7 +116,7 @@
             <div class="card" style="height:auto">
               <span class="kicker" data-i18n="contact.phone">Or call us</span>
               <p style="font-family:var(--serif);font-size:1.5rem;margin-bottom:1.4rem"><a data-whatsapp href="https://wa.me/573138750104">+57 313 8750104</a></p>
-              <p class="tst-note" data-i18n="contact.remote">International clients can begin with a remote consultation before traveling.</p>
+              <p class="tst-note" data-i18n="contact.remote">International clients can begin with a remote assessment before traveling.</p>
               <div class="btn-row" style="margin-top:1.6rem">
                 <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Book Your Assessment</a>
               </div>
@@ -123,12 +133,13 @@
       <div class="footer-grid">
         <div>
           <span class="nav__wordmark" style="color:var(--ivory)">Regener<b>Axis</b></span>
-          <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">The Axis of Human Renewal. Medellín, Colombia.</p>
+          <p style="margin-top:1rem;font-size:0.9rem" data-i18n="footer.tagline">Longevity &amp; Regeneration Center. Medellín, Colombia.</p>
         </div>
         <div>
           <h3 data-i18n="footer.explore">Explore</h3>
           <ul>
             <li><a href="./#programs" data-i18n="nav.programs">Programs</a></li>
+            <li><a href="./about.html" data-i18n="nav.about">About</a></li>
             <li><a href="./#process" data-i18n="nav.process">Process</a></li>
             <li><a href="./faq.html" data-i18n="nav.faq">FAQ</a></li>
             <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -143,7 +154,7 @@
           </ul>
         </div>
       </div>
-      <p class="disclaimer" data-i18n="footer.disclaimer">RegenerAxis provides physician-supervised regenerative wellness programs. Every program requires a prior medical assessment and is personalized and supervised by licensed physicians. Content on this site is informational and is not a substitute for professional medical advice, diagnosis, or treatment, and it does not guarantee specific results, which vary by individual. Treatments are provided in person in Medellín, Colombia.</p>
+      <p class="disclaimer" data-i18n="footer.disclaimer">RegenerAxis is a longevity and regeneration center. Our programs are guided by certified professional personnel and require a prior initial assessment. Content on this site is informational, is not a substitute for professional guidance, and does not guarantee specific results, which vary by individual. Programs are delivered in person in Medellín, Colombia.</p>
     </div>
   </footer>
 

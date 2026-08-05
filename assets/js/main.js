@@ -1,7 +1,14 @@
 /* RegenerAxis — shared site behavior. Tiny, no dependencies. */
 
-// Single source of truth for the paid scheduling link.
-// Swap this one value when the Calendly / Cal.com / payment URL is ready.
+// TODO (integration pending) — single source of truth for the paid booking
+// flow. Every "Agenda tu Valoración" / "Book Your Assessment" link on the site
+// carries [data-booking] and is pointed here by initBookingLinks(), including
+// the ones injected later by programs.js. Swapping this one string connects
+// the whole funnel; nothing else needs to change.
+//
+// The target should be the eligibility form first, then scheduling, then
+// payment. The exclusion criteria that form must screen for are in
+// INTAKE_SCREENING.md (local only, deliberately not published).
 export const BOOKING_URL = "#booking-placeholder";
 
 // WhatsApp: one number, one place. wa.me opens the chat directly on web and
@@ -36,23 +43,6 @@ function initLangToggle() {
     el.addEventListener("click", () => {
       try { localStorage.setItem("ra_lang", target); } catch (e) {}
     });
-  });
-}
-
-/* ---- Theme (dark default, remembered) ---- */
-function applyTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  try { localStorage.setItem("ra_theme", theme); } catch (e) {}
-}
-function initTheme() {
-  let saved = "dark";
-  try { saved = localStorage.getItem("ra_theme") || "dark"; } catch (e) {}
-  document.documentElement.setAttribute("data-theme", saved);
-  const btn = document.getElementById("theme-toggle");
-  if (!btn) return;
-  btn.addEventListener("click", () => {
-    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
-    applyTheme(next);
   });
 }
 
@@ -133,7 +123,6 @@ function initReveal() {
 export function refreshReveal() { initReveal(); }
 
 export function boot() {
-  initTheme();
   persistLangFromPath();
   initLangToggle();
   initHeader();

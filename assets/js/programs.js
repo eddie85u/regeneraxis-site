@@ -7,16 +7,25 @@ async function loadPrograms() {
   return res.json();
 }
 
-/* Build one preview card. Text comes from locale under programs.items.<id>. */
+/* Slugs differ per locale: Spanish pages live at the root under Spanish
+   slugs, English ones under /en/ with English slugs. */
+export function slugFor(prog, lang) {
+  const s = prog.slug;
+  return typeof s === "string" ? s : s[lang] || s.en;
+}
+
+/* Build one preview card. Text comes from locale under programs.items.<id>.
+   The bridge line is the searchable outcome phrasing under the brand name. */
 function previewCard(prog, dict, lang) {
   const t = get(dict, `programs.items.${prog.id}`) || {};
   const ctaLabel = get(dict, "programs.learn") || "Explore program";
   const a = document.createElement("a");
   a.className = "card card--link reveal";
-  a.href = `./${prog.slug}.html`;
+  a.href = `./${slugFor(prog, lang)}.html`;
   a.innerHTML = `
     <div class="card__num">${prog.number}</div>
     <h3>${t.name || prog.id}</h3>
+    ${t.bridge ? `<p class="card__bridge">${t.bridge}</p>` : ""}
     <p>${t.tagline || ""}</p>
     <span class="card__cta">${ctaLabel} &rarr;</span>
   `;
@@ -68,7 +77,7 @@ export function payStrip(dict) {
 function priceLine(prog, dict) {
   if (!prog.priceFrom) return "";
   const label = get(dict, "program.investmentFrom") || "Investment from";
-  const note = get(dict, "program.investmentNote") || "Final pricing depends on your medical assessment and personalization.";
+  const note = get(dict, "program.investmentNote") || "Final pricing depends on your initial assessment and personalization.";
   return `
     <div class="price">
       <span class="kicker">${label}</span>
@@ -87,8 +96,7 @@ async function renderProgramPage() {
   const t = get(dict, `programs.items.${id}`) || {};
 
   const benefits = (t.benefits || []).map((b) => `<li>${b}</li>`).join("");
-  const symptoms = (t.symptoms || []).map((s) => `<li>${s}</li>`).join("");
-  const flags = (t.disqualifiers || []).map((s) => `<li>${s}</li>`).join("");
+  const signals = (t.signals || []).map((s) => `<li>${s}</li>`).join("");
   const phases = (t.phases || [])
     .map((p) => `<div class="step"><div class="step__n"></div><div><h3>${p.t || ""}</h3><p>${p.b || ""}</p></div></div>`)
     .join("");
@@ -102,41 +110,65 @@ async function renderProgramPage() {
     return `<article class="card"><h3>${s.t || ""}</h3><p>${s.b || ""}</p></article>`;
   };
 
-  document.title = `${t.name || id} · RegenerAxis`;
+  /* SEO: the brand name stays the H1, but the title and description lead with
+     the bridge term, which is what people actually search for. */
+  const entity = get(dict, "brand.entity") || "";
+  document.title = t.bridge
+    ? `${t.name || id} · ${t.bridge} · RegenerAxis`
+    : `${t.name || id} · RegenerAxis`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute("content", `${t.bridge || t.tagline || ""} ${t.hook || ""}`.trim());
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", `${t.name || id} · RegenerAxis`);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", t.tagline || "");
+
+  /* Optional aesthetic complements. Only Longevity carries these today, so the
+     block renders solely when the locale defines it. */
+  const complements = t.complements
+    ? `<div class="note-block reveal">
+         <span class="kicker">${t.complementsTitle || ""}</span>
+         <p>${t.complements}</p>
+       </div>`
+    : "";
 
   mount.innerHTML = `
-    <section class="hero hero--program">
+    <section class="hero hero--program stage--night">
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="wrap hero__inner reveal">
-        <span class="kicker">${t.kicker || ""}</span>
+        <span class="kicker">${t.kicker || ""}${entity ? ` · ${entity}` : ""}</span>
         <h1>${t.name || id}</h1>
+        ${t.bridge ? `<p class="hero__bridge">${t.bridge}</p>` : ""}
         <p class="subline">${t.hook || ""}</p>
         <div class="btn-row"><a class="btn btn--dark" data-booking href="#booking-placeholder">${cta}</a></div>
       </div>
     </section>
 
-    <section class="section"><div class="wrap narrow reveal">
+    <section class="section stage--bone"><div class="wrap narrow reveal">
+      ${t.outcome ? `<span class="kicker">${L("program.outcomeKicker", "What you are after")}</span>
+        <p class="outcome-line">${t.outcome}</p>` : ""}
       <span class="kicker">${L("program.whatItDoes", "What it does in your body")}</span>
       <p>${t.body || ""}</p>
       <ul class="benefits">${benefits}</ul>
+      ${complements}
     </div></section>
 
-    <section class="section strip-dark"><div class="wrap reveal">
+    <section class="section stage--graphite"><div class="wrap reveal">
       <div class="grid grid--2">
         <div>
-          <span class="kicker">${L("program.symptomsTitle", "Signs worth addressing")}</span>
-          <ul class="benefits">${symptoms}</ul>
+          <span class="kicker">${L("program.signalsTitle", "Does this sound like you?")}</span>
+          <ul class="benefits">${signals}</ul>
         </div>
         <div>
           <span class="kicker">${L("program.candidateTitle", "Ideal candidate")}</span>
           <p>${t.idealFor || ""}</p>
-          <span class="kicker" style="margin-top:1.6rem">${L("program.disqualifiersTitle", "Not suitable if")}</span>
-          <ul class="flags">${flags}</ul>
-          <p class="tst-note">${L("program.disqualifiersNote", "")}</p>
+          <span class="kicker" style="margin-top:1.6rem">${L("program.eligibilityTitle", "Before you start")}</span>
+          <p>${L("program.eligibilityBody", "")}</p>
         </div>
       </div>
     </div></section>
 
-    <section class="section"><div class="wrap narrow reveal">
+    <section class="section stage--night"><div class="wrap narrow reveal">
       <div class="eyebrow-center" style="text-align:left">
         <span class="kicker">${L("program.timelineKicker", "The 90-day journey")}</span>
         <h2>${L("program.timelineTitle", "How your program unfolds")}</h2>
@@ -145,7 +177,7 @@ async function renderProgramPage() {
       <p class="tst-note">${L("program.timelineNote", "")}</p>
     </div></section>
 
-    <section class="section strip-dark"><div class="wrap narrow reveal">
+    <section class="section stage--olive"><div class="wrap narrow reveal">
       <div class="grid grid--2">
         <div>
           <span class="kicker">${L("program.schema", "Schema & cycle")}</span>
@@ -156,7 +188,7 @@ async function renderProgramPage() {
       </div>
     </div></section>
 
-    <section class="section"><div class="wrap reveal">
+    <section class="section stage--ivory"><div class="wrap reveal">
       <div class="narrow center eyebrow-center">
         <span class="kicker">${L("program.supportKicker", "Integrated support (optional)")}</span>
         <h2>${L("program.supportTitle", "You can amplify your program")}</h2>
@@ -166,7 +198,7 @@ async function renderProgramPage() {
       </div>
     </div></section>
 
-    <section class="section"><div class="wrap narrow center reveal">
+    <section class="section stage--night"><div class="wrap narrow center reveal">
       <ul class="expect" aria-label="What to expect">
         <li><span class="kicker">${L("expect.a.k","What it includes")}</span><p>${L("expect.a.body","")}</p></li>
         <li><span class="kicker">${L("expect.b.k","How long it takes")}</span><p>${L("expect.b.body","")}</p></li>
@@ -176,7 +208,7 @@ async function renderProgramPage() {
         <p class="gateway__statement">${L("program.gatewayStatement", "")}</p>
         ${payStrip(dict)}
         <div class="btn-row" style="justify-content:center"><a class="btn" data-booking href="#booking-placeholder">${L("program.gatewayCta", cta)}</a></div>
-        <p class="tst-note">${L("program.resultsVary","Personalized and physician supervised. Individual results vary.")}</p>
+        <p class="tst-note">${L("program.resultsVary","Guided by certified professional personnel. Individual results vary.")}</p>
       </div>
     </div></section>
   `;

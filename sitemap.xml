@@ -15,46 +15,53 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/"/>
   </url>
 
-  <url><loc>https://regeneraxis.com/recovery-performance.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/recovery-performance.html"/>
+  <url><loc>https://regeneraxis.com/recuperacion-rendimiento.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/recuperacion-rendimiento.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/recovery-performance.html"/></url>
   <url><loc>https://regeneraxis.com/en/recovery-performance.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/recovery-performance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/recuperacion-rendimiento.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/recovery-performance.html"/></url>
 
-  <url><loc>https://regeneraxis.com/metabolic-reset.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/metabolic-reset.html"/>
+  <url><loc>https://regeneraxis.com/reinicio-metabolico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/reinicio-metabolico.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/metabolic-reset.html"/></url>
   <url><loc>https://regeneraxis.com/en/metabolic-reset.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/metabolic-reset.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/reinicio-metabolico.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/metabolic-reset.html"/></url>
 
-  <url><loc>https://regeneraxis.com/longevity-premium.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/longevity-premium.html"/>
+  <url><loc>https://regeneraxis.com/longevidad-premium.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/longevidad-premium.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/longevity-premium.html"/></url>
   <url><loc>https://regeneraxis.com/en/longevity-premium.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/longevity-premium.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/longevidad-premium.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/longevity-premium.html"/></url>
 
-  <url><loc>https://regeneraxis.com/executive-performance.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/executive-performance.html"/>
+  <url><loc>https://regeneraxis.com/rendimiento-ejecutivo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/rendimiento-ejecutivo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/executive-performance.html"/></url>
   <url><loc>https://regeneraxis.com/en/executive-performance.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/executive-performance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/rendimiento-ejecutivo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/executive-performance.html"/></url>
 
-  <url><loc>https://regeneraxis.com/advanced-cellular-regeneration.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/advanced-cellular-regeneration.html"/>
+  <url><loc>https://regeneraxis.com/regeneracion-celular-avanzada.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/regeneracion-celular-avanzada.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/advanced-cellular-regeneration.html"/></url>
   <url><loc>https://regeneraxis.com/en/advanced-cellular-regeneration.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/advanced-cellular-regeneration.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/regeneracion-celular-avanzada.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/advanced-cellular-regeneration.html"/></url>
 
-  <url><loc>https://regeneraxis.com/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/faq.html"/>
+  <url><loc>https://regeneraxis.com/nosotros.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/about.html"/></url>
+  <url><loc>https://regeneraxis.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/about.html"/></url>
+
+  <url><loc>https://regeneraxis.com/preguntas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/preguntas.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/faq.html"/></url>
   <url><loc>https://regeneraxis.com/en/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://regeneraxis.com/preguntas.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/faq.html"/></url>
 
   <url><loc>https://regeneraxis.com/testimonios.html</loc>

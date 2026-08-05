@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Experiencias · RegenerAxis · Medellín</title>
-  <meta name="description" content="Experiencias de clientes de RegenerAxis. Experiencias individuales de servicio y proceso. Los resultados varían de una persona a otra.">
+  <title>Por qué Medellín · Centro de Longevidad y Regeneración · RegenerAxis</title>
+  <meta name="description" content="Por qué Medellín es el lugar. El clima, la red de profesionales certificados y los precios justos que hacen posible un programa de longevidad de tres meses.">
 
-  <link rel="canonical" href="https://regeneraxis.com/testimonios.html">
-  <link rel="alternate" hreflang="es" href="https://regeneraxis.com/testimonios.html">
-  <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/testimonials.html">
-  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/testimonios.html">
+  <link rel="canonical" href="https://regeneraxis.com/nosotros.html">
+  <link rel="alternate" hreflang="es" href="https://regeneraxis.com/nosotros.html">
+  <link rel="alternate" hreflang="en" href="https://regeneraxis.com/en/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://regeneraxis.com/nosotros.html">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="RegenerAxis · Experiencias">
-  <meta property="og:description" content="Experiencias de quienes ya empezaron. Los resultados varían.">
+  <meta property="og:title" content="Por qué Medellín · RegenerAxis">
+  <meta property="og:description" content="El entorno no es un detalle del programa. Es parte de por qué funciona.">
   <meta property="og:image" content="https://regeneraxis.com/assets/img/og.jpg">
   <meta property="og:locale" content="es_CO">
   <meta property="og:locale:alternate" content="en_US">
@@ -32,26 +32,28 @@
     <div class="wrap">
       <nav class="nav" aria-label="Principal">
         <a class="nav__brand" href="./" aria-label="Inicio RegenerAxis">
-          <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
+          <svg class="mark" viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
             <g class="logo-stroke" fill="none" stroke-width="1.5">
               <ellipse cx="50" cy="50" rx="15" ry="28"/>
               <ellipse cx="50" cy="50" rx="28" ry="15"/>
             </g>
             <circle cx="50" cy="50" r="24" fill="none" stroke="#C7A96B" stroke-width="1"/>
             <circle cx="50" cy="50" r="4" fill="#C7A96B"/>
+            <circle class="mark__e mark__e--a" cx="50" cy="50" r="2.2" fill="#C7A96B"/>
+            <circle class="mark__e mark__e--b" cx="50" cy="50" r="2.2" fill="#C7A96B"/>
           </svg>
           <span class="nav__wordmark">Regener<b>Axis</b></span>
         </a>
         <div class="nav__links" id="nav-links">
           <a href="./#programas" data-i18n="nav.programs">Programas</a>
-          <a href="./nosotros.html" data-i18n="nav.about">Nosotros</a>
+          <a href="./nosotros.html" class="active" data-i18n="nav.about">Nosotros</a>
           <a href="./testimonios.html" data-i18n="nav.testimonials">Testimonios</a>
           <a href="./preguntas.html" data-i18n="nav.faq">Preguntas</a>
           <a href="./contacto.html" data-i18n="nav.contact">Contacto</a>
           <a class="nav__enquire" data-booking href="#booking-placeholder" data-i18n="cta.bookShort">Agendar cita</a>
           <span class="lang-toggle">
-            <a href="en/testimonials.html">EN</a>
-            <a href="./testimonios.html" class="active">ES</a>
+            <a href="en/about.html">EN</a>
+            <a href="./nosotros.html" class="active">ES</a>
           </span>
         </div>
         <button class="nav__toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-links">
@@ -62,29 +64,52 @@
   </header>
 
   <main id="main">
-    <section class="section stage--night" style="padding-top:calc(var(--section-y) + 3rem)">
-      <div class="wrap narrow reveal">
-        <span class="kicker" data-i18n="testimonials.kicker">Testimonios</span>
-        <h1 data-i18n="testimonials.title">Experiencias de quienes ya empezaron.</h1>
-        <p class="lead" data-i18n="testimonials.intro">Experiencias individuales de servicio y proceso. Los resultados varían de una persona a otra.</p>
+
+    <section class="hero hero--program stage--night">
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="wrap hero__inner reveal">
+        <span class="kicker" data-i18n="about.kicker">Nosotros</span>
+        <h1 data-i18n="about.title">Por qué Medellín.</h1>
+        <p class="subline" data-i18n="about.lead">El entorno no es un detalle del programa. Es parte de por qué funciona.</p>
       </div>
     </section>
 
     <section class="section stage--bone">
-      <div class="wrap">
-        <div class="filter-row reveal" data-tst-filters aria-label="Filtrar por programa"></div>
-        <div class="grid grid--3 reveal-stagger" data-tst-grid></div>
+      <div class="wrap narrow reveal">
+        <div class="rich" data-i18n-html="about.body">
+          <p>Medellín tiene un clima que el cuerpo encuentra naturalmente restaurador durante todo el año, la razón por la que la llaman la Ciudad de la Eterna Primavera. No hay invierno que interrumpa un ciclo de tres meses, ni un verano que lo haga insostenible.</p>
+          <p>Alrededor de ese clima creció una de las redes de atención más sólidas de América Latina: profesionales certificados, formados dentro y fuera del país, con estándares que la ciudad lleva décadas exportando.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section stage--graphite">
+    <!-- The manifesto: written long ago for this site and never given a home
+         until now. It belongs here, as the position behind the method. -->
+    <section class="section stage--olive">
+      <div class="wrap narrow reveal manifesto">
+        <span class="kicker" data-i18n="about.manifestoKicker">Nuestra posición</span>
+        <p data-i18n="manifesto.body">La recuperación ya no es pasiva. La longevidad ya no es solo vivir más años. El rendimiento ya no es exclusivo de atletas de élite. El futuro del bienestar es proactivo, personalizado y guiado por la ciencia. Bienvenido a una nueva era de optimización humana.</p>
+      </div>
+    </section>
+
+    <section class="section stage--ivory">
+      <div class="wrap narrow reveal">
+        <span class="kicker" data-i18n="about.visitKicker">Si vienes de fuera</span>
+        <h2 data-i18n="about.visitTitle">Cómo funciona a distancia.</h2>
+        <p data-i18n="about.visitBody">Puedes empezar tu valoración inicial de forma remota, antes de comprar un tiquete. Si el programa tiene sentido para ti, coordinamos tus fechas y dejamos todo listo para que tu tiempo en Medellín sea el programa, no la logística.</p>
+      </div>
+    </section>
+
+    <section class="section stage--night">
       <div class="wrap narrow center reveal">
         <h2 data-i18n="final.title">Tu biología merece una estrategia.</h2>
+        <p class="lead" data-i18n="final.subline">Comienza con una valoración inicial privada. Presencial en Medellín, o remota si viajas hacia nosotros.</p>
         <div class="btn-row" style="justify-content:center">
           <a class="btn" data-booking href="#booking-placeholder" data-i18n="cta.book">Agenda tu Valoración</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -119,6 +144,5 @@
 
   <script type="module" src="assets/js/main.js"></script>
   <script type="module" src="assets/js/i18n.js"></script>
-  <script type="module" src="assets/js/testimonials.js"></script>
 </body>
 </html>

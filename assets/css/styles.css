@@ -1,19 +1,21 @@
 /* ============================================================
    RegenerAxis — Brand Style System
-   Dark default. Full light/dark flip via [data-theme].
+   One palette, no theme switch. Section "stages" carry the tone.
    Quiet luxury. Editorial. 40%+ white space.
    ============================================================ */
 
 :root {
-  /* Raw brand palette (never changes) */
-  --ivory:       #F4F0E8;
-  --warm-black:  #1B1A17;
-  --graphite:    #3B3A37;
-  --river-stone: #B9AF9E;
-  --bone:        #EAE4D8;
-  --olive:       #6E7154;
-  --deep-stone:  #8E8574;
-  --gold:        #C7A96B;
+  /* Raw brand palette — the ten colors of the brandbook, nothing else. */
+  --ivory:        #F4F0E8;
+  --bone:         #EAE4D8;
+  --river-stone:  #B9AF9E;
+  --champagne:    #D9C6A0;
+  --gold:         #C7A96B;
+  --deep-stone:   #8E8574;
+  --olive:        #6E7154;
+  --olive-deep:   #565839;
+  --graphite:     #3B3A37;
+  --warm-black:   #1B1A17;
 
   /* Type */
   --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -31,67 +33,135 @@
 }
 
 /* ============================================================
-   THEME TOKENS
-   Both themes are internally consistent: light stays light,
-   dark stays dark. No section inverts against the page. Section
-   rhythm comes from a subtle "panel" surface, not a hard flip.
-   Contrast pairings are checked for WCAG AA (small text >= 4.5:1).
+   STAGES — the section is the theme scope
+   ------------------------------------------------------------
+   There is no global light/dark mode. Instead each section is a
+   "stage" that sets its own surface tokens, and every component
+   inside it (cards, kickers, hairlines, buttons) reads those
+   tokens and recolors automatically. Scrolling the page walks
+   through tones: night, graphite, olive, bone, ivory. That
+   tonal rhythm is where the contrast and the life come from.
+
+   Two rules make it hold together:
+     1. --accent is gold on dark stages and olive-deep on light
+        ones. Gold on a light surface is 1.8:1 and disappears, so
+        light stages accent in olive instead.
+     2. Card surfaces are a translucent veil of the stage's own
+        ink, never a fixed hex, so they sit correctly on any tone.
+
+   Every text pairing below is measured, small text >= 4.5:1.
    ============================================================ */
 
-/* ---- DARK THEME (default) ---- */
-:root, [data-theme="dark"] {
+:root {
+  /* Page default = the night stage, so any unstaged section is safe. */
   --bg:            var(--warm-black);
-  --ink:           var(--ivory);           /* #F4F0E8 on #1B1A17  ~ 15:1 */
-  --muted:         var(--river-stone);     /* #B9AF9E on #1B1A17  ~ 8:1  */
-  --kicker-ink:    var(--champagne-soft);  /* #D9C6A0 on dark     ~ 10:1 */
-  --hairline:      rgba(199, 169, 107, 0.5);
+  --ink:           var(--ivory);        /* 15.0:1 */
+  --muted:         var(--river-stone);  /*  8.0:1 */
+  --kicker-ink:    var(--champagne);    /* 10.1:1 */
+  --accent:        var(--gold);         /*  7.7:1 */
+  --accent-ink:    var(--warm-black);   /* text on an --accent fill */
+  --hairline:      rgba(199, 169, 107, 0.50);
   --hairline-soft: rgba(244, 240, 232, 0.14);
-
-  --surface:       #211F1B;                /* cards */
-  --panel:         #16150F;                /* section rhythm (slightly deeper) */
-  --panel-ink:     var(--ivory);
-  --panel-muted:   var(--river-stone);
-
+  --surface:       rgba(244, 240, 232, 0.045);
+  --surface-hover: rgba(244, 240, 232, 0.075);
   --logo-stroke:   var(--ivory);
-  --header-bg:     rgba(27, 26, 23, 0.82);
-  --header-scrim:  rgba(20, 19, 15, 0.55);   /* subtle always-on backdrop over the hero */
-
-  --hero-bg:       var(--warm-black);
-  --hero-ink:      var(--ivory);
-  --hero-muted:    var(--river-stone);
-  --aurora-1:      rgba(110, 113, 84, 0.42);   /* cordillera olive */
-  --aurora-2:      rgba(199, 169, 107, 0.30);  /* champagne */
-  --aurora-3:      rgba(142, 133, 116, 0.30);  /* deep stone */
-
-  --footer-bg:     #131210;
 }
 
-/* ---- LIGHT THEME ---- */
-[data-theme="light"] {
-  --bg:            var(--ivory);
-  --ink:           var(--warm-black);      /* #1B1A17 on #F4F0E8  ~ 15:1 */
-  --muted:         var(--graphite);        /* #3B3A37 on ivory    ~ 9:1  */
-  --kicker-ink:    var(--olive-deep);      /* #565839 on ivory    ~ 6:1  */
-  --hairline:      rgba(199, 169, 107, 0.55);
-  --hairline-soft: rgba(59, 58, 55, 0.16);
+/* --- Night. The anchor tone: hero, footer, closing CTA. --- */
+.stage--night {
+  --bg: var(--warm-black); --ink: var(--ivory); --muted: var(--river-stone);
+  --kicker-ink: var(--champagne); --accent: var(--gold); --accent-ink: var(--warm-black);
+  --hairline: rgba(199, 169, 107, 0.50); --hairline-soft: rgba(244, 240, 232, 0.14);
+  --surface: rgba(244, 240, 232, 0.045); --surface-hover: rgba(244, 240, 232, 0.075);
+}
 
-  --surface:       #FFFFFF;
-  --panel:         var(--bone);            /* #EAE4D8 gentle warm panel */
-  --panel-ink:     var(--warm-black);
-  --panel-muted:   var(--graphite);
+/* --- Graphite. A half-step up from night: warmer, closer, still dark. --- */
+.stage--graphite {
+  --bg: var(--graphite); --ink: var(--ivory);        /*  9.8:1 */
+  --muted: var(--bone);                              /*  8.9:1 */
+  --kicker-ink: var(--champagne);                    /*  6.6:1 */
+  --accent: var(--gold);                             /*  4.9:1 */
+  --accent-ink: var(--warm-black);
+  --hairline: rgba(199, 169, 107, 0.55); --hairline-soft: rgba(244, 240, 232, 0.16);
+  --surface: rgba(244, 240, 232, 0.055); --surface-hover: rgba(244, 240, 232, 0.09);
+}
 
-  --logo-stroke:   var(--warm-black);
-  --header-bg:     rgba(244, 240, 232, 0.85);
-  --header-scrim:  rgba(244, 240, 232, 0.6);  /* subtle always-on backdrop over the hero */
+/* --- Olive. The saturated middle tone. Used once or twice per page,
+       where the story should feel like it changes register. Gold drops
+       to 3.3:1 here, so it stays decorative and bone carries the eyebrows. --- */
+.stage--olive {
+  --bg: var(--olive-deep); --ink: var(--ivory);      /*  6.5:1 */
+  --muted: var(--bone);                              /*  5.8:1 */
+  --kicker-ink: var(--bone);                         /*  5.8:1 */
+  --accent: var(--champagne);                        /*  4.4:1, decorative + large only */
+  --accent-ink: var(--warm-black);
+  --hairline: rgba(217, 198, 160, 0.55); --hairline-soft: rgba(244, 240, 232, 0.20);
+  --surface: rgba(244, 240, 232, 0.07); --surface-hover: rgba(244, 240, 232, 0.11);
+}
 
-  --hero-bg:       var(--bone);
-  --hero-ink:      var(--warm-black);
-  --hero-muted:    var(--graphite);
-  --aurora-1:      rgba(110, 113, 84, 0.30);
-  --aurora-2:      rgba(199, 169, 107, 0.34);
-  --aurora-3:      rgba(185, 175, 158, 0.40);
+/* --- Bone. The exhale. Light, warm, never white. --- */
+.stage--bone {
+  --bg: var(--bone); --ink: var(--warm-black);       /* 13.7:1 */
+  --muted: var(--graphite);                          /*  9.0:1 */
+  --kicker-ink: var(--olive-deep);                   /*  5.8:1 */
+  --accent: var(--olive-deep);                       /*  5.8:1 */
+  --accent-ink: var(--ivory);
+  --hairline: rgba(86, 88, 57, 0.42); --hairline-soft: rgba(27, 26, 23, 0.14);
+  --surface: rgba(255, 255, 255, 0.55); --surface-hover: rgba(255, 255, 255, 0.85);
+  --logo-stroke: var(--warm-black);
+}
 
-  --footer-bg:     var(--warm-black);      /* footer stays a dark anchor in both modes */
+/* --- Ivory. The brightest stage, for the widest reading passages. --- */
+.stage--ivory {
+  --bg: var(--ivory); --ink: var(--warm-black);      /* 15.0:1 */
+  --muted: var(--graphite);                          /*  9.3:1 */
+  --kicker-ink: var(--olive-deep);                   /*  6.0:1 */
+  --accent: var(--olive-deep);                       /*  6.0:1 */
+  --accent-ink: var(--ivory);
+  --hairline: rgba(86, 88, 57, 0.38); --hairline-soft: rgba(27, 26, 23, 0.12);
+  --surface: rgba(255, 255, 255, 0.7); --surface-hover: #FFFFFF;
+  --logo-stroke: var(--warm-black);
+}
+
+/* --- Gold. One per page at most: the closing ask. --- */
+.stage--gold {
+  --bg: var(--gold); --ink: var(--warm-black);       /*  7.7:1 */
+  --muted: rgba(27, 26, 23, 0.78);                   /*  6.2:1 */
+  --kicker-ink: var(--olive-deep);                   /*  4.6:1 */
+  --accent: var(--warm-black); --accent-ink: var(--gold);
+  --hairline: rgba(27, 26, 23, 0.40); --hairline-soft: rgba(27, 26, 23, 0.18);
+  --surface: rgba(244, 240, 232, 0.28); --surface-hover: rgba(244, 240, 232, 0.45);
+  --logo-stroke: var(--warm-black);
+}
+
+.stage--night, .stage--graphite, .stage--olive,
+.stage--bone, .stage--ivory, .stage--gold {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Legacy alias: markup that still says .strip-dark renders as the graphite stage. */
+.strip-dark {
+  --bg: var(--graphite); --ink: var(--ivory); --muted: var(--bone);
+  --kicker-ink: var(--champagne); --accent: var(--gold); --accent-ink: var(--warm-black);
+  --hairline: rgba(199, 169, 107, 0.55); --hairline-soft: rgba(244, 240, 232, 0.16);
+  --surface: rgba(244, 240, 232, 0.055); --surface-hover: rgba(244, 240, 232, 0.09);
+  background: var(--bg); color: var(--ink);
+}
+
+/* ---- Fixed chrome. The header floats over every stage, so it keeps one
+   dark identity instead of trying to match whatever is underneath. ---- */
+:root {
+  --header-bg:    rgba(27, 26, 23, 0.88);
+  --header-scrim: rgba(20, 19, 15, 0.42);
+  --header-ink:   var(--ivory);
+  --header-muted: var(--river-stone);
+  --footer-bg:    #131210;
+
+  /* Hero aurora washes */
+  --aurora-1: rgba(110, 113, 84, 0.50);   /* cordillera olive */
+  --aurora-2: rgba(199, 169, 107, 0.34);  /* champagne */
+  --aurora-3: rgba(142, 133, 116, 0.32);  /* deep stone */
 }
 
 /* ---------- Reset ---------- */
@@ -142,7 +212,7 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
   display: block;
 }
 .lead { font-size: 1.22rem; color: var(--muted); }
-.serif-accent { color: var(--gold); }
+.serif-accent { color: var(--accent); }
 
 /* ---------- Layout ---------- */
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 3.5rem); }
@@ -157,7 +227,7 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 
 /* ---------- Buttons / CTA ---------- */
 .btn {
-  --bc: var(--gold);
+  --bc: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
@@ -178,30 +248,39 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 .btn::after {
   content: "";
   position: absolute; inset: 0;
-  background: var(--gold);
+  background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 200ms var(--ease);
   z-index: -1;
 }
-.btn:hover, .btn:focus-visible { color: var(--warm-black); }
+.btn:hover, .btn:focus-visible { color: var(--accent-ink); }
 .btn:hover::after, .btn:focus-visible::after { transform: scaleX(1); }
-.btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-/* Legacy modifier kept for existing markup; now just follows theme ink
-   since no surface is inverted anymore. */
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+/* Legacy modifier kept for existing markup; the stage now decides the tone,
+   so it is just the base button. */
 .btn--dark { color: var(--ink); }
-.btn--dark:hover, .btn--dark:focus-visible { color: var(--warm-black); }
+.btn--dark:hover, .btn--dark:focus-visible { color: var(--accent-ink); }
 
 .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
 .link-quiet {
   font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--deep-stone); border-bottom: 1px solid var(--hairline);
+  color: var(--muted); border-bottom: 1px solid var(--hairline);
   padding-bottom: 2px; transition: color 200ms var(--ease);
 }
-.link-quiet:hover { color: var(--gold); }
+.link-quiet:hover { color: var(--accent); }
 
-/* ---------- Header / Nav ---------- */
+/* ---------- Header / Nav ----------
+   The header is fixed above stages of every tone, so it opts out of the
+   stage system and keeps one dark identity of its own. */
 .site-header {
+  --ink: var(--header-ink);
+  --muted: var(--header-muted);
+  --accent: var(--gold);
+  --accent-ink: var(--warm-black);
+  --logo-stroke: var(--ivory);
+  --hairline: rgba(199, 169, 107, 0.5);
+  --hairline-soft: rgba(244, 240, 232, 0.14);
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: var(--header-scrim);
   backdrop-filter: blur(6px);
@@ -235,21 +314,8 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 }
 
 .lang-toggle { display: inline-flex; border: 1px solid var(--hairline-soft); }
-.lang-toggle a { padding: 0.4em 0.8em; font-size: 0.68rem; letter-spacing: 0.15em; color: var(--deep-stone); }
+.lang-toggle a { padding: 0.4em 0.8em; font-size: 0.68rem; letter-spacing: 0.15em; color: var(--muted); }
 .lang-toggle a.active { background: var(--gold); color: var(--warm-black); }
-
-.theme-toggle {
-  display: inline-flex; align-items: center; justify-content: center;
-  border: 1px solid var(--hairline-soft); background: none;
-  padding: 0.45em 0.6em; color: var(--deep-stone);
-  transition: color 200ms var(--ease), border-color 200ms var(--ease);
-}
-.theme-toggle:hover { color: var(--gold); border-color: var(--hairline); }
-.theme-toggle svg { width: 15px; height: 15px; display: block; }
-.theme-toggle .t-sun { display: none; }
-.theme-toggle .t-moon { display: block; }
-[data-theme="light"] .theme-toggle .t-sun { display: block; }
-[data-theme="light"] .theme-toggle .t-moon { display: none; }
 
 .nav__toggle { display: none; background: none; border: 0; padding: 0.5rem; }
 .nav__toggle span { display: block; width: 24px; height: 1px; background: var(--ink); margin: 5px 0; transition: 250ms var(--ease); }
@@ -272,8 +338,7 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 /* ---------- Hero (CSS aurora + breathing Axis Bloom) ---------- */
 .hero {
   min-height: 92vh; display: flex; align-items: center; position: relative;
-  background: var(--hero-bg); color: var(--hero-ink); overflow: hidden;
-  transition: background-color 400ms var(--ease), color 400ms var(--ease);
+  background: var(--bg); color: var(--ink); overflow: hidden;
 }
 /* Aurora: three slow-drifting radial washes in brand tones. GPU-friendly,
    pure CSS, tiny. Falls back to a static wash under reduced-motion. */
@@ -304,19 +369,19 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
   filter: drop-shadow(0 0 46px rgba(199,169,107,0.14)); }
 .hero__bloom svg { width: 100%; height: 100%; display: block;
   animation: bloomFloat 20s ease-in-out infinite; transform-origin: center; }
-.hero__bloom .b-stroke { stroke: var(--hero-ink); opacity: 0.5; }
+.hero__bloom .b-stroke { stroke: var(--ink); opacity: 0.5; }
 @keyframes bloomFloat { 0%,100% { transform: rotate(-4deg) scale(0.97); } 50% { transform: rotate(4deg) scale(1.04); } }
 
 .hero__inner { position: relative; z-index: 2; padding-block: clamp(7rem, 12vh, 9rem) clamp(3rem, 8vh, 4.5rem); }
-.hero h1 { color: var(--hero-ink); max-width: 15ch; }
+.hero h1 { color: var(--ink); max-width: 15ch; }
 /* Home headline: three scannable sentence-lines with breathing room and a
    gold accent on each payoff noun, so it reads as rhythm rather than a block. */
 .hero--home h1 { max-width: 18ch; line-height: 1.12; }
 .hero__line { display: block; }
 .hero__line + .hero__line { margin-top: 0.42em; }
-.hero__key { color: var(--gold); }
+.hero__key { color: var(--accent); }
 .hero .kicker { color: var(--kicker-ink); }
-.hero .subline { color: var(--hero-muted); max-width: 42ch; font-size: 1.22rem; margin-bottom: 2.2rem; }
+.hero .subline { color: var(--muted); max-width: 42ch; font-size: 1.22rem; margin-bottom: 2.2rem; }
 
 /* Home hero: two balanced columns so the copy and the Axis Bloom read as a pair,
    with a controlled gap instead of a wide empty band between them. */
@@ -341,47 +406,130 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 @media (max-width: 900px) { .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; } }
 
-.card { border: 1px solid var(--hairline-soft); padding: clamp(1.6rem, 3vw, 2.4rem); background: var(--surface); transition: border-color 300ms var(--ease), transform 300ms var(--ease), background-color 400ms var(--ease); position: relative; height: 100%; }
-.card:hover { border-color: var(--hairline); }
-.card__num { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1rem; }
+.card { border: 1px solid var(--hairline-soft); padding: clamp(1.6rem, 3vw, 2.4rem); background: var(--surface); transition: border-color 300ms var(--ease), transform 300ms var(--ease), background-color 300ms var(--ease); position: relative; height: 100%; }
+.card:hover { border-color: var(--hairline); background: var(--surface-hover); }
+.card__num { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 1rem; }
 .card h3 { margin-bottom: 0.6rem; }
 .card p { color: var(--muted); margin-bottom: 0; font-size: 1.04rem; }
 .card--link { display: flex; flex-direction: column; }
 .card--link:hover { transform: translateY(-3px); }
 /* Distinct CTA card: fills the 6th grid cell so the program grid reads as a
-   balanced 2x3, and carries the primary action in gold so it pops. */
-.card--cta { background: var(--gold); border-color: var(--gold); color: var(--warm-black); display: flex; flex-direction: column; justify-content: center; }
-.card--cta h3 { color: var(--warm-black); }
-.card--cta p { color: rgba(27,26,23,0.82); margin-bottom: 0; }
-.card--cta .card__cta { color: var(--warm-black); margin-top: 1.4rem; }
-.card--cta:hover { transform: translateY(-3px); border-color: var(--gold); }
-.card__cta { margin-top: auto; padding-top: 1.4rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+   balanced 2x3, and inverts to the stage accent so the primary action pops. */
+.card--cta { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); display: flex; flex-direction: column; justify-content: center; }
+.card--cta h3 { color: var(--accent-ink); }
+.card--cta p { color: var(--accent-ink); opacity: 0.82; margin-bottom: 0; }
+.card--cta .card__cta { color: var(--accent-ink); margin-top: 1.4rem; }
+.card--cta:hover { transform: translateY(-3px); border-color: var(--accent); background: var(--accent); }
+.card__cta { margin-top: auto; padding-top: 1.4rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
 
 /* ---------- Steps ---------- */
 .steps { counter-reset: step; }
 .step { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; padding-block: 1.8rem; border-top: 1px solid var(--hairline-soft); }
 .step:last-child { border-bottom: 1px solid var(--hairline-soft); }
-.step__n { counter-increment: step; font-family: var(--serif); font-size: 2.2rem; color: var(--gold); line-height: 1; }
+.step__n { counter-increment: step; font-family: var(--serif); font-size: 2.2rem; color: var(--accent); line-height: 1; }
 .step__n::before { content: "0" counter(step); }
 .step h3 { font-size: 1.35rem; margin-bottom: 0.3rem; }
 .step p { margin: 0; color: var(--muted); }
 
-/* ---------- Panels (section rhythm, never inverted) ----------
-   Legacy class name .strip-dark is kept so markup need not change,
-   but it now renders as a subtle same-theme panel, not a flip. */
-.strip-dark, .panel { background: var(--panel); color: var(--panel-ink); }
-.strip-dark h2, .strip-dark h3, .panel h2, .panel h3 { color: var(--panel-ink); }
-.strip-dark .kicker, .panel .kicker { color: var(--kicker-ink); }
-.strip-dark p, .panel p { color: var(--muted); }
-.manifesto p { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.15rem); line-height: 1.4; color: var(--panel-ink); max-width: 24ch; }
+/* ---------- Method: the pinned "how it works" stage ----------
+   Unpinned (default, and what mobile and reduced-motion always get) this is
+   an ordinary two-column section with every beat legible. method.js adds
+   .is-pinned only on wide viewports with motion allowed, which turns the
+   track into a tall scroll runway and sticks the stage inside it. */
+.method__inner { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+@media (max-width: 900px) { .method__inner { grid-template-columns: 1fr; } }
+
+.method__beats { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(1.6rem, 3vw, 2.4rem); }
+.beat { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: start; }
+.beat__n { font-family: var(--serif); font-size: 1.5rem; line-height: 1.2; color: var(--accent); }
+.beat h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); margin-bottom: 0.35rem; }
+.beat p { color: var(--muted); margin: 0; font-size: 1.02rem; }
+
+/* Pinned mode. --beat-count sets the runway length: one viewport to read the
+   stage plus roughly two thirds of one per beat to advance through them. */
+.method.is-pinned .method__track {
+  height: calc(100vh + (var(--beat-count, 4) - 1) * 68vh);
+  position: relative;
+}
+.method.is-pinned .method__stage {
+  position: sticky; top: 0; min-height: 100vh;
+  display: flex; align-items: center;
+}
+/* Section padding would fight the sticky stage, so the track owns the space. */
+.method.is-pinned { padding-block: 0; }
+.method.is-pinned .method__stage > .wrap { padding-block: clamp(5rem, 10vh, 7rem); width: 100%; }
+
+/* Beats dim until their turn. The transition makes scrolling back up
+   un-highlight them just as smoothly as scrolling down lit them. */
+.method.is-pinned .beat {
+  opacity: 0.3;
+  transform: translateY(6px);
+  transition: opacity 420ms var(--ease), transform 420ms var(--ease);
+}
+.method.is-pinned .beat.is-active { opacity: 1; transform: none; }
+
+/* Progress rail down the left edge of the beats, driven by --p. */
+.method.is-pinned .method__beats {
+  position: relative; padding-left: clamp(1.4rem, 3vw, 2.2rem);
+  border-left: 1px solid var(--hairline-soft);
+}
+.method.is-pinned .method__beats::before {
+  content: ""; position: absolute; left: -1px; top: 0; width: 1px;
+  height: calc(var(--p, 0) * 100%); background: var(--accent);
+}
+
+/* ---------- Signature motion: the Axis Bloom comes alive ----------
+   The nav mark and the hero mark are the same atom. Gold electrons travel the
+   ellipse paths with offset-path, which needs no JS and no library. Browsers
+   without offset-path simply show the static mark, which is the current
+   design, so there is no broken intermediate state. */
+@supports (offset-path: path("M 0 0")) {
+  .mark__e, .bloom__e {
+    offset-rotate: 0deg;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  /* Nav mark: two electrons, one per ellipse, slow enough to read as alive
+     rather than as a spinner. */
+  .mark__e--a { offset-path: path("M 50 22 A 15 28 0 1 1 50 78 A 15 28 0 1 1 50 22"); animation-name: orbit; animation-duration: 9s; }
+  .mark__e--b { offset-path: path("M 22 50 A 28 15 0 1 1 78 50 A 28 15 0 1 1 22 50"); animation-name: orbit; animation-duration: 13s; animation-direction: reverse; }
+
+  /* Hero bloom: three electrons across the three orbitals. */
+  .bloom__e--1 { offset-path: path("M 50 16 A 14 34 0 1 1 50 84 A 14 34 0 1 1 50 16"); animation-name: orbit; animation-duration: 14s; }
+  .bloom__e--2 { offset-path: path("M 16 50 A 34 14 0 1 1 84 50 A 34 14 0 1 1 16 50"); animation-name: orbit; animation-duration: 19s; animation-direction: reverse; }
+  .bloom__e--3 { offset-path: path("M 50 24 A 26 26 0 1 1 50 76 A 26 26 0 1 1 50 24"); animation-name: orbit; animation-duration: 24s; }
+}
+@keyframes orbit { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+
+/* The nav mark draws itself in once on load, then settles. */
+.nav__brand .mark { animation: markSettle 900ms var(--ease) both; }
+@keyframes markSettle {
+  from { opacity: 0; transform: scale(0.86) rotate(-12deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Program cards get a deeper entrance than the generic stagger: a longer rise
+   with a touch of scale, so the grid assembles instead of just fading. This
+   rides the existing .reveal-stagger transition and its per-child delays, so
+   there is no second animation to keep in sync and reduced-motion already
+   neutralizes it. */
+.reveal-stagger > .card--link,
+.reveal-stagger > .card--cta { transform: translateY(18px) scale(0.985); }
+.reveal-stagger.in > .card--link,
+.reveal-stagger.in > .card--cta { transform: none; }
+.reveal-stagger.in > .card--link:nth-child(6) { transition-delay: 400ms; }
+
+/* ---------- Manifesto ---------- */
+.manifesto p { font-family: var(--serif); font-size: clamp(1.6rem, 3.4vw, 2.4rem); line-height: 1.38; color: var(--ink); max-width: 22ch; }
+.manifesto p + p { margin-top: 1.2rem; }
 
 /* ---------- Asymmetric feature ---------- */
 .feature { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 /* Placeholder visual for the Medellin section. Swap the .feature__bloom SVG for
    an <img> when a real photo is ready; the img rule below already fits it. */
 .feature__media { position: relative; aspect-ratio: 4/5; overflow: hidden; border: 1px solid var(--hairline-soft);
-  background: radial-gradient(120% 90% at 72% 18%, var(--aurora-2), transparent 58%), var(--panel); }
-.feature__bloom { position: absolute; inset: 0; margin: auto; width: 66%; height: auto; color: var(--hero-ink);
+  background: radial-gradient(120% 90% at 72% 18%, var(--aurora-2), transparent 58%), var(--surface); }
+.feature__bloom { position: absolute; inset: 0; margin: auto; width: 66%; height: auto; color: var(--ink);
   opacity: 0.5; animation: bloomFloat 22s ease-in-out infinite; transform-origin: center; }
 .feature__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 800px) { .feature { grid-template-columns: 1fr; } }
@@ -395,12 +543,12 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 
 /* ---------- FAQ accordion ---------- */
 .faq-cat { margin-bottom: 3rem; }
-.faq-cat > h3 { font-size: 1.1rem; letter-spacing: 0.04em; color: var(--deep-stone); font-family: var(--sans); font-weight: 400; text-transform: uppercase; margin-bottom: 1rem; }
+.faq-cat > h3 { font-size: 1.1rem; letter-spacing: 0.04em; color: var(--muted); font-family: var(--sans); font-weight: 400; text-transform: uppercase; margin-bottom: 1rem; }
 .faq-item { border-top: 1px solid var(--hairline-soft); }
 .faq-item:last-child { border-bottom: 1px solid var(--hairline-soft); }
 .faq-item summary { list-style: none; cursor: pointer; padding: 1.4rem 2.5rem 1.4rem 0; position: relative; font-family: var(--serif); font-size: 1.25rem; color: var(--ink); }
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: "+"; position: absolute; right: 0.2rem; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-weight: 300; font-size: 1.5rem; color: var(--gold); transition: transform 250ms var(--ease); }
+.faq-item summary::after { content: "+"; position: absolute; right: 0.2rem; top: 50%; transform: translateY(-50%); font-family: var(--sans); font-weight: 300; font-size: 1.5rem; color: var(--accent); transition: transform 250ms var(--ease); }
 .faq-item[open] summary::after { content: "\2013"; }
 .faq-item__body { overflow: hidden; }
 .faq-item[open] .faq-item__body { animation: faqOpen 320ms var(--ease); }
@@ -411,28 +559,35 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 .tst { border: 1px solid var(--hairline-soft); padding: 2rem; background: transparent; height: 100%; }
 .tst blockquote { font-family: var(--serif); font-size: 1.3rem; line-height: 1.45; margin: 0 0 1.2rem; color: var(--ink); }
 .tst__meta { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--kicker-ink); }
-.tst__meta b { color: var(--gold); font-weight: 400; }
-.tst-note { font-size: 0.8rem; color: var(--deep-stone); font-style: italic; }
+.tst__meta b { color: var(--accent); font-weight: 400; }
+/* --muted is already the de-emphasized token for each stage; stacking an extra
+   opacity on top of it pushed this under AA on the gold stage. */
+.tst-note { font-size: 0.8rem; color: var(--muted); font-style: italic; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
 .filter-row button { background: none; border: 1px solid var(--hairline-soft); padding: 0.55em 1.2em; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: 200ms var(--ease); }
-.filter-row button.active, .filter-row button:hover { border-color: var(--gold); color: var(--gold); }
+.filter-row button.active, .filter-row button:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- Forms ---------- */
 .form { display: grid; gap: 1.2rem; max-width: 560px; }
-.form label { display: block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--deep-stone); margin-bottom: 0.5rem; }
+.form label { display: block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--kicker-ink); margin-bottom: 0.5rem; }
 .form input, .form select, .form textarea { width: 100%; padding: 0.9em 1em; border: 1px solid var(--hairline-soft); background: var(--surface); font-family: var(--sans); font-size: 1rem; color: var(--ink); transition: border-color 200ms var(--ease); }
-.form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--gold); }
+.form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--accent); }
 .form textarea { min-height: 130px; resize: vertical; }
 
-/* ---------- Footer ---------- */
-.site-footer { background: var(--footer-bg); color: var(--river-stone); padding-block: clamp(3rem, 6vw, 5rem); }
+/* ---------- Footer ----------
+   Like the header, the footer keeps its own dark identity so the page
+   always closes on the same anchor tone whatever stage precedes it. */
+.site-footer {
+  --ink: var(--ivory); --muted: var(--river-stone); --accent: var(--gold);
+  background: var(--footer-bg); color: var(--river-stone); padding-block: clamp(3rem, 6vw, 5rem);
+}
 .site-footer a { color: var(--river-stone); transition: color 200ms var(--ease); }
 .site-footer a:hover { color: var(--gold); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
 @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; } }
 .footer-grid h3 { color: var(--ivory); font-family: var(--sans); font-weight: 400; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; font-size: 0.9rem; }
-.disclaimer { font-size: 0.78rem; line-height: 1.7; color: var(--deep-stone); border-top: 1px solid rgba(185,175,158,0.15); padding-top: 2rem; max-width: 100%; }
+.disclaimer { font-size: 0.78rem; line-height: 1.7; color: var(--river-stone); opacity: 0.82; border-top: 1px solid rgba(185,175,158,0.15); padding-top: 2rem; max-width: 100%; }
 
 /* ---------- Reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(12px); transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
@@ -446,7 +601,15 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-  .reveal, .reveal-stagger > * { opacity: 1; transform: none; }
+  /* !important because the per-component entrance offsets (.card--link and
+     friends) outrank a bare .reveal-stagger > * selector. Without it, content
+     would sit permanently nudged off its resting position. */
+  .reveal, .reveal-stagger > *, .beat { opacity: 1 !important; transform: none !important; }
+  /* The pinned stage is never switched on under reduced motion, but if the
+     preference flips after load the section must fall back cleanly. */
+  .method.is-pinned .method__track { height: auto !important; }
+  .method.is-pinned .method__stage { position: static !important; min-height: 0 !important; }
+  .method.is-pinned { padding-block: var(--section-y) !important; }
 }
 
 /* ---------- Utilities ---------- */
@@ -460,22 +623,37 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
 .hero--program { min-height: 62vh; }
 .benefits { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.9rem; }
 .benefits li { position: relative; padding-left: 1.6rem; color: var(--muted); }
-.benefits li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+.benefits li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; }
 .price { border-top: 1px solid var(--hairline); margin-top: 2.5rem; padding-top: 2rem; }
-.price__amount { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); color: var(--gold); line-height: 1; margin-bottom: 0.6rem; }
+.price__amount { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); color: var(--accent); line-height: 1; margin-bottom: 0.6rem; }
 .doping-note { border: 1px solid var(--hairline-soft); padding: 1.1rem 1.3rem; font-size: 0.88rem; color: var(--muted); margin-top: 1.5rem; }
 
-/* Disqualifying conditions: caution-flagged list (distinct from the gold-dot benefits) */
-.flags { list-style: none; padding: 0; margin: 0.6rem 0 0.8rem; display: grid; gap: 0.7rem; }
-.flags li { position: relative; padding-left: 1.9rem; color: var(--muted); font-size: 0.96rem; }
-.flags li::before {
-  content: "!"; position: absolute; left: 0; top: 0.12em;
-  width: 1.15rem; height: 1.15rem; display: flex; align-items: center; justify-content: center;
-  font-family: var(--sans); font-size: 0.72rem; font-weight: 500; line-height: 1;
-  color: var(--warm-black); background: var(--gold); border-radius: 3px;
+/* Bridge line: the searchable outcome phrasing that sits under the brand
+   name of a program, on cards and on the program hero. */
+.card__bridge {
+  font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--kicker-ink); margin-bottom: 0.7rem; line-height: 1.5;
+}
+.hero__bridge {
+  font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--kicker-ink); margin-bottom: 1.2rem;
 }
 
-/* Clinical gateway: the compliant close on every program page */
+/* The one concrete outcome per program, set large so it reads before the prose. */
+.outcome-line {
+  font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.32; color: var(--ink); max-width: 22ch; margin-bottom: 2.4rem;
+}
+
+/* Aside block: optional complements, advisories, anything set apart from
+   the running copy without shouting. */
+.note-block {
+  border-left: 2px solid var(--hairline); padding: 0.2rem 0 0.2rem 1.4rem;
+  margin-top: 2.4rem;
+}
+.note-block p { color: var(--muted); margin-bottom: 0; }
+
+/* Gateway: the compliant close on every program page */
 .gateway { border: 1px solid var(--hairline); background: var(--surface); padding: clamp(1.8rem, 4vw, 3rem); margin-top: clamp(2rem, 5vw, 3.5rem); }
 .gateway__statement { font-family: var(--serif); font-weight: 300; font-size: clamp(1.2rem, 2.4vw, 1.6rem); line-height: 1.4; color: var(--ink); max-width: 42ch; margin: 0 auto 1.8rem; }
 
@@ -489,7 +667,7 @@ p  { margin: 0 0 1.1em; max-width: var(--readw); }
   gap: 0.6rem 1.4rem; border-block: 1px solid var(--hairline); padding: 1.1rem 0; margin: 1.5rem 0;
   font-size: 0.8rem; letter-spacing: 0.06em; color: var(--muted); }
 .pay-strip .pay-item { display: inline-flex; align-items: center; gap: 0.5rem; }
-.pay-strip svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; flex: none; }
+.pay-strip svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; flex: none; }
 
 /* ---------- Floating WhatsApp button (injected by main.js) ---------- */
 .wa-fab { position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem);
